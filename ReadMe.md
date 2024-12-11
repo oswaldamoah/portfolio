@@ -1,6 +1,6 @@
 # Oswald Amoah - Professional Portfolio
 
-Welcome to my professional portfolio! Here, you’ll find a collection of my work, including projects related to web development, app development, research, data management, and more. I’m currently pursuing a BSc in Computer Science at the University of Ghana and working as a freelancer, contributing to various projects in tech and digital marketing.
+Welcome to my professional portfolio! Here, you’ll find a collection of my work, including projects related to web development, app development, research, data management, and more. I’m currently pursuing a BSc in Computer Science at the University of Ghana and working as a freelancer, contributing to various projects in tech and project management.
 
 ## What’s Inside:
 - **About Me**: A quick intro to who I am and my skills.
