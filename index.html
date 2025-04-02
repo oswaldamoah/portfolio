@@ -1,9 +1,8 @@
-<html lang="en">
-<head>
+<html lang="en"><head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Oswald Amoah | Resume</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&amp;display=swap" rel="stylesheet">
     <style>
         body {
             font-family: 'Montserrat', sans-serif;
@@ -33,11 +32,10 @@
         h4 {
             color: #2c3e50;
             margin: 5px 0 0 0;
-            transition: transform 0.3s;
+            transition: color 0.3s; /* Updated to only transition color */
         }
         h4:hover {
-            transform: scale(1.01);
-            color: #1abc9c;
+            color: #1abc9c; /* Keep color change */
         }
         p {
             margin-top: 5px;
@@ -85,18 +83,21 @@
                 margin-top: 20px;
                 font-size: 1.2em;
             }
-
             a {
-            text-decoration: underline !important;
-            color: #0066cc !important;
-              }
-        
-            a[href]::after {
-            content: "" !important;
-                           }
+                text-decoration: underline !important;
+                color: #0066cc !important;
             }
+            a[href]::after {
+                content: "" !important;
+            }
+        }
         .experience-block {
             margin-bottom: 5px;
+            transition: transform 0.3s; /* Added transform transition */
+        }
+        .experience-block:hover {
+            transform: scale(1.01); /* Whole block zoom */
+            cursor: pointer;
         }
         .timeline {
             color: #1abc9c;
@@ -119,8 +120,8 @@
 
     <h2>Education</h2>
     <ul>
-        <li><strong>University of Ghana <span class="timeline">(Class of 2026)</span></strong> <br/>BSc. Computer Science </li>
-        <li><strong>Ghana Christian International High School <span class="timeline">(2019-2022)</span></strong> <br/><a href="https://drive.google.com/file/d/1MEFN4PJZVPf4Sl2HcfgZrEI_0UGOnvJE/view?usp=sharing">High School Diploma (SAT, WASSCE)</a><br/><a href="https://www.credly.com/badges/8e398e1c-1042-4fcc-b730-8d5af5a4846b/public_url" target="_blank">IC3 Digital Literacy Certification</a> </li>
+        <li><strong>University of Ghana <span class="timeline">(Class of 2026)</span></strong> <br>BSc. Computer Science </li>
+        <li><strong>Ghana Christian International High School <span class="timeline">(2019-2022)</span></strong> <br><a href="https://drive.google.com/file/d/1MEFN4PJZVPf4Sl2HcfgZrEI_0UGOnvJE/view?usp=sharing">High School Diploma (SAT, WASSCE)</a><br><a href="https://www.credly.com/badges/8e398e1c-1042-4fcc-b730-8d5af5a4846b/public_url" target="_blank">IC3 Digital Literacy Certification</a> </li>
     </ul>
 
     <h2>Technical Skills</h2>
@@ -169,8 +170,8 @@
     <h3>Data Management &amp; Research</h3>
     <h4>Volunteer Projects</h4>
     <ul>
-        <li>MMS Product Backlog & Analysis</li>
-        <li>Rabbit Farming Record Management & Industry Analysis</li>
+        <li>MMS Product Backlog &amp; Analysis</li>
+        <li>Rabbit Farming Record Management &amp; Industry Analysis</li>
     </ul>
     <h4>Freelance Projects</h4>
     <ul>
@@ -180,10 +181,10 @@
     </ul>
     <h4>Academic Projects</h4>
     <ul>
-        <li>MSOffice & Google Workspace Capstone Projects</li>
+        <li>MSOffice &amp; Google Workspace Capstone Projects</li>
     </ul>
 
-    <h3>Web & Mobile App Development</h3>
+    <h3>Web &amp; Mobile App Development</h3>
     <h4>Volunteer Projects</h4>
     <ul>
        <li><a href="https://github.com/oswaldamoah/mms">Member Management Service (MMS) - FFI</a></li>
@@ -204,6 +205,8 @@
     <p class="contact-info"><strong>Email: </strong><a href="mailto:oswaldamoah00@gmail.com" target="_blank">oswaldamoah00@gmail.com</a></p>
     <p class="contact-info"><strong>LinkedIn: </strong> <a href="https://www.linkedin.com/in/oswaldamoah" target="_blank">linkedin.com/in/oswaldamoah</a></p>
     <p class="contact-info"><strong>Other: </strong><a href="https://lnk.bio/oswaldamoah" target="_blank">lnk.bio/oswaldamoah</a></p>
-</div>
-</body>
-</html>
+</ul></div>
+
+
+
+</body></html>
