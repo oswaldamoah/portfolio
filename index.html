@@ -5,7 +5,9 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&amp;display=swap" rel="stylesheet">
     <style>
         body {
-
+            background-color: var(--bg-color);
+        color: var(--text-color);
+        transition: background-color 0.3s, color 0.3s;
             background-image: 
         radial-gradient(circle at 10% 20%, rgba(26, 188, 156, 0.1) 0%, transparent 50%),
         radial-gradient(circle at 90% 80%, rgba(52, 152, 219, 0.1) 0%, transparent 50%);
@@ -135,6 +137,76 @@
             text-overflow: ellipsis;
             max-width: 100%;
         }
+
+        :root {
+        --bg-color: #ffffff;
+        --text-color: #2c3e50;
+        --accent-color: #1abc9c;
+        --card-bg: rgba(255, 255, 255, 0.85);
+        --border-color: rgba(0, 0, 0, 0.1);
+    }
+
+    [data-theme="dark"] {
+        --bg-color: #1a1a1a;
+        --text-color: #f5f7fa;
+        --accent-color: #3498db;
+        --card-bg: rgba(26, 26, 26, 0.85);
+        --border-color: rgba(255, 255, 255, 0.1);
+    }
+
+    .theme-switcher {
+        position: fixed;
+        bottom: 30px;
+        right: 30px;
+        background: var(--card-bg);
+        backdrop-filter: blur(10px);
+        border: 1px solid var(--border-color);
+        border-radius: 50%;
+        width: 50px;
+        height: 50px;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        cursor: pointer;
+        box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
+        z-index: 1000;
+    }
+
+    .theme-icon {
+        position: absolute;
+        font-size: 1.5rem;
+        transition: opacity 0.3s, transform 0.3s;
+    }
+
+    .theme-icon:last-child {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+
+    [data-theme="dark"] .theme-icon:first-child {
+        opacity: 0;
+        transform: scale(0.5);
+    }
+
+    [data-theme="dark"] .theme-icon:last-child {
+        opacity: 1;
+        transform: scale(1);
+    }
+
+    .glass-panel {
+        background: var(--card-bg);
+        border: 1px solid var(--border-color);
+        color: var(--text-color);
+    }
+
+    /* Update existing elements to use CSS variables */
+    h1, h2, h3, h4 {
+        color: var(--text-color);
+    }
+
+    .timeline {
+        color: var(--accent-color);
+    }
     </style>
 </head>
 <body data-year="">
@@ -246,6 +318,26 @@
     <p class="contact-info"><strong>Other: </strong><a href="https://lnk.bio/oswaldamoah" target="_blank">lnk.bio/oswaldamoah</a></p>
 </div>
 
+<!-- Add this to your HTML -->
+<button id="theme-toggle" class="theme-switcher">
+    <span class="theme-icon">🌙</span>
+    <span class="theme-icon">☀️</span>
+</button>
+
+
+<script>
+    // Add this JavaScript
+    const themeToggle = document.getElementById('theme-toggle');
+    const currentTheme = localStorage.getItem('theme') || 'light';
+
+    document.body.setAttribute('data-theme', currentTheme);
+
+    themeToggle.addEventListener('click', () => {
+        const isDark = document.body.getAttribute('data-theme') === 'dark';
+        document.body.setAttribute('data-theme', isDark ? 'light' : 'dark');
+        localStorage.setItem('theme', isDark ? 'light' : 'dark');
+    });
+</script>
 
 
 </body></html>
