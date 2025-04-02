@@ -202,6 +202,16 @@
                 content: "" !important;
             }
         }
+         /* Ensure all text is black */
+    h1, h2, h3, h4, p, li {
+        color: black !important;
+    }
+    
+    /* Timeline color */
+    .timeline {
+        color: #1abc9c !important;
+    }
+}
     </style>
 </head>
 <body data-year="">
@@ -325,12 +335,29 @@
     const themeToggle = document.getElementById('theme-toggle');
     const currentTheme = localStorage.getItem('theme') || 'light';
 
+    // Apply theme
     document.body.setAttribute('data-theme', currentTheme);
 
+    // Theme toggle functionality
     themeToggle.addEventListener('click', () => {
         const isDark = document.body.getAttribute('data-theme') === 'dark';
         document.body.setAttribute('data-theme', isDark ? 'light' : 'dark');
         localStorage.setItem('theme', isDark ? 'light' : 'dark');
+    });
+
+    // Force light mode before printing
+    window.addEventListener('beforeprint', () => {
+        document.body.setAttribute('data-theme-print', document.body.getAttribute('data-theme'));
+        document.body.setAttribute('data-theme', 'light');
+    });
+
+    // Restore original theme after printing
+    window.addEventListener('afterprint', () => {
+        const originalTheme = document.body.getAttribute('data-theme-print');
+        if (originalTheme) {
+            document.body.setAttribute('data-theme', originalTheme);
+            document.body.removeAttribute('data-theme-print');
+        }
     });
 </script>
 </body>
