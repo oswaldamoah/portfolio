@@ -11,7 +11,6 @@ Welcome to my professional portfolio! Here, you’ll find a collection of my wor
 
 ## How to Navigate:
 - [**Portfolio Link**](http://oswaldamoah.github.io/portfolio/) – Visit here to explore my portfolio in detail.
-- [**Alternative Link**](http://oswaldamoah.tiiny.site) – Visit here to explore my portfolio in detail.
 
 Feel free to browse through the various sections to learn more about my experience and the work I’ve done. For any inquiries or collaboration opportunities, don’t hesitate to contact me.
 
