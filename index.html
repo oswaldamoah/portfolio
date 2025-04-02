@@ -85,7 +85,16 @@
                 margin-top: 20px;
                 font-size: 1.2em;
             }
-        }
+
+            a {
+            text-decoration: underline !important;
+            color: #0066cc !important;
+              }
+        
+            a[href]::after {
+            content: "" !important;
+                           }
+            }
         .experience-block {
             margin-bottom: 5px;
         }
