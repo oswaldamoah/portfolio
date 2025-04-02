@@ -5,6 +5,13 @@
     <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&amp;display=swap" rel="stylesheet">
     <style>
         body {
+
+            background-image: 
+        radial-gradient(circle at 10% 20%, rgba(26, 188, 156, 0.1) 0%, transparent 50%),
+        radial-gradient(circle at 90% 80%, rgba(52, 152, 219, 0.1) 0%, transparent 50%);
+    background-size: 400% 400%;
+    animation: gradientMove 15s ease infinite;
+
             font-family: 'Montserrat', sans-serif;
             margin: 0;
             padding: 20px;
@@ -86,6 +93,15 @@
             from { opacity: 0; }
             to { opacity: 1; }
         }
+
+        @keyframes slideIn {
+          from { opacity: 0; transform: translateY(50px); }
+          to { opacity: 1; transform: translateY(0); }
+      }
+
+.scroll-animate {
+    animation: slideIn 0.8s ease forwards;
+}
         
         @media print {
             body::after {
@@ -183,8 +199,8 @@
 <div class="project-block">
     <h4>Volunteer Projects</h4>
     <ul>
-        <li>MMS Product Backlog & Analysis</li>
-        <li>Rabbit Farming Record Management & Industry Analysis</li>
+        <li>MMS Product Backlog &amp; Analysis</li>
+        <li>Rabbit Farming Record Management &amp; Industry Analysis</li>
     </ul>
 </div>
 
@@ -200,11 +216,11 @@
 <div class="project-block">
     <h4>Academic Projects</h4>
     <ul>
-        <li>MSOffice & Google Workspace Capstone Projects</li>
+        <li>MSOffice &amp; Google Workspace Capstone Projects</li>
     </ul>
 </div>
 
-<h3>Web & Mobile App Development</h3>
+<h3>Web &amp; Mobile App Development</h3>
 <div class="project-block">
     <h4>Volunteer Projects</h4>
     <ul>
@@ -228,7 +244,7 @@
     <p class="contact-info"><strong>Email: </strong><a href="mailto:oswaldamoah00@gmail.com" target="_blank">oswaldamoah00@gmail.com</a></p>
     <p class="contact-info"><strong>LinkedIn: </strong> <a href="https://www.linkedin.com/in/oswaldamoah" target="_blank">linkedin.com/in/oswaldamoah</a></p>
     <p class="contact-info"><strong>Other: </strong><a href="https://lnk.bio/oswaldamoah" target="_blank">lnk.bio/oswaldamoah</a></p>
-</ul></div>
+</div>
 
 
 
