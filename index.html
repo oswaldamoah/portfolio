@@ -194,56 +194,49 @@
             transform: scale(1);
         }
 
-         .visually-hidden {
-                position: absolute;
-                width: 1px;
-                height: 1px;
-                padding: 0;
-                margin: -1px;
-                overflow: hidden;
-                clip: rect(0, 0, 0, 0);
-                white-space: nowrap;
-                border: 0;
-  }
+        .visually-hidden {
+            position: absolute;
+            width: 1px;
+            height: 1px;
+            padding: 0;
+            margin: -1px;
+            overflow: hidden;
+            clip: rect(0, 0, 0, 0);
+            white-space: nowrap;
+            border: 0;
+        }
 
         @media print {
             .theme-switcher {
                 display: none !important;
             }
-            
+
             body {
                 background-color: white !important;
                 color: black !important;
                 padding: 0;
             }
-            
+
             .container {
                 box-shadow: none !important;
                 padding: 10px !important;
             }
-            
+
             a {
                 color: #0066cc !important;
                 text-decoration: underline !important;
             }
-            
+
             a[href]::after {
                 content: "" !important;
             }
 
-            
+            .timeline {
+                color: #1abc9c !important;
+            }
         }
-     
-    
-    /* Timeline color */
-    .timeline {
-        color: #1abc9c !important;
-    }
-}
     </style>
 </head>
-<body data-year="">
-
 <body data-year="">
 
 <div class="container fade-in">
@@ -251,9 +244,9 @@
     <h3>Resume</h3>
 
     <h2>Profile Summary</h2>
-        <h2 class="visually-hidden">
-            African Tech Freelancer Available for Remote Work | Full-Stack Software Engineer, Research, Project Management, SaaS & Telecom Projects
-       </h2>
+    <h2 class="visually-hidden">
+        African Tech Freelancer Available for Remote Work | Full-Stack Software Engineer, Research, Project Management, SaaS & Telecom Projects
+    </h2>
     <p>I am <a href="https://www.linkedin.com/in/oswaldamoah/" target="_blank" rel="noopener noreferrer">Oswald Amoah</a>, a results-oriented resource with a strong background in technology and management.<br> I am currently pursuing a BSc. in Computer Science at the University of Ghana, and I aim to apply my skills to solve more real-world challenges</p>
 
     <h2>Education</h2>
@@ -264,8 +257,8 @@
 
     <h2>Technical Skills</h2>
     <h2 class="visually-hidden">Programming, Web Development, Mobile Apps, Project Management Data Analysis, AutoCAD, AI</h2>
-    <ul> 
-         <li><strong>Project Management:</strong> Jira, Trello, Communication, Problem-Solving</li>
+    <ul>
+        <li><strong>Project Management:</strong> Jira, Trello, Communication, Problem-Solving</li>
         <li><strong>Web Development:</strong> ReactJS, MongoDB, ExpressJS, NodeJS, <br> ASP.NET Core, SQL, AWS, API Development.</li>
         <li><strong>Mobile App Development:</strong> ReactNative, PWAs</li>
         <li><strong>Other Languages:</strong> C#, C++, Python, Javascript, Java</li>
@@ -275,95 +268,117 @@
 
     <h2>Experience</h2>
     <h2 class="visually-hidden">Professional Experience in Software Development, Research, and Project Leadership</h2>
+
     <div class="experience-block">
-    <h4>Technical Team Lead - Flourishing Field International <span class="timeline">(2020 - Present)</span></h4>
-    <p>Coordinate technical operations across data, multimedia, and software units. Led teams of 10–15 in structured weekly tasks, improving workflow clarity and execution. Developed a member management system that enhanced internal processes and automated communication</p>
-</div>
+        <h4>Technical Team Lead - Flourishing Field International <span class="timeline">(2020 - Present)</span></h4>
+        <p>Coordinate technical operations across data, multimedia, and software units. Led teams of 10–15 in structured weekly tasks, improving workflow clarity and execution. Developed a member management system that enhanced internal processes and automated communication</p>
+    </div>
 
-<div class="experience-block">
-    <h4>Product Manager - BitByBit <span class="timeline">(2023 - Present)</span></h4>
-    <p>Led product development initiatives across design and engineering teams, translating requirements into functional web experiences. Supported delivery by contributing full-stack development expertise, including a tailored routing system that streamlined operational workflows.</p>
-</div>
+    <div class="experience-block">
+        <h4>Product Manager - BitByBit <span class="timeline">(2023 - Present)</span></h4>
+        <p>Led product development initiatives across design and engineering teams, translating requirements into functional web experiences. Supported delivery by contributing full-stack development expertise, including a tailored routing system that streamlined operational workflows.</p>
+    </div>
 
-<div class="experience-block">
-    <h4>Technical Writer - Project Team, Department of Computer Science, University of Ghana <span class="timeline">(Oct. 2024 - Dec. 2024)</span></h4>
-    <p>Documented meetings, updated user stories/workflows, and created technical reports.</p>
-</div>
+    <div class="experience-block">
+        <h4>Technical Writer - Project Team, Department of Computer Science, University of Ghana <span class="timeline">(Oct. 2024 - Dec. 2024)</span></h4>
+        <p>Documented meetings, updated user stories/workflows, and created technical reports.</p>
+    </div>
 
-<div class="experience-block">
-    <h4>Software Development Intern - El Cuto Consult <span class="timeline">(2024)</span></h4>
-    <p>Implemented USSD services and ASP.NET CORE applications. Contributed to website updates.</p>
-</div>
+    <div class="experience-block">
+        <h4>Software Development Intern - El Cuto Consult <span class="timeline">(2024)</span></h4>
+        <p>Implemented USSD services and ASP.NET CORE applications. Contributed to website updates.</p>
+    </div>
 
-<div class="experience-block">
-    <h4>Intern - Headstarter AI Ghana <span class="timeline">(Nov. 2024 - March 2025)</span></h4>
-    <p>Software development with AI implementation focus. Work on personal projects with organizational support.</p>
-</div>
+    <div class="experience-block">
+        <h4>Intern - Headstarter AI Ghana <span class="timeline">(Nov. 2024 - March 2025)</span></h4>
+        <p>Software development with AI implementation focus. Work on personal projects with organizational support.</p>
+    </div>
 
-<div class="experience-block">
-    <h4>Freelancer - Project Palace <span class="timeline">(June 2025 - Present)</span></h4>
-    <p>I deliver high-quality results through effective client communication and thorough project documentation.</p>
-</div>
+    <div class="experience-block">
+        <h4>Freelancer - Project Palace <span class="timeline">(June 2025 - Present)</span></h4>
+        <p>I deliver high-quality results through effective client communication and thorough project documentation.</p>
+    </div>
 
-   <h2>Key Projects</h2>
+    <h2>Key Projects</h2>
 
-<div class="project-block">
-       <div class="project-block">
-    <h4>Contract Projects</h4>
-    <ul>
-       <li>
-  <details>
-    <summary>HomzAndKidz Store (2025)</summary>
-      <h2 class="visually-hidden">WooCommerce E-commerce Store in Ghana | Online Retail for Household & Kids Products</h2>
-    <p>Built and manage 
-      <a href="https://www.homzandkidz.store" target="_blank" rel="noopener noreferrer">HomzAndKidz Store</a>, 
-      an e-commerce platform offering household and kids’ products. Implemented WooCommerce integration, custom product filters, and automated order workflows to improve user experience and streamline operations.
-    </p>
-  </details>
-</li>
-<br>
-<li>
-  <details>
-       <h2 class="visually-hidden">FTTH Survey & AutoCAD GPON Design in Ghana | Civil-to-Cable Distance Automation Tool</h2>
-    <summary>MTN GPON Technical Survey & Network Design - GESL (2025-2026)</summary>
-    <p>Conducted Fibre-To-The-Home survey, led an AutoCAD network design team, and developed a 
-      <a href="https://github.com/oswaldamoah/civiltocable" target="_blank" rel="noopener noreferrer">civil-to-cable distance automation tool</a> 
-      to streamline broadband expansion for MTN’s GPON Project with GESL.
-    </p>
-  </details>
-</li>
- <br>
-<li>
-  <details>
-       <h2 class="visually-hidden">Gold Coast Cooking Class | Cooking Class In Ghana</h2>
-    <summary>Gold Coast Cooking Class Website (2026)</summary>
-    <p>Built and manage  <a href="https://goldcoastcookingclass.vercel.app/" target="_blank" rel="noopener noreferrer">Gold Coast Cooking Class</a>, a private Ghanaian culinary experience in Accra. 
-        Structured the service flow from market tours to hands-on cooking, organized customizable menu selections, 
-        and optimized booking via WhatsApp and email to create a seamless, high-conversion experience.
-    </p>
-  </details>
-</li>
-    </ul>
-</div>
-    
-    <h4>Volunteer Projects</h4>
-    <ul>
-        <li><a href="https://mindfulcircle.vercel.app/" target="_blank" rel="noopener noreferrer">Mindful Circle - Support Mental Health</a></li>
-        <li><a href="https://github.com/oswaldamoah/mms" target="_blank" rel="noopener noreferrer">Member Management Service (MMS) - FFI</a></li>
-    </ul>
-</div>
+    <div class="project-block">
+        <h4>Contract Projects</h4>
+        <ul>
+            <li>
+                <details>
+                    <summary>HomzAndKidz Store (2025)</summary>
+                    <h2 class="visually-hidden">WooCommerce E-commerce Store in Ghana | Online Retail for Household & Kids Products</h2>
+                    <p>Built and manage
+                        <a href="https://www.homzandkidz.store" target="_blank" rel="noopener noreferrer">HomzAndKidz Store</a>,
+                        an e-commerce platform offering household and kids' products. Implemented WooCommerce integration, custom product filters, and automated order workflows to improve user experience and streamline operations.
+                    </p>
+                </details>
+            </li>
+            <br>
+            <li>
+                <details>
+                    <summary>Omanye Aba Rentals &amp; Trading (2025)</summary>
+                    <h2 class="visually-hidden">Event Rental & Trading Platform in Ghana | Listings and Service Inquiries</h2>
+                    <p>Built and manage
+                        <a href="https://omanyeaba.com" target="_blank" rel="noopener noreferrer">Omanye Aba Rentals &amp; Trading</a>,
+                        an event rental and trading platform for listings and service inquiries. Designed for seamless browsing of available rentals and streamlined client communication.
+                    </p>
+                </details>
+            </li>
+            <br>
+            <li>
+                <details>
+                    <summary>HaddyandMe Store (2025)</summary>
+                    <h2 class="visually-hidden">Fashion & Lifestyle E-commerce Store | Clean Modern Shopping Experience</h2>
+                    <p>Built and manage
+                        <a href="https://haddyandme.com" target="_blank" rel="noopener noreferrer">HaddyandMe Store</a>,
+                        a fashion and lifestyle store with a clean, modern shopping experience. Focused on intuitive product discovery and a streamlined checkout flow.
+                    </p>
+                </details>
+            </li>
+            <br>
+            <li>
+                <details>
+                    <h2 class="visually-hidden">FTTH Survey & AutoCAD GPON Design in Ghana | Civil-to-Cable Distance Automation Tool</h2>
+                    <summary>MTN GPON Technical Survey &amp; Network Design - GESL (2025-2026)</summary>
+                    <p>Conducted Fibre-To-The-Home survey, led an AutoCAD network design team, and developed a
+                        <a href="https://github.com/oswaldamoah/civiltocable" target="_blank" rel="noopener noreferrer">civil-to-cable distance automation tool</a>
+                        to streamline broadband expansion for MTN's GPON Project with GESL.
+                    </p>
+                </details>
+            </li>
+            <br>
+            <li>
+                <details>
+                    <h2 class="visually-hidden">Gold Coast Cooking Class | Cooking Class In Ghana</h2>
+                    <summary>Gold Coast Cooking Class Website (2026)</summary>
+                    <p>Built and manage <a href="https://goldcoastcookingclass.vercel.app/" target="_blank" rel="noopener noreferrer">Gold Coast Cooking Class</a>, a private Ghanaian culinary experience in Accra.
+                        Structured the service flow from market tours to hands-on cooking, organized customizable menu selections,
+                        and optimized booking via WhatsApp and email to create a seamless, high-conversion experience.
+                    </p>
+                </details>
+            </li>
+        </ul>
+    </div>
 
- 
-<div class="project-block">
-    <h4>Personal Projects</h4>
-    <ul>
-        <li><a href="https://github.com/oswaldamoah/q-mgmt" target="_blank" rel="noopener noreferrer">Queue Management Embedded System</a></li>
-        <li><a href="https://github.com/oswaldamoah/free-plagiarism-checker" target="_blank" rel="noopener noreferrer">Free Plagiarism Checker</a></li>
-        <li><a href="https://github.com/oswaldamoah/UG-GradeReport" target="_blank" rel="noopener noreferrer">Student Grade Report Web App</a></li>
-        <li><a href="https://github.com/oswaldamoah/shopping-mobileapp" target="_blank" rel="noopener noreferrer">API-Integrated Shopping App</a></li>
-        <li><a href="https://github.com/MichaelAdadey/didiyie" target="_blank" rel="noopener noreferrer">Smart Restaurant Menu App</a></li>
-    </ul>
-</div>
+    <div class="project-block">
+        <h4>Volunteer Projects</h4>
+        <ul>
+            <li><a href="https://mindfulcircle.vercel.app/" target="_blank" rel="noopener noreferrer">Mindful Circle - Support Mental Health</a></li>
+            <li><a href="https://github.com/oswaldamoah/mms" target="_blank" rel="noopener noreferrer">Member Management Service (MMS) - FFI</a></li>
+        </ul>
+    </div>
+
+    <div class="project-block">
+        <h4>Personal Projects</h4>
+        <ul>
+            <li><a href="https://github.com/oswaldamoah/q-mgmt" target="_blank" rel="noopener noreferrer">Queue Management Embedded System</a></li>
+            <li><a href="https://github.com/oswaldamoah/free-plagiarism-checker" target="_blank" rel="noopener noreferrer">Free Plagiarism Checker</a></li>
+            <li><a href="https://github.com/oswaldamoah/UG-GradeReport" target="_blank" rel="noopener noreferrer">Student Grade Report Web App</a></li>
+            <li><a href="https://github.com/oswaldamoah/shopping-mobileapp" target="_blank" rel="noopener noreferrer">API-Integrated Shopping App</a></li>
+            <li><a href="https://github.com/MichaelAdadey/didiyie" target="_blank" rel="noopener noreferrer">Smart Restaurant Menu App</a></li>
+        </ul>
+    </div>
 
     <h2>Contact</h2>
     <p class="contact-info"><strong>Email: </strong><a href="mailto:oswaldamoah00@gmail.com" target="_blank" rel="noopener noreferrer">oswaldamoah00@gmail.com</a></p>
@@ -371,7 +386,6 @@
     <p class="contact-info"><strong>LinkedIn: </strong><a href="https://www.linkedin.com/in/oswaldamoah/" target="_blank" rel="noopener noreferrer">Oswald Amoah</a></p>
     <p class="contact-info"><strong>Other Links: </strong><a href="https://lnk.bio/oswaldamoah" target="_blank" rel="noopener noreferrer">lnk.bio/oswaldamoah</a></p>
 </div>
-
 
 <button id="theme-toggle" class="theme-switcher">
     <span class="theme-icon">🌙</span>
@@ -382,23 +396,19 @@
     const themeToggle = document.getElementById('theme-toggle');
     const currentTheme = localStorage.getItem('theme') || 'light';
 
-    // Apply theme
     document.body.setAttribute('data-theme', currentTheme);
 
-    // Theme toggle functionality
     themeToggle.addEventListener('click', () => {
         const isDark = document.body.getAttribute('data-theme') === 'dark';
         document.body.setAttribute('data-theme', isDark ? 'light' : 'dark');
         localStorage.setItem('theme', isDark ? 'light' : 'dark');
     });
 
-    // Force light mode before printing
     window.addEventListener('beforeprint', () => {
         document.body.setAttribute('data-theme-print', document.body.getAttribute('data-theme'));
         document.body.setAttribute('data-theme', 'light');
     });
 
-    // Restore original theme after printing
     window.addEventListener('afterprint', () => {
         const originalTheme = document.body.getAttribute('data-theme-print');
         if (originalTheme) {
@@ -409,26 +419,3 @@
 </script>
 </body>
 </html>
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
