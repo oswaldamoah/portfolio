@@ -1,128 +1,173 @@
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <meta charset="UTF-8">
-    <link rel="icon" type="image/png" href="https://www.svgrepo.com/show/406076/letter-o.svg">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <link rel="icon" type="image/png"
+          href="https://www.svgrepo.com/show/406076/letter-o.svg">
+
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0">
+
     <title>Oswald Amoah | Resume</title>
-    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap" rel="stylesheet">
 
-    <!--- Google Console Verification --->
-    <meta name="google-site-verification" content="CFOrdiXA5SIOw6beiqY7fPKrm1OUP-Wq5IKVzB5YQ40" />
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;700&display=swap"
+          rel="stylesheet">
 
-    <!-- ✅ SEO Meta Tags -->
-    <meta name="description" content="Portfolio and resume of Oswald Amoah, a full-stack developer and project lead skilled in web development, mobile apps, AutoCAD design, data management, AI, and project leadership.">
-    <meta name="keywords" content="Oswald Amoah, developer, software engineer, fullstack, web developer, mobile app developer, project manager, project lead, Ghana, Africa ReactJS, NodeJS, Python, Java, C++, AutoCAD, FTTH, GPON, AI, e-commerce, WooCommerce, Ghana, resume, portfolio">
-    <meta name="author" content="Oswald Amoah">
+    <!-- Google Verification -->
+    <meta name="google-site-verification"
+          content="CFOrdiXA5SIOw6beiqY7fPKrm1OUP-Wq5IKVzB5YQ40" />
 
-    <!-- Open Graph for social/SEO -->
-    <meta property="og:title" content="Oswald Amoah | Developer Portfolio">
-    <meta property="og:description" content="Explore the projects and resume of Oswald Amoah, a full-stack developer specializing in web, mobile, AI, and technical design.">
-    <meta property="og:type" content="website">
-    <meta property="og:url" content="https://oswaldamoah.github.io/portfolio/">
-    <meta property="og:image" content="https://www.svgrepo.com/show/406076/letter-o.svg">
+    <!-- SEO -->
+    <meta name="description"
+          content="Portfolio and resume of Oswald Amoah, a full-stack developer and project lead skilled in web development, mobile apps, AutoCAD design, AI, and project leadership.">
+
+    <meta name="keywords"
+          content="Oswald Amoah, developer, software engineer, fullstack, web developer, mobile app developer, project manager, ReactJS, NodeJS, Python, Ghana">
+
+    <meta name="author"
+          content="Oswald Amoah">
+
+    <!-- Open Graph -->
+    <meta property="og:title"
+          content="Oswald Amoah | Developer Portfolio">
+
+    <meta property="og:description"
+          content="Explore the projects and resume of Oswald Amoah, a full-stack developer specializing in web, mobile, AI, and technical design.">
+
+    <meta property="og:type"
+          content="website">
+
+    <meta property="og:url"
+          content="https://oswaldamoah.github.io/portfolio/">
+
+    <meta property="og:image"
+          content="https://www.svgrepo.com/show/406076/letter-o.svg">
+
+        <script src="https://cdn.jsdelivr.net/npm/docx@8.5.0/build/index.umd.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jszip/3.10.1/jszip.min.js"></script>
 
     <style>
+
         :root {
-            --bg-color: #f5f7fa;
-            --text-color: #2c3e50;
-            --accent-color: #1abc9c;
-            --card-bg: #ffffff;
-            --border-color: rgba(0, 0, 0, 0.1);
-            --container-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
-            --timeline-color: #1abc9c;
-            --h1-color: #2c3e50;
-            --h2-border: #1abc9c;
-            --h4-hover: #1abc9c;
+            --bg-color: #eef2f7;
+            --bg-accent: #dde7f2;
+            --text-color: #1f2937;
+            --muted-text: #5f6b7a;
+            --accent-color: #0e8f7d;
+            --accent-strong: #0a6e61;
+            --card-bg: rgba(255,255,255,0.86);
+            --card-solid: #ffffff;
+            --border-color: rgba(15, 23, 42, 0.08);
+            --container-shadow: 0 18px 50px rgba(15, 23, 42, 0.12);
+            --soft-shadow: 0 10px 30px rgba(15, 23, 42, 0.10);
         }
 
         [data-theme="dark"] {
-            --bg-color: #121212;
-            --text-color: #e0e0e0;
-            --accent-color: #3498db;
-            --card-bg: #1e1e1e;
-            --border-color: rgba(255, 255, 255, 0.1);
-            --container-shadow: 0 2px 10px rgba(0, 0, 0, 0.3);
-            --timeline-color: #3498db;
-            --h1-color: #f5f7fa;
-            --h2-border: #3498db;
-            --h4-hover: #3498db;
+            --bg-color: #0b1220;
+            --bg-accent: #111827;
+            --text-color: #ecf0f6;
+            --muted-text: #a7b0be;
+            --accent-color: #5ad1bf;
+            --accent-strong: #8ee7da;
+            --card-bg: rgba(17, 24, 39, 0.82);
+            --card-solid: #111827;
+            --border-color: rgba(255,255,255,0.09);
+            --container-shadow: 0 22px 60px rgba(0,0,0,0.42);
+            --soft-shadow: 0 12px 32px rgba(0,0,0,0.30);
+        }
+
+        * {
+            box-sizing: border-box;
         }
 
         body {
             font-family: 'Montserrat', sans-serif;
             margin: 0;
-            padding: 20px;
-            background-color: var(--bg-color);
+            min-height: 100vh;
+            padding: 16px;
+            background:
+                radial-gradient(circle at top left, var(--bg-accent), transparent 34%),
+                radial-gradient(circle at bottom right, rgba(14, 143, 125, 0.16), transparent 28%),
+                var(--bg-color);
             color: var(--text-color);
-            transition: background-color 0.3s, color 0.3s;
+            transition: background 0.3s ease, color 0.3s ease;
+        }
+
+        .container {
+            max-width: 1000px;
+            margin: auto;
+            background: var(--card-bg);
+            backdrop-filter: blur(18px);
+            border: 1px solid var(--border-color);
+            border-radius: 28px;
+            padding: 24px;
+            box-shadow: var(--container-shadow);
         }
 
         h1 {
             text-align: center;
-            color: var(--h1-color);
-            font-size: 2.5em;
-            margin-bottom: 10px;
-            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.1);
+            margin: 0 0 6px;
+            font-size: clamp(2.2rem, 7vw, 3.4rem);
+            letter-spacing: -0.03em;
         }
 
         h3 {
             text-align: center;
-            color: var(--text-color);
-            margin: 5px 0 10px 0;
+            color: var(--muted-text);
+            font-weight: 500;
+            margin-top: 0;
+            margin-bottom: 28px;
         }
 
         h2 {
-            color: var(--text-color);
-            border-bottom: 2px solid var(--h2-border);
-            padding-bottom: 5px;
-            margin-top: 15px;
-            margin-bottom: 0;
+            margin-top: 34px;
+            margin-bottom: 14px;
+            padding-bottom: 10px;
+            border-bottom: 1px solid var(--border-color);
+            position: relative;
+        }
+
+        h2::after {
+            content: "";
+            position: absolute;
+            left: 0;
+            bottom: -1px;
+            width: 78px;
+            height: 3px;
+            border-radius: 999px;
+            background: linear-gradient(90deg, var(--accent-color), var(--accent-strong));
         }
 
         h4 {
-            color: var(--text-color);
-            margin: 5px 0 0 0;
-            transition: color 0.3s;
-        }
-
-        h4:hover {
-            color: var(--h4-hover);
-        }
-
-        p {
-            margin-top: 5px;
-            margin-bottom: 10px;
-        }
-
-        ul {
-            list-style-type: none;
-            padding-left: 0;
-            padding-bottom: 2px;
-            margin-top: 5px;
-        }
-
-        li {
             margin-bottom: 5px;
         }
 
-        .container {
-            max-width: 900px;
-            margin: 0 auto;
-            background-color: var(--card-bg);
-            padding: 20px;
-            box-shadow: var(--container-shadow);
-            border-radius: 8px;
-            transition: background-color 0.3s, box-shadow 0.3s;
+        p {
+            line-height: 1.7;
+            color: var(--muted-text);
         }
 
-        .project-block {
-            transition: transform 0.3s;
-            margin-bottom: 15px;
+        a {
+            color: var(--accent-color);
+            text-decoration: none;
         }
 
-        .project-block:hover {
-            transform: scale(1.01);
-            cursor: pointer;
+        a:hover {
+            text-decoration: underline;
+        }
+
+        ul {
+            padding-left: 18px;
+        }
+
+        li {
+            margin-bottom: 10px;
+        }
+
+        .timeline {
+            color: var(--accent-color);
+            font-weight: bold;
         }
 
         .experience-block {
@@ -135,63 +180,31 @@
             cursor: pointer;
         }
 
-        .timeline {
-            color: var(--timeline-color);
-            font-weight: bold;
-            white-space: nowrap;
-            overflow: hidden;
-            text-overflow: ellipsis;
-            max-width: 100%;
-        }
-
-        a {
-            color: var(--accent-color);
-            text-decoration: none;
+        h4 {
+            color: var(--text-color);
+            margin: 5px 0 0 0;
             transition: color 0.3s;
         }
 
-        a:hover {
-            text-decoration: underline;
+        h4:hover {
+            color: var(--h4-hover);
         }
 
-        .theme-switcher {
-            position: fixed;
-            bottom: 30px;
-            right: 30px;
-            background: var(--card-bg);
-            backdrop-filter: blur(10px);
-            border: 1px solid var(--border-color);
-            border-radius: 50%;
-            width: 50px;
-            height: 50px;
+        .experience-block h4 {
             display: flex;
-            align-items: center;
-            justify-content: center;
-            cursor: pointer;
-            box-shadow: 0 4px 30px rgba(0, 0, 0, 0.1);
-            z-index: 1000;
-            transition: all 0.3s;
+            flex-wrap: wrap;
+            align-items: baseline;
+            gap: 4px;
         }
 
-        .theme-icon {
-            position: absolute;
-            font-size: 1.5rem;
-            transition: opacity 0.3s, transform 0.3s;
+        .experience-title {
+            display: inline;
         }
 
-        .theme-icon:last-child {
-            opacity: 0;
-            transform: scale(0.5);
-        }
-
-        [data-theme="dark"] .theme-icon:first-child {
-            opacity: 0;
-            transform: scale(0.5);
-        }
-
-        [data-theme="dark"] .theme-icon:last-child {
-            opacity: 1;
-            transform: scale(1);
+        .experience-date {
+            display: inline-block;
+            white-space: nowrap;
+            flex-shrink: 0;
         }
 
         .visually-hidden {
@@ -206,216 +219,1141 @@
             border: 0;
         }
 
-        @media print {
-            .theme-switcher {
-                display: none !important;
-            }
+        .experience-block p {
+            margin-top: 5px;
+            margin-bottom: 10px;
+            line-height: 1.7;
+        }
 
-            body {
-                background-color: white !important;
-                color: black !important;
-                padding: 0;
-            }
+        .theme-switcher {
+            position: fixed;
+            bottom: 25px;
+            right: 25px;
+            width: 55px;
+            height: 55px;
+            border-radius: 50%;
+            border: none;
+            background: var(--card-bg);
+            color: var(--text-color);
+            font-size: 1.3rem;
+            cursor: pointer;
+            box-shadow: var(--container-shadow);
+            z-index: 999;
+        }
+
+        /* =========================
+           PARTNERS
+        ========================= */
+
+        .partners-section {
+            margin-top: 42px;
+        }
+
+        .partners-wrapper {
+            position: relative;
+            overflow: hidden;
+            margin-top: 18px;
+            padding: 12px 6px 8px;
+            border-radius: 26px;
+            border: 1px solid var(--border-color);
+            background: linear-gradient(180deg, rgba(255,255,255,0.32), rgba(255,255,255,0.08));
+        }
+
+        .partners-track {
+            display: flex;
+            gap: 14px;
+            justify-content: space-around;
+            overflow-x: auto;
+            scroll-snap-type: x mandatory;
+            scroll-behavior: smooth;
+            touch-action: pan-x;
+            -ms-overflow-style: none;
+            scrollbar-width: none;
+            padding: 6px 14px 14px;
+        }
+
+        .partners-track::-webkit-scrollbar {
+            display: none;
+        }
+
+        .partner-card {
+            min-width: min(60vw, 290px);
+            max-width: min(60vw, 290px);
+            background: linear-gradient(180deg, rgba(255,255,255,0.94), rgba(243,246,250,0.92));
+            border: 1px solid var(--border-color);
+            border-radius: 22px;
+            overflow: hidden;
+            cursor: pointer;
+            flex-shrink: 0;
+            transition: transform 0.28s ease, box-shadow 0.28s ease, border-color 0.28s ease;
+            box-shadow: var(--soft-shadow);
+            scroll-snap-align: start;
+            position: relative;
+        }
+
+        .partner-card:hover {
+            transform: translateY(-4px);
+            box-shadow: var(--container-shadow);
+            border-color: rgba(14, 143, 125, 0.24);
+        }
+
+        .partner-card:active {
+            transform: scale(0.98);
+        }
+
+        .partner-card::after {
+            content: "";
+            position: absolute;
+            inset: 0;
+            background: linear-gradient(180deg, rgba(14, 143, 125, 0.08), transparent 42%);
+            pointer-events: none;
+        }
+
+        .partner-image {
+            width: 100%;
+            height: 160px;
+            object-fit: contain;
+            padding: 18px;
+            background: linear-gradient(180deg, #ffffff, #eef4f8);
+        }
+
+        .partner-image.logo-fit {
+            padding: 22px;
+            object-fit: contain;
+        }
+
+        .partner-content {
+            padding: 16px 16px 18px;
+        }
+
+        .partner-content h4 {
+            margin: 0;
+            font-size: 1.02rem;
+        }
+
+        .partner-content p {
+            margin: 8px 0 0;
+            color: var(--muted-text);
+            font-size: 0.92rem;
+        }
+
+        .carousel-btn {
+            position: absolute;
+            top: calc(50% - 6px);
+            transform: translateY(-50%);
+            z-index: 20;
+            width: 44px;
+            height: 44px;
+            border-radius: 50%;
+            border: none;
+            background: rgba(255,255,255,0.88);
+            color: var(--text-color);
+            cursor: pointer;
+            box-shadow: var(--soft-shadow);
+            font-size: 1rem;
+            backdrop-filter: blur(10px);
+        }
+
+        .carousel-btn.left {
+            left: 5px;
+        }
+
+        .carousel-btn.right {
+            right: 5px;
+        }
+
+        /* =========================
+           MODAL
+        ========================= */
+
+        .project-modal {
+            position: fixed;
+            inset: 0;
+            background: rgba(15, 23, 42, 0.72);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            padding: 20px;
+            z-index: 9999;
+        }
+
+        .project-modal.active {
+            display: flex;
+        }
+
+        .modal-content {
+            background: var(--card-bg);
+            width: 100%;
+            max-width: 560px;
+            border-radius: 26px;
+            overflow: hidden;
+            position: relative;
+            max-height: 90vh;
+            overflow-y: auto;
+            border: 1px solid var(--border-color);
+            box-shadow: var(--container-shadow);
+        }
+
+        .modal-image {
+            width: 100%;
+            height: 200px;
+            object-fit: contain;
+            padding: 18px;
+            background: linear-gradient(180deg, #ffffff, #edf3f8);
+        }
+
+        .modal-body {
+            padding: 22px 22px 24px;
+        }
+
+        .modal-close {
+            position: absolute;
+            top: 14px;
+            right: 14px;
+            width: 42px;
+            height: 42px;
+            border: none;
+            border-radius: 50%;
+            background: rgba(15,23,42,0.62);
+            color: white;
+            cursor: pointer;
+            font-size: 1.1rem;
+        }
+
+        .visit-btn {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            margin-top: 18px;
+            background: linear-gradient(135deg, var(--accent-color), var(--accent-strong));
+            color: white;
+            padding: 13px 20px;
+            border-radius: 14px;
+            font-weight: bold;
+            min-width: 180px;
+        }
+
+        .visit-btn:hover {
+            opacity: 0.9;
+            text-decoration: none;
+        }
+
+        .project-list {
+            list-style: none;
+            padding-left: 0;
+            margin: 14px 0 0;
+            display: grid;
+            gap: 12px;
+        }
+
+        .project-list li {
+            margin: 0;
+        }
+
+        .project-list a {
+            display: block;
+            padding: 14px 16px;
+            border: 1px solid var(--border-color);
+            border-radius: 14px;
+            background: rgba(255,255,255,0.44);
+            color: var(--text-color);
+            transition: transform 0.25s ease, box-shadow 0.25s ease, border-color 0.25s ease;
+            box-shadow: 0 8px 20px rgba(15, 23, 42, 0.05);
+        }
+
+        .project-list a:hover {
+            transform: translateY(-2px);
+            border-color: rgba(14, 143, 125, 0.22);
+            box-shadow: var(--soft-shadow);
+            text-decoration: none;
+        }
+
+        [data-theme="dark"] .project-list a {
+            background: rgba(17, 24, 39, 0.5);
+        }
+
+        .section-note {
+            color: var(--muted-text);
+            font-size: 0.92rem;
+            margin-top: -6px;
+            margin-bottom: 4px;
+        }
+
+        @media(max-width:768px) {
 
             .container {
-                box-shadow: none !important;
-                padding: 10px !important;
+                padding: 18px;
+                border-radius: 24px;
             }
 
-            a {
-                color: #0066cc !important;
-                text-decoration: underline !important;
+            h1 {
+                font-size: 2.3rem;
             }
 
-            a[href]::after {
-                content: "" !important;
+            .partners-wrapper {
+                padding: 10px 4px 8px;
             }
 
-            .timeline {
-                color: #1abc9c !important;
+            .partners-track {
+                padding: 8px 14px 12px;
+            }
+
+            .partner-card {
+                min-width: 60vw;
+                max-width: 60vw;
+            }
+
+            .partner-image {
+                height: 150px;
+            }
+
+            .modal-image {
+                height: 170px;
+            }
+
+            .modal-body {
+                padding: 20px;
+            }
+
+            .visit-btn {
+                width: 100%;
             }
         }
+
+        @media(min-width:769px) {
+            .container {
+                padding: 34px;
+            }
+
+            .partner-card {
+                min-width: 260px;
+                max-width: 260px;
+            }
+
+            .partner-image {
+                height: 180px;
+            }
+        }
+
     </style>
 </head>
-<body data-year="">
 
-<div class="container fade-in">
+<body data-theme="light">
+
+<div class="container">
+
     <h1>Oswald Amoah</h1>
-    <h3>Resume</h3>
+    <h3><b>Portfolio</b></h3>
 
     <h2>Profile Summary</h2>
-    <h2 class="visually-hidden">
-        African Tech Freelancer Available for Remote Work | Full-Stack Software Engineer, Research, Project Management, SaaS & Telecom Projects
-    </h2>
-    <p>I am <a href="https://www.linkedin.com/in/oswaldamoah/" target="_blank" rel="noopener noreferrer">Oswald Amoah</a>, a results-oriented resource with a strong background in technology and management.<br> I am currently pursuing a BSc. in Computer Science at the University of Ghana, and I aim to apply my skills to solve more real-world challenges</p>
-
-    <h2>Education</h2>
-    <ul>
-        <li><strong>University of Ghana <span class="timeline">(Class of 2026)</span></strong> <br>BSc. Computer Science </li>
-        <li><strong>Ghana Christian International High School <span class="timeline">(2019-2022)</span></strong> <br><a href="https://drive.google.com/file/d/1MEFN4PJZVPf4Sl2HcfgZrEI_0UGOnvJE/" target="_blank" rel="noopener noreferrer">High School Diploma (SAT, WASSCE)</a><br><a href="https://www.credly.com/badges/8e398e1c-1042-4fcc-b730-8d5af5a4846b/public_url" target="_blank" rel="noopener noreferrer">IC3 Digital Literacy Certification</a> </li>
-    </ul>
+    <h2 class="visually-hidden">African Tech Developer Available for Remote Work | Full-Stack Software Engineer, Research, Project Management, SaaS & Telecom Projects</h2>
+    <p>
+        I am
+        <a href="https://www.linkedin.com/in/oswaldamoah/"
+           target="_blank" rel="noopener noreferrer">
+            Oswald Amoah
+        </a>,
+        a results-oriented resource with a strong background in technology and management.<br>
+        I am currently pursuing a BSc. in Computer Science at the University of Ghana, and I aim to apply my skills to solve more real-world challenges.
+    </p>
 
     <h2>Technical Skills</h2>
-    <h2 class="visually-hidden">Programming, Web Development, Mobile Apps, Project Management Data Analysis, AutoCAD, AI</h2>
+    <h2 class="visually-hidden">Programming, Web Development, Mobile Apps, Project Management, Data Analysis, AutoCAD, AI</h2>
+
     <ul>
         <li><strong>Project Management:</strong> Jira, Trello, Communication, Problem-Solving</li>
-        <li><strong>Web Development:</strong> ReactJS, MongoDB, ExpressJS, NodeJS, <br> ASP.NET Core, SQL, AWS, API Development.</li>
+        <li><strong>Web Development:</strong> ReactJS, MongoDB, ExpressJS, NodeJS,<br>ASP.NET Core, SQL, AWS, API Development.</li>
         <li><strong>Mobile App Development:</strong> ReactNative, PWAs</li>
         <li><strong>Other Languages:</strong> C#, C++, Python, Javascript, Java</li>
         <li><strong>Other Skills:</strong> AutoCAD, Research</li>
         <li><strong>Office Productivity Tools:</strong> Microsoft Office Suite, Google Workspace</li>
     </ul>
 
+     <h2>Education</h2>
+    <ul>
+        <li><strong>University of Ghana <span class="timeline">(Class of 2026)</span></strong><br>BSc. Computer Science</li>
+        <li><strong>Ghana Christian International High School <span class="timeline">(2019-2022)</span></strong><br><a href="https://drive.google.com/file/d/1MEFN4PJZVPf4Sl2HcfgZrEI_0UGOnvJE/" target="_blank" rel="noopener noreferrer">High School Diploma (SAT, WASSCE)</a><br><a href="https://www.credly.com/badges/8e398e1c-1042-4fcc-b730-8d5af5a4846b/public_url" target="_blank" rel="noopener noreferrer">IC3 Digital Literacy Certification</a></li>
+    </ul>
+
     <h2>Experience</h2>
     <h2 class="visually-hidden">Professional Experience in Software Development, Research, and Project Leadership</h2>
 
     <div class="experience-block">
-        <h4>Technical Team Lead - Flourishing Field International <span class="timeline">(2020 - Present)</span></h4>
-        <p>Coordinate technical operations across data, multimedia, and software units. Led teams of 10–15 in structured weekly tasks, improving workflow clarity and execution. Developed a member management system that enhanced internal processes and automated communication</p>
+        <h4><span class="experience-title">Technical Team Lead - Flourishing Field International</span> <span class="timeline experience-date">(2020 - Present)</span></h4>
+        <p>Coordinate technical operations across data, multimedia, and software units. Led teams of 10–15 in structured weekly tasks, improving workflow clarity and execution. Developed a member management system that enhanced internal processes and automated communication.</p>
     </div>
 
     <div class="experience-block">
-        <h4>Product Manager - BitByBit <span class="timeline">(2023 - Present)</span></h4>
+        <h4><span class="experience-title">Product Manager - BitByBit</span> <span class="timeline experience-date">(2023 - Present)</span></h4>
         <p>Led product development initiatives across design and engineering teams, translating requirements into functional web experiences. Supported delivery by contributing full-stack development expertise, including a tailored routing system that streamlined operational workflows.</p>
     </div>
 
     <div class="experience-block">
-        <h4>Technical Writer - Project Team, Department of Computer Science, University of Ghana <span class="timeline">(Oct. 2024 - Dec. 2024)</span></h4>
+        <h4><span class="experience-title">Technical Writer - Project Team, Department of Computer Science, University of Ghana</span> <span class="timeline experience-date">(Oct. 2024 - Dec. 2024)</span></h4>
         <p>Documented meetings, updated user stories/workflows, and created technical reports.</p>
     </div>
 
     <div class="experience-block">
-        <h4>Software Development Intern - El Cuto Consult <span class="timeline">(2024)</span></h4>
+        <h4><span class="experience-title">Software Development Intern - El Cuto Consult</span> <span class="timeline experience-date">(2024)</span></h4>
         <p>Implemented USSD services and ASP.NET CORE applications. Contributed to website updates.</p>
     </div>
 
     <div class="experience-block">
-        <h4>Intern - Headstarter AI Ghana <span class="timeline">(Nov. 2024 - March 2025)</span></h4>
+        <h4><span class="experience-title">Intern - Headstarter AI Ghana</span> <span class="timeline experience-date">(Nov. 2024 - March 2025)</span></h4>
         <p>Software development with AI implementation focus. Work on personal projects with organizational support.</p>
     </div>
 
     <div class="experience-block">
-        <h4>Freelancer - Project Palace <span class="timeline">(June 2025 - Present)</span></h4>
+        <h4><span class="experience-title">Freelancer - Project Palace</span> <span class="timeline experience-date">(June 2025 - Present)</span></h4>
         <p>I deliver high-quality results through effective client communication and thorough project documentation.</p>
     </div>
 
-    <h2>Key Projects</h2>
+    <!-- =========================
+         PARTNERS SECTION
+    ========================== -->
 
-    <div class="project-block">
-        <h4>Contract Projects</h4>
-        <ul>
-              <li>
-                <details>
-                    <h2 class="visually-hidden">FTTH Survey & AutoCAD GPON Design in Ghana | Civil-to-Cable Distance Automation Tool</h2>
-                    <summary>MTN GPON Technical Survey &amp; Network Design - GESL (2025-2026)</summary>
-                    <p>Conducted Fibre-To-The-Home survey, led an AutoCAD network design team, and developed a
-                        <a href="https://github.com/oswaldamoah/civiltocable" target="_blank" rel="noopener noreferrer">civil-to-cable distance automation tool</a>
-                        to streamline broadband expansion for MTN's GPON Project with GESL.
-                    </p>
-                </details>
-            </li>
-            <li>
-                <details>
-                    <summary>HomzAndKidz Store (2025)</summary>
-                    <h2 class="visually-hidden">WooCommerce E-commerce Store in Ghana | Online Retail for Household & Kids Products</h2>
-                    <p>Built and manage
-                        <a href="https://www.homzandkidz.store" target="_blank" rel="noopener noreferrer">HomzAndKidz Store</a>,
-                        an e-commerce platform offering household and kids' products. Implemented WooCommerce integration, custom product filters, and automated order workflows to improve user experience and streamline operations.
-                    </p>
-                </details>
-            </li>
-            <br>
-            <li>
-                <details>
-                    <summary>Omanye Aba Rentals &amp; Trading (2026)</summary>
-                    <h2 class="visually-hidden">Event Rental & Trading Platform in Ghana | Listings and Service Inquiries</h2>
-                    <p>Built and manage
-                        <a href="https://omanyeaba.com" target="_blank" rel="noopener noreferrer">Omanye Aba Rentals &amp; Trading</a>,
-                        an event rental and trading platform for listings and service inquiries. Designed for seamless browsing of available rentals and streamlined client communication.
-                    </p>
-                </details>
-            </li>
-            <li>
-                <details>
-                    <summary>HaddyandMe Store (2026)</summary>
-                    <h2 class="visually-hidden">Fashion & Lifestyle E-commerce Store | Clean Modern Shopping Experience</h2>
-                    <p>Built and manage
-                        <a href="https://haddyandme.com" target="_blank" rel="noopener noreferrer">HaddyandMe Store</a>,
-                        a fashion and lifestyle store with a clean, modern shopping experience. Focused on intuitive product discovery and a streamlined checkout flow.
-                    </p>
-                </details>
-            </li>
-            <br>
-          
-            <br>
-            <li>
-                <details>
-                    <h2 class="visually-hidden">Gold Coast Cooking Class | Cooking Class In Ghana</h2>
-                    <summary>Gold Coast Cooking Class Website (2026)</summary>
-                    <p>Built and manage <a href="https://goldcoastcookingclass.vercel.app/" target="_blank" rel="noopener noreferrer">Gold Coast Cooking Class</a>, a private Ghanaian culinary experience in Accra.
-                        Structured the service flow from market tours to hands-on cooking, organized customizable menu selections,
-                        and optimized booking via WhatsApp and email to create a seamless, high-conversion experience.
-                    </p>
-                </details>
-            </li>
-        </ul>
+    <div class="partners-section">
+
+        <h2>Key Projects</h2>
+
+        <div class="partners-wrapper">
+
+            <button class="carousel-btn left">&#10094;</button>
+
+            <div class="partners-track" id="partnersTrack">
+
+                <!-- CARD -->
+                <div class="partner-card"
+                     data-title="MTN GPON Technical Survey & Network Design"
+                     data-description="Conducted Fibre-To-The-Home survey, led an AutoCAD network design team, and developed a civil-to-cable distance automation tool to streamline broadband expansion for MTN's GPON Project with GESL."
+                     data-link="https://github.com/oswaldamoah/civiltocable"
+                     data-image="https://upload.wikimedia.org/wikipedia/commons/9/93/New-mtn-logo.jpg">
+
+                    <img class="partner-image"
+                         src="https://upload.wikimedia.org/wikipedia/commons/9/93/New-mtn-logo.jpg">
+
+                    <div class="partner-content">
+                        <h4>MTN GPON</h4>
+                        <p>Survey & Network Design</p>
+                    </div>
+                </div>
+
+                <!-- CARD -->
+                <div class="partner-card"
+                     data-title="HomzAndKidz Store"
+                     data-description="Built and manage an e-commerce platform offering household and kids products with WooCommerce integration and custom workflows."
+                     data-link="https://www.homzandkidz.store"
+                     data-image="https://homzandkidz.store/wp-content/uploads/2025/04/HOMZKIDZ_logo_final_final-01__1_-removebg-preview.svg">
+
+                    <img class="partner-image"
+                         src="https://homzandkidz.store/wp-content/uploads/2025/04/HOMZKIDZ_logo_final_final-01__1_-removebg-preview.svg">
+
+                    <div class="partner-content">
+                        <h4>HomzAndKidz</h4>
+                        <p>E-commerce Store</p>
+                    </div>
+                </div>
+
+                <!-- CARD -->
+                <div class="partner-card"
+                     data-title="Omanye Aba Rentals & Trading"
+                     data-description="Built and manage an event rental and trading platform for listings and service inquiries."
+                     data-link="https://omanyeaba.com"
+                     data-image="https://omanyeaba.com/wp-content/uploads/2025/11/cropped-cropped-cropped-cropped-cropped-download-73-1.png">
+
+                    <img class="partner-image"
+                        src="https://omanyeaba.com/wp-content/uploads/2025/11/cropped-cropped-cropped-cropped-cropped-download-73-1.png"
+                        alt="Omanye Aba logo">
+
+                    <div class="partner-content">
+                        <h4>Omanye Aba</h4>
+                        <p>Rentals Platform</p>
+                    </div>
+                </div>
+
+                <!-- CARD -->
+                <div class="partner-card"
+                     data-title="HaddyandMe Store"
+                     data-description="Fashion and lifestyle shopping experience focused on intuitive product discovery."
+                     data-link="https://haddyandme.com"
+                     data-image="https://haddyandme.com/assets/logo-dark-CgBvOjj3.png">
+
+                    <img class="partner-image"
+                         src="https://haddyandme.com/assets/logo-dark-CgBvOjj3.png">
+
+                    <div class="partner-content">
+                        <h4>HaddyandMe</h4>
+                        <p>Fashion Store</p>
+                    </div>
+                </div>
+
+                <!-- CARD -->
+                <div class="partner-card"
+                     data-title="Gold Coast Cooking Class"
+                     data-description="Built and manage a private Ghanaian culinary experience website in Accra with optimized booking flows."
+                     data-link="https://goldcoastcookingclass.vercel.app/"
+                     data-image="https://github.com/oswaldamoah/goldcoastcookingclass/blob/main/gccctext.png?raw=true">
+
+                    <img class="partner-image"
+                         src="https://github.com/oswaldamoah/goldcoastcookingclass/blob/main/gccctext.png?raw=true">
+
+                    <div class="partner-content">
+                        <h4>Gold Coast Cooking</h4>
+                        <p>Culinary Experience</p>
+                    </div>
+                </div>
+
+            </div>
+
+            <button class="carousel-btn right">&#10095;</button>
+
+        </div>
     </div>
 
-    <div class="project-block">
-        <h4>Volunteer Projects</h4>
-        <ul>
-            <li><a href="https://mindfulcircle.vercel.app/" target="_blank" rel="noopener noreferrer">Mindful Circle - Support Mental Health</a></li>
-            <li><a href="https://github.com/oswaldamoah/mms" target="_blank" rel="noopener noreferrer">Member Management Service (MMS) - FFI</a></li>
-        </ul>
-    </div>
+    <h2>Volunteer Projects</h2>
+    <ul class="project-list">
+        <li><a href="https://mindfulcircle.vercel.app/" target="_blank" rel="noopener noreferrer">Mindful Circle - Support Mental Health</a></li>
+        <li><a href="https://github.com/oswaldamoah/mms" target="_blank" rel="noopener noreferrer">Member Management Service - FFI</a></li>
+    </ul>
 
-    <div class="project-block">
-        <h4>Personal Projects</h4>
-        <ul>
-            <li><a href="https://github.com/oswaldamoah/q-mgmt" target="_blank" rel="noopener noreferrer">Queue Management Embedded System</a></li>
-            <li><a href="https://github.com/oswaldamoah/free-plagiarism-checker" target="_blank" rel="noopener noreferrer">Free Plagiarism Checker</a></li>
-            <li><a href="https://github.com/oswaldamoah/UG-GradeReport" target="_blank" rel="noopener noreferrer">Student Grade Report Web App</a></li>
-            <li><a href="https://github.com/oswaldamoah/shopping-mobileapp" target="_blank" rel="noopener noreferrer">API-Integrated Shopping App</a></li>
-            <li><a href="https://github.com/MichaelAdadey/didiyie" target="_blank" rel="noopener noreferrer">Smart Restaurant Menu App</a></li>
-        </ul>
-    </div>
+    <h2>Personal Projects</h2>
+    <ul class="project-list">
+        <li><a href="https://github.com/oswaldamoah/q-mgmt" target="_blank" rel="noopener noreferrer">Queue Management Embedded System</a></li>
+        <li><a href="https://github.com/oswaldamoah/free-plagiarism-checker" target="_blank" rel="noopener noreferrer">Free Plagiarism Checker</a></li>
+        <li><a href="https://github.com/oswaldamoah/UG-GradeReport" target="_blank" rel="noopener noreferrer">Student Grade Report Web App</a></li>
+        <li><a href="https://github.com/oswaldamoah/shopping-mobileapp" target="_blank" rel="noopener noreferrer">API-Integrated Shopping App</a></li>
+        <li><a href="https://github.com/MichaelAdadey/didiyie" target="_blank" rel="noopener noreferrer">Smart Restaurant Menu App</a></li>
+    </ul>
 
     <h2>Contact</h2>
-    <p class="contact-info"><strong>Email: </strong><a href="mailto:oswaldamoah00@gmail.com" target="_blank" rel="noopener noreferrer">oswaldamoah00@gmail.com</a></p>
-    <p class="contact-info"><strong>GitHub: </strong> <a href="https://github.com/oswaldamoah/" target="_blank" rel="noopener noreferrer">@oswaldamoah</a></p>
-    <p class="contact-info"><strong>LinkedIn: </strong><a href="https://www.linkedin.com/in/oswaldamoah/" target="_blank" rel="noopener noreferrer">Oswald Amoah</a></p>
-    <p class="contact-info"><strong>Other Links: </strong><a href="https://lnk.bio/oswaldamoah" target="_blank" rel="noopener noreferrer">lnk.bio/oswaldamoah</a></p>
+
+    <p>
+        <strong>Email:</strong>
+        <a href="mailto:oswaldamoah00@gmail.com">
+            oswaldamoah00@gmail.com
+        </a>
+    </p>
+
+    <p>
+        <strong>GitHub:</strong>
+        <a href="https://github.com/oswaldamoah/"
+           target="_blank">
+            @oswaldamoah
+        </a>
+    </p>
+
+    <p>
+        <strong>LinkedIn:</strong>
+        <a href="https://www.linkedin.com/in/oswaldamoah/"
+           target="_blank">
+            Oswald Amoah
+        </a>
+    </p>
+
+    <p>
+        <strong>Other Links:</strong>
+        <a href="https://lnk.bio/oswaldamoah"
+           target="_blank">
+            lnk.bio/oswaldamoah
+        </a>
+    </p>
+
+    <hr style="margin: 24px 0; opacity: 0.2;">
+    
+    <p>
+        <button id="generateResumeBtn" 
+                style="background: linear-gradient(135deg, #0E8F7D 0%, #2A7D7D 100%); 
+                       color: white; 
+                       border: none; 
+                       padding: 12px 24px; 
+                       border-radius: 8px; 
+                       cursor: pointer; 
+                       font-weight: 600; 
+                       font-size: 1rem;
+                       transition: transform 0.25s ease, box-shadow 0.25s ease;
+                       box-shadow: 0 4px 12px rgba(14, 143, 125, 0.2);
+                       display: none;">
+            Print Resume
+        </button>
+    </p>
+
 </div>
 
-<button id="theme-toggle" class="theme-switcher">
-    <span class="theme-icon">🌙</span>
-    <span class="theme-icon">☀️</span>
+<!-- =========================
+     MODAL
+========================= -->
+
+<div class="project-modal" id="projectModal">
+
+    <div class="modal-content">
+
+        <button class="modal-close"
+                id="closeModal">
+            &times;
+        </button>
+
+        <img id="modalImage"
+             class="modal-image">
+
+        <div class="modal-body">
+
+            <h2 id="modalTitle"></h2>
+
+            <p id="modalDescription"></p>
+
+            <a id="modalLink"
+               class="visit-btn"
+               target="_blank">
+                Visit Project
+            </a>
+
+        </div>
+    </div>
+</div>
+
+<!-- THEME TOGGLE -->
+<button id="theme-toggle"
+        class="theme-switcher">
+    🌙
 </button>
 
 <script>
-    const themeToggle = document.getElementById('theme-toggle');
-    const currentTheme = localStorage.getItem('theme') || 'light';
 
-    document.body.setAttribute('data-theme', currentTheme);
+    /* =========================
+       THEME
+    ========================= */
+
+    const themeToggle =
+        document.getElementById('theme-toggle');
+
+    const currentTheme =
+        localStorage.getItem('theme') || 'light';
+
+    document.body.setAttribute(
+        'data-theme',
+        currentTheme
+    );
+
+    themeToggle.innerHTML =
+        currentTheme === 'dark'
+            ? '☀️'
+            : '🌙';
 
     themeToggle.addEventListener('click', () => {
-        const isDark = document.body.getAttribute('data-theme') === 'dark';
-        document.body.setAttribute('data-theme', isDark ? 'light' : 'dark');
-        localStorage.setItem('theme', isDark ? 'light' : 'dark');
+
+        const isDark =
+            document.body.getAttribute('data-theme')
+            === 'dark';
+
+        const newTheme =
+            isDark ? 'light' : 'dark';
+
+        document.body.setAttribute(
+            'data-theme',
+            newTheme
+        );
+
+        localStorage.setItem(
+            'theme',
+            newTheme
+        );
+
+        themeToggle.innerHTML =
+            newTheme === 'dark'
+                ? '☀️'
+                : '🌙';
     });
 
-    window.addEventListener('beforeprint', () => {
-        document.body.setAttribute('data-theme-print', document.body.getAttribute('data-theme'));
-        document.body.setAttribute('data-theme', 'light');
+    const vibrate = (pattern = 8) => {
+        if (navigator.vibrate) {
+            navigator.vibrate(pattern);
+        }
+    };
+
+    /* =========================
+       CAROUSEL
+    ========================= */
+
+    const track =
+        document.getElementById('partnersTrack');
+
+    const cards =
+        document.querySelectorAll('.partner-card');
+
+    const trackGap =
+        14;
+
+    const prevBtn =
+        document.querySelector('.carousel-btn.left');
+
+    const nextBtn =
+        document.querySelector('.carousel-btn.right');
+
+    let currentIndex = 0;
+    let carouselTouched = false;
+    let carouselInView = false;
+    let autoStarted = false;
+
+    function moveCarousel(direction = 1) {
+
+        const cardWidth =
+            cards[0].getBoundingClientRect().width + trackGap;
+
+        currentIndex =
+            (currentIndex + direction + cards.length) % cards.length;
+
+        track.scrollTo({
+            left: currentIndex * cardWidth,
+            behavior: 'smooth'
+        });
+    }
+
+    function pauseCarousel() {
+        carouselTouched = true;
+    }
+
+    nextBtn.addEventListener('click', () => {
+        pauseCarousel();
+        vibrate(8);
+        moveCarousel(1);
     });
 
-    window.addEventListener('afterprint', () => {
-        const originalTheme = document.body.getAttribute('data-theme-print');
-        if (originalTheme) {
-            document.body.setAttribute('data-theme', originalTheme);
-            document.body.removeAttribute('data-theme-print');
+    prevBtn.addEventListener('click', () => {
+        pauseCarousel();
+        vibrate(8);
+        moveCarousel(-1);
+    });
+
+    track.addEventListener('pointerdown', pauseCarousel, { passive: true });
+    track.addEventListener('touchstart', pauseCarousel, { passive: true });
+    track.addEventListener('wheel', pauseCarousel, { passive: true });
+
+    const carouselObserver = new IntersectionObserver((entries) => {
+        entries.forEach(entry => {
+            carouselInView = entry.isIntersecting;
+
+            if (carouselInView && !autoStarted && !carouselTouched) {
+                track.scrollTo({ left: 0, behavior: 'auto' });
+                currentIndex = 0;
+                autoStarted = true;
+            }
+        });
+    }, {
+        threshold: 0.5
+    });
+
+    carouselObserver.observe(document.querySelector('.partners-section'));
+
+    setInterval(() => {
+        if (carouselInView && !carouselTouched) {
+            moveCarousel(1);
+        }
+    }, 3500);
+
+    /* =========================
+       MODAL
+    ========================= */
+
+    const modal =
+        document.getElementById('projectModal');
+
+    const modalTitle =
+        document.getElementById('modalTitle');
+
+    const modalDescription =
+        document.getElementById('modalDescription');
+
+    const modalImage =
+        document.getElementById('modalImage');
+
+    const modalLink =
+        document.getElementById('modalLink');
+
+    const closeModal =
+        document.getElementById('closeModal');
+
+    cards.forEach(card => {
+
+        card.addEventListener('click', () => {
+            pauseCarousel();
+            vibrate([10, 20, 10]);
+
+            modalTitle.textContent =
+                card.dataset.title;
+
+            modalDescription.textContent =
+                card.dataset.description;
+
+            modalImage.src =
+                card.dataset.image;
+
+            modalLink.href =
+                card.dataset.link;
+
+            modal.classList.add('active');
+        });
+    });
+
+    track.addEventListener('scroll', () => {
+
+        const cardWidth =
+            cards[0].getBoundingClientRect().width + trackGap;
+
+        currentIndex =
+            Math.round(track.scrollLeft / cardWidth);
+    }, { passive: true });
+
+    closeModal.addEventListener('click', () => {
+        vibrate(6);
+        modal.classList.remove('active');
+    });
+
+    modal.addEventListener('click', (e) => {
+
+        if(e.target === modal) {
+            vibrate(6);
+            modal.classList.remove('active');
         }
     });
+
+    /* =========================
+       RESUME GENERATOR
+    ========================= */
+
+    const resumeBtn = document.getElementById('generateResumeBtn');
+
+    const { Document, Packer, Paragraph, TextRun, HeadingLevel, AlignmentType, BorderStyle, WidthType } = window.docx;
+
+    function sectionHeader(text) {
+        return new Paragraph({
+            text,
+            bold: true,
+            size: 22,
+            color: 'FFFFFF',
+            shading: { type: 'clear', color: '0E8F7D' },
+            spacing: { before: 120, after: 80, line: 240 },
+            indent: { left: 200, right: 200 }
+        });
+    }
+
+    function bulletParagraph(text) {
+        return new Paragraph({
+            text,
+            bullet: { level: 0 },
+            spacing: { before: 0, after: 60, line: 240 },
+            indent: { left: 720, hanging: 360 },
+            size: 18,
+            color: '1F2937'
+        });
+    }
+
+    function jobTitle(role, company, date) {
+        return new Paragraph({
+            children: [
+                new TextRun({
+                    text: role,
+                    bold: true,
+                    size: 20,
+                    color: '111827'
+                }),
+                new TextRun({
+                    text: company ? ` • ${company}` : '',
+                    size: 20,
+                    color: '374151'
+                }),
+                new TextRun({
+                    text: date ? ` (${date})` : '',
+                    size: 18,
+                    color: '6B7280',
+                    italics: true
+                })
+            ],
+            spacing: { before: 0, after: 40, line: 240 }
+        });
+    }
+
+    function buildResumeDoc(data) {
+        const contactLinks = [
+            data.email ? `📧 ${data.email}` : '',
+            data.github ? `🔗 ${data.github}` : '',
+            data.linkedin ? `🔗 ${data.linkedin}` : ''
+        ].filter(Boolean);
+
+        const summary = data.summary || '';
+        const skills = Array.isArray(data.skills) ? data.skills : [];
+        const experience = Array.isArray(data.experience) ? data.experience : [];
+        const projects = Array.isArray(data.projects) ? data.projects : [];
+        const education = Array.isArray(data.education) ? data.education : [];
+
+        const children = [
+            // Header
+            new Paragraph({
+                alignment: AlignmentType.CENTER,
+                spacing: { after: 20, line: 240 },
+                children: [
+                    new TextRun({
+                        text: data.name || 'Oswald Amoah',
+                        bold: true,
+                        size: 32,
+                        color: '0E8F7D'
+                    })
+                ]
+            }),
+            new Paragraph({
+                alignment: AlignmentType.CENTER,
+                spacing: { after: 40, line: 240 },
+                children: [
+                    new TextRun({
+                        text: data.title || 'Full-Stack Software Engineer',
+                        size: 20,
+                        color: '374151'
+                    })
+                ]
+            }),
+            // Contact Info
+            new Paragraph({
+                alignment: AlignmentType.CENTER,
+                spacing: { after: 120, line: 200 },
+                children: contactLinks.map((link, idx) => [
+                    new TextRun({
+                        text: link,
+                        size: 16,
+                        color: '0E8F7D'
+                    }),
+                    ...(idx < contactLinks.length - 1 ? [new TextRun({ text: '  |  ', size: 16, color: 'D1D5DB' })] : [])
+                ]).flat()
+            }),
+            // Summary
+            sectionHeader('PROFESSIONAL SUMMARY'),
+            new Paragraph({
+                text: summary,
+                spacing: { before: 0, after: 100, line: 240 },
+                size: 18,
+                color: '1F2937'
+            }),
+            // Skills
+            sectionHeader('TECHNICAL SKILLS')
+        ];
+
+        skills.forEach(skill => {
+            children.push(bulletParagraph(skill));
+        });
+
+        // Experience
+        children.push(sectionHeader('PROFESSIONAL EXPERIENCE'));
+
+        experience.forEach((item, idx) => {
+            children.push(jobTitle(item.role || '', item.company || '', item.date || ''));
+            (item.bullets || []).slice(0, 3).forEach(bullet => {
+                children.push(bulletParagraph(bullet));
+            });
+            if (idx < experience.length - 1) {
+                children.push(new Paragraph({ text: '', spacing: { after: 40 } }));
+            }
+        });
+
+        // Projects
+        if (projects.length) {
+            children.push(sectionHeader('SELECTED PROJECTS'));
+            projects.slice(0, 3).forEach((project, idx) => {
+                children.push(jobTitle(project.name || '', project.role || '', ''));
+                if (project.summary) {
+                    children.push(new Paragraph({
+                        text: project.summary,
+                        spacing: { before: 0, after: idx < projects.length - 1 ? 60 : 0, line: 240 },
+                        size: 18,
+                        color: '1F2937'
+                    }));
+                }
+            });
+        }
+
+        // Education
+        if (education.length) {
+            children.push(sectionHeader('EDUCATION'));
+            education.forEach(item => {
+                children.push(new Paragraph({
+                    text: item,
+                    spacing: { before: 0, after: 60, line: 240 },
+                    size: 18,
+                    color: '1F2937'
+                }));
+            });
+        }
+
+        return new Document({
+            sections: [
+                {
+                    properties: {
+                        page: {
+                            margin: {
+                                top: 540,
+                                right: 540,
+                                bottom: 540,
+                                left: 540
+                            }
+                        }
+                    },
+                    children
+                }
+            ]
+        });
+    }
+
+    function generateLocalResumeData() {
+        return {
+            name: 'Oswald Amoah',
+            title: 'Full-Stack Software Engineer | Project Lead',
+            email: 'oswaldamoah00@gmail.com',
+            github: 'github.com/oswaldamoah',
+            linkedin: 'linkedin.com/in/oswaldamoah',
+            summary: 'Results-oriented full-stack developer and project lead with experience in web development, mobile apps, automation, technical documentation, and cross-functional delivery. Strong background in product execution, client communication, and building practical tools that improve operational workflows.',
+            skills: [
+                'Project management: Jira, Trello, communication, problem-solving',
+                'Web development: ReactJS, NodeJS, ExpressJS, MongoDB, SQL, ASP.NET Core, AWS, API development',
+                'Mobile development: React Native, PWAs',
+                'Languages: C#, C++, Python, JavaScript, Java',
+                'Other tools: AutoCAD, Microsoft Office, Google Workspace, research'
+            ],
+            experience: [
+                {
+                    role: 'Technical Team Lead',
+                    company: 'Flourishing Field International',
+                    date: '2020 - Present',
+                    bullets: [
+                        'Coordinate technical operations across data, multimedia, and software units.',
+                        'Led teams of 10-15 in structured weekly tasks and improved workflow clarity.',
+                        'Developed a member management system that streamlined internal processes and communication.'
+                    ]
+                },
+                {
+                    role: 'Product Manager',
+                    company: 'BitByBit',
+                    date: '2023 - Present',
+                    bullets: [
+                        'Led product initiatives across design and engineering teams.',
+                        'Translated requirements into functional web experiences and delivery workflows.',
+                        'Contributed full-stack development support, including tailored routing systems.'
+                    ]
+                },
+                {
+                    role: 'Technical Writer',
+                    company: 'Project Team, Department of Computer Science, University of Ghana',
+                    date: 'Oct. 2024 - Dec. 2024',
+                    bullets: [
+                        'Documented meetings, updated workflows, and created technical reports.'
+                    ]
+                },
+                {
+                    role: 'Software Development Intern',
+                    company: 'El Cuto Consult',
+                    date: '2024',
+                    bullets: [
+                        'Implemented USSD services and ASP.NET Core applications.',
+                        'Contributed to website updates and internal development tasks.'
+                    ]
+                }
+            ],
+            projects: [
+                {
+                    name: 'MTN GPON Technical Survey & Network Design',
+                    role: 'Survey and network design lead',
+                    summary: 'Conducted FTTH survey work, led AutoCAD network design, and built a civil-to-cable distance automation tool for the MTN GPON project.'
+                },
+                {
+                    name: 'HomzAndKidz Store',
+                    role: 'E-commerce platform',
+                    summary: 'Built and managed an e-commerce platform with WooCommerce integration and custom workflows.'
+                },
+                {
+                    name: 'Omanye Aba Rentals & Trading',
+                    role: 'Rentals platform',
+                    summary: 'Built and managed an event rental and trading platform for listings and service inquiries.'
+                }
+            ],
+            education: [
+                'University of Ghana - BSc. Computer Science (Class of 2026)',
+                'Ghana Christian International High School - High School Diploma, SAT, WASSCE (2019-2022)'
+            ]
+        };
+    }
+
+    async function downloadDocx(documentInstance, fileName) {
+        const blob = await Packer.toBlob(documentInstance);
+        const url = URL.createObjectURL(blob);
+        const link = document.createElement('a');
+        link.href = url;
+        link.download = fileName;
+        document.body.appendChild(link);
+        link.click();
+        link.remove();
+        URL.revokeObjectURL(url);
+    }
+
+    // Function to trigger resume generation
+    async function generateResume() {
+        vibrate(8);
+        resumeBtn.disabled = true;
+        resumeBtn.innerHTML = '⏳ Generating...';
+
+        try {
+            const resumeData = generateLocalResumeData();
+            const doc = buildResumeDoc(resumeData);
+            await downloadDocx(doc, 'Oswald_Amoah_Resume.docx');
+            vibrate([10, 20, 10]);
+        } catch (error) {
+            console.error('Resume generation error:', error);
+            alert(`Error: ${error.message}`);
+        } finally {
+            resumeBtn.innerHTML = '📄 Generate 1-Page Resume (DOCX)';
+            resumeBtn.disabled = false;
+        }
+    }
+
+    // Log shortcuts to console
+    console.log('%c=== RESUME SHORTCUTS ===', 'font-weight: bold; font-size: 14px; color: #0E8F7D;');
+    console.log('%cKeyboard: Alt+P', 'font-size: 12px; color: #5f6b7a;');
+    console.log('%cMobile: Tap the page 4 times quickly', 'font-size: 12px; color: #5f6b7a;');
+
+    // Keyboard shortcut (Alt+P)
+    document.addEventListener('keydown', (e) => {
+        if (e.altKey && e.key === 'p') {
+            e.preventDefault();
+            generateResume();
+        }
+    });
+
+    // Mobile tap detection (4x fast taps)
+    let tapCount = 0;
+    let tapTimeout = null;
+    const TAP_INTERVAL = 400; // 400ms between taps
+
+    document.addEventListener('click', (e) => {
+        // Only count taps on the body/container, not on links or buttons
+        if (e.target.tagName === 'A' || e.target.tagName === 'BUTTON' || e.target.closest('a') || e.target.closest('button')) {
+            return;
+        }
+
+        tapCount++;
+
+        if (tapCount === 1) {
+            tapTimeout = setTimeout(() => {
+                tapCount = 0;
+            }, TAP_INTERVAL * 3);
+        }
+
+        if (tapCount === 4) {
+            clearTimeout(tapTimeout);
+            tapCount = 0;
+            generateResume();
+        }
+    });
+
+    resumeBtn.addEventListener('click', async () => {
+        generateResume();
+    });
+
 </script>
+
 </body>
 </html>
