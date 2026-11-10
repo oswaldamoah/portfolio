@@ -18,6 +18,231 @@
     <meta property="og:title" content="Oswald Amoah | Software Engineer">
     <meta property="og:url" content="https://oswaldamoah.github.io/portfolio/">
 
+<!--
+╔══════════════════════════════════════════════════════════════════════╗
+║  ✏️  EDIT YOUR CONTENT HERE                                           ║
+║                                                                      ║
+║  Everything on the page (work, experience, education, skills,        ║
+║  clients) is built from the lists below. To add something, copy an   ║
+║  existing { ... } block, paste it where you want it, and change the  ║
+║  text. Order in the list = order on the page.                        ║
+║                                                                      ║
+║  Dropbox links: paste the normal share link — "dl=0" is swapped for  ║
+║  "raw=1" automatically, so images always load.                       ║
+╚══════════════════════════════════════════════════════════════════════╝
+-->
+<script>
+/* ──────────────────────────────────────────────────────────────────────
+   WORK / PROJECTS
+   ──────────────────────────────────────────────────────────────────────
+   title        Project name (shown on card, list and popup)
+   client       Who it was for (shown in popup + list)
+   category     Short label under the card title
+   description  Paragraph shown in the popup
+   logo         Logo URL. Leave "" to show the project's initials instead
+   media        One or more images/videos. 1 item = single image.
+                2+ items = swipeable gallery with arrows in the popup.
+                Videos are detected by extension (.mp4 .webm .mov),
+                or write { src: "...", type: "video", poster: "img.png" }
+   link         "View Project" button URL. Leave "" to hide the button
+   featured     true  = shows in the "Selected Work" gallery
+                false = only appears in the "View all work" list
+   ────────────────────────────────────────────────────────────────────── */
+const PROJECTS = [
+    {
+        title: "MTN Fibre Network Design",
+        client: "MTN Ghana",
+        category: "Telecommunications",
+        description: "Conducted site surveys and led a network design team in planning over 500km of MTN Fibre routes across Ghana, while developing an internal distance automation tool to improve data accuracy.",
+        logo: "https://www.dropbox.com/scl/fi/mwehughxcqgabvq2qlob8/mtn.jpg?rlkey=bvpdao8r083igaa62mm8i85pv&st=0s2v7vzu&raw=1",
+        media: [
+            "https://www.dropbox.com/scl/fi/cvotkb89fnm766qju2xdt/mtn.png?rlkey=5es9zn9g2lu0jbaig8lx32cpu&st=vrbnaqhh&raw=1",
+        ],
+        link: "https://github.com/oswaldamoah/civiltocable",
+        featured: true,
+    },
+    {
+        title: "Cordova Remodeling, Houston TX",
+        client: "Cordova Remodeling, Houston TX",
+        category: "Website",
+        description: "Framing, foundation and building repair, remodeling, trim carpentry and wood floors.",
+        logo: "https://www.dropbox.com/scl/fi/mhin5jnzsbwlihvn3wkbx/cordovaremodeling_logo.png?rlkey=xso48iyz00fy4tc0k94z6qj32&st=gdcukoj5&raw=1",
+        media: [
+            "https://www.dropbox.com/scl/fi/paiagyvpauovobemukflg/cordovaremodeling.png?rlkey=m3ki8vs036svg2rqggyzw9atj&st=mpb1be85&raw=1",
+        ],
+        link: "https://cordovaremodeling.vercel.app/",
+        featured: true,
+    },
+    {
+        // TODO: add screenshots/videos, a logo and a link when ready
+        title: "Telecom Site Manager",
+        client: "Telecommunications",
+        category: "Operations Platform",
+        description: "A web platform for managing telecom sites in one place: tracking site records, survey data and maintenance status, and keeping field teams and project leads aligned on progress.",
+        logo: "",
+        media: [],
+        link: "",
+        featured: true,
+    },
+    {
+        title: "HaddyandMe Store",
+        client: "Haddy & Me",
+        category: "E-commerce Platform",
+        description: "Fashion and lifestyle e-commerce store with intuitive product discovery and smooth shopping experience built with modern web technologies.",
+        logo: "https://www.dropbox.com/scl/fi/r236dna6n5r5otre8yy69/haddyandme.png?rlkey=36xb77yjs3eyl8z3x9iw826hl&st=vy349omq&raw=1",
+        media: [
+            "https://www.dropbox.com/scl/fi/p962c9z0vf2275eg81y9w/haddyandme.png?rlkey=9jrk5eja8kerckn8hktmpvwyv&st=xbcon3nw&raw=1",
+        ],
+        link: "https://haddyandme.com",
+        featured: true,
+    },
+    {
+        title: "Mindful Circle",
+        client: "Mindful Circle",
+        category: "Mental Health Support",
+        description: "A modern community platform that makes it easy for people to discover events, connect with the community, and offer support for mental health awareness.",
+        logo: "https://www.dropbox.com/scl/fi/6r1v245dxw7slw0749ism/mindfulcircle.png?rlkey=r7tgv83rvqorj2zpgspdc78h4&st=dim6ix9i&raw=1",
+        media: [
+            "https://www.dropbox.com/scl/fi/du22bxf6rzjp9jvcc43xr/mindfulcircle.png?rlkey=rxusvb5dy3720acv6j602gy1r&st=xqefi3kx&raw=1",
+        ],
+        link: "https://mindfulcircle.vercel.app",
+        featured: true,
+    },
+    {
+        title: "Omanye Aba Rentals",
+        client: "Omanye Aba",
+        category: "Rentals Platform",
+        description: "Event rental and trading platform for listings and service inquiries with seamless user experience.",
+        logo: "https://www.dropbox.com/scl/fi/r1aysg8glwkun0uyj3zhw/omanyeaba.png?rlkey=7pvz77kkblojcxntkzwtl44yo&st=j7jwthsm&raw=1",
+        media: [
+            "https://www.dropbox.com/scl/fi/gho1e9wadfdf3vr5wkntp/omanyeaba.png?rlkey=w2rc1xs8ilrnwwapqky94c7yp&st=z66wyudb&raw=1",
+        ],
+        link: "https://omanyeaba.com",
+        featured: true,
+    },
+    {
+        title: "Free Plagiarism Checker",
+        client: "Personal Project",
+        category: "Utility Tool",
+        description: "Lightweight plagiarism detection tool — a free TurnItIn alternative for students and writers to check their work.",
+        logo: "",
+        media: [
+            "https://www.dropbox.com/scl/fi/79i071seozgat1sldrflv/freeplagiarismchecker.png?rlkey=pa0db1pj20zpu9827u5u8om90&st=vjgb6oqg&raw=1",
+        ],
+        link: "https://github.com/oswaldamoah/free-plagiarism-checker",
+        featured: false,
+    },
+
+    /* ── TEMPLATE: copy this to add a project ──
+    {
+        title: "Project Name",
+        client: "Client Name",
+        category: "Website",
+        description: "What you built and why it mattered.",
+        logo: "https://...logo.png",
+        media: [
+            "https://...screenshot-1.png",
+            "https://...screenshot-2.png",
+            "https://...demo.mp4",
+        ],
+        link: "https://...",
+        featured: false,
+    },
+    */
+];
+
+/* ──────────────────────────────────────────────────────────────────────
+   EXPERIENCE  — logo: "" shows the default building icon
+   ────────────────────────────────────────────────────────────────────── */
+const EXPERIENCE = [
+    {
+        title: "Project Manager",
+        org: "Utopia Technologies Africa",
+        logo: "https://www.dropbox.com/scl/fi/i4y211ss0wl15utqvku0j/utopia.webp?rlkey=df3k95l8p0mhypou60b9fd2z1&st=sen2oipr&raw=1",
+        period: "October 2026 - Present",
+        description: "Supervise the delivery of enterprise and consumer solutions, aligning engineering, design and stakeholders to ship reliable products on schedule.",
+    },
+    {
+        title: "Technical Team Lead",
+        org: "Flourishing Field International",
+        logo: "https://www.dropbox.com/scl/fi/9xrxh30zhkjc2y9ab5fns/ffim.webp?rlkey=9vk6b27fpsl0pkhaykj66lnvb&st=hzy25rkn&raw=1",
+        period: "2020 - Present",
+        description: "Coordinate technical operations across data, multimedia, and software units. Led teams of 10-15 in structured weekly tasks, improving workflow clarity and execution.",
+    },
+    {
+        title: "Product Manager",
+        org: "BitByBit",
+        logo: "https://www.dropbox.com/scl/fi/i7fkoi6wnlilope3xnfl1/bitbybit.png?rlkey=j14od53vhob4e0lfk7gnikg8k&st=cswrmmlh&raw=1",
+        period: "2023 - Present",
+        description: "Led product development initiatives across design and engineering teams, translating requirements into functional web experiences.",
+    },
+    {
+        title: "Software Development Intern",
+        org: "El Cuto Consult",
+        logo: "https://www.dropbox.com/scl/fi/v7ew9pkexr6crza7st6pz/elcutoconsult.webp?rlkey=56b0fz7uc8czes9xtb9z77pt3&st=bitfxegk&raw=1",
+        period: "2024",
+        description: "Implemented USSD services and ASP.NET Core applications. Contributed to website updates and internal development tasks.",
+    },
+    {
+        title: "Technical Writer",
+        org: "University of Ghana",
+        logo: "",
+        period: "2024",
+        description: "Documented sprints, timelines and product requirements, turning technical progress into clear reports. Worked under Dr. Prince Alvin Kwabena Ansah and Mr. Mark Atta Mensah.",
+    },
+    {
+        title: "Freelancer",
+        org: "Project Palace",
+        logo: "https://www.dropbox.com/scl/fi/rpwa0u4y7sczr4xpjh045/projectpalace.png?rlkey=oq19hikd2r87klrnd6btw2qgj&st=k4sx5v0i&raw=1",
+        period: "June 2025 - Present",
+        description: "Delivering high-quality results through effective client communication and thorough project documentation.",
+    },
+];
+
+/* ──────────────────────────────────────────────────────────────────────
+   EDUCATION  — same fields as experience
+   ────────────────────────────────────────────────────────────────────── */
+const EDUCATION = [
+    {
+        title: "BSc. Computer Science",
+        org: "University of Ghana",
+        logo: "",
+        period: "Class of 2026",
+        description: "",
+    },
+    {
+        title: "High School Diploma",
+        org: "Ghana Christian International High School",
+        logo: "",
+        period: "2019 - 2022",
+        description: "SAT, WASSCE · IC3 Digital Literacy Certification",
+    },
+];
+
+/* ──────────────────────────────────────────────────────────────────────
+   SKILLS
+   ────────────────────────────────────────────────────────────────────── */
+const SKILLS = [
+    "React", "Node.js", "MongoDB", "Express", "React Native", "PWAs",
+    "Python", "C#", "SQL", "AWS", "AutoCAD", "Jira", "Trello",
+];
+
+/* ──────────────────────────────────────────────────────────────────────
+   CLIENTS CAROUSEL  — loops automatically, no need to list twice
+   ────────────────────────────────────────────────────────────────────── */
+const CLIENTS = [
+    { name: "MTN", logo: "https://www.dropbox.com/scl/fi/mwehughxcqgabvq2qlob8/mtn.jpg?rlkey=bvpdao8r083igaa62mm8i85pv&st=0s2v7vzu&raw=1" },
+    { name: "Cordova Remodeling, Houston TX", logo: "https://www.dropbox.com/scl/fi/nnfgrmxzlriduzf48cv45/gccc.png?rlkey=0o70uzror6x6kqu54zc2dh03v&st=89o7tth9&raw=1" },
+    { name: "Omanye Aba", logo: "https://www.dropbox.com/scl/fi/r1aysg8glwkun0uyj3zhw/omanyeaba.png?rlkey=7pvz77kkblojcxntkzwtl44yo&st=j7jwthsm&raw=1" },
+    { name: "Mindful Circle", logo: "https://www.dropbox.com/scl/fi/6r1v245dxw7slw0749ism/mindfulcircle.png?rlkey=r7tgv83rvqorj2zpgspdc78h4&st=dim6ix9i&raw=1" },
+    { name: "Haddy & Me", logo: "https://www.dropbox.com/scl/fi/r236dna6n5r5otre8yy69/haddyandme.png?rlkey=36xb77yjs3eyl8z3x9iw826hl&st=vy349omq&raw=1" },
+    { name: "Flourishing Field International Ministries", logo: "https://www.dropbox.com/scl/fi/roeb219i1bokhakpm7pzv/ffim.ico?rlkey=i8v9zmsppy5wvox2e9a04i9vw&st=lk9g23f9&raw=1" },
+    { name: "Homz & Kidz", logo: "https://www.dropbox.com/scl/fi/euuvvc0ua1m1gura28wn6/homzandkidz.png?rlkey=g8fgxr0audx77gam8jbnpasl3&st=6gvrsx77&raw=1" },
+    { name: "EMET Australia", logo: "https://www.dropbox.com/scl/fi/7dy77y6jdamo11lnea831/emetlogo.png?rlkey=d3jiui9z02b970j2l3vq5wrtj&st=x4914vv1&raw=1" },
+];
+</script>
+<!-- ═══════════════════════ END OF EDITABLE CONTENT ═══════════════════════ -->
+
     <style>
         :root {
             --bg: #fafafa;
@@ -36,6 +261,7 @@
             --shadow-lg: 0 20px 60px rgba(0,0,0,0.12);
             --nav-bg: rgba(250, 250, 250, 0.85);
             --overlay: rgba(0, 0, 0, 0.8);
+            --ease: cubic-bezier(0.2, 0.8, 0.2, 1);
         }
 
         [data-theme="dark"] {
@@ -57,15 +283,9 @@
             --overlay: rgba(0, 0, 0, 0.9);
         }
 
-        * {
-            margin: 0;
-            padding: 0;
-            box-sizing: border-box;
-        }
+        * { margin: 0; padding: 0; box-sizing: border-box; }
 
-        html {
-            scroll-behavior: smooth;
-        }
+        html { scroll-behavior: smooth; }
 
         body {
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
@@ -82,12 +302,12 @@
             letter-spacing: -0.02em;
         }
 
+        button { font: inherit; }
+
         /* ===== NAVIGATION ===== */
         .nav {
             position: fixed;
-            top: 0;
-            left: 0;
-            right: 0;
+            top: 0; left: 0; right: 0;
             z-index: 1000;
             background: var(--nav-bg);
             backdrop-filter: blur(20px);
@@ -118,9 +338,7 @@
             transition: opacity 0.2s;
         }
 
-        .nav-logo:hover {
-            opacity: 0.7;
-        }
+        .nav-logo:hover { opacity: 0.7; }
 
         .nav-logo-icon {
             width: 32px;
@@ -135,11 +353,7 @@
             font-size: 0.9rem;
         }
 
-        .nav-links {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
+        .nav-links { display: flex; align-items: center; gap: 8px; }
 
         .nav-link {
             font-family: 'Sora', sans-serif;
@@ -153,20 +367,10 @@
             position: relative;
         }
 
-        .nav-link:hover {
-            color: var(--text);
-            background: var(--bg-elevated);
-        }
+        .nav-link:hover { color: var(--text); background: var(--bg-elevated); }
+        .nav-link.active { color: var(--accent); }
 
-        .nav-link.active {
-            color: var(--accent);
-        }
-
-        .nav-actions {
-            display: flex;
-            align-items: center;
-            gap: 8px;
-        }
+        .nav-actions { display: flex; align-items: center; gap: 8px; }
 
         .theme-toggle {
             width: 40px;
@@ -182,24 +386,10 @@
             transition: background 0.2s, transform 0.2s;
         }
 
-        .theme-toggle:hover {
-            background: var(--border);
-            transform: scale(1.05);
-        }
-
-        .theme-toggle:active {
-            transform: scale(0.95);
-        }
-
-        .theme-toggle svg {
-            width: 20px;
-            height: 20px;
-            transition: transform 0.3s ease;
-        }
-
-        .theme-toggle:hover svg {
-            transform: rotate(15deg);
-        }
+        .theme-toggle:hover { background: var(--border); transform: scale(1.05); }
+        .theme-toggle:active { transform: scale(0.95); }
+        .theme-toggle svg { width: 20px; height: 20px; transition: transform 0.3s ease; }
+        .theme-toggle:hover svg { transform: rotate(15deg); }
 
         .nav-hamburger {
             display: none;
@@ -225,25 +415,14 @@
             transition: transform 0.3s, opacity 0.3s;
         }
 
-        .nav-hamburger.active span:nth-child(1) {
-            transform: rotate(45deg) translate(5px, 5px);
-        }
-
-        .nav-hamburger.active span:nth-child(2) {
-            opacity: 0;
-        }
-
-        .nav-hamburger.active span:nth-child(3) {
-            transform: rotate(-45deg) translate(5px, -5px);
-        }
+        .nav-hamburger.active span:nth-child(1) { transform: rotate(45deg) translate(5px, 5px); }
+        .nav-hamburger.active span:nth-child(2) { opacity: 0; }
+        .nav-hamburger.active span:nth-child(3) { transform: rotate(-45deg) translate(5px, -5px); }
 
         .mobile-menu {
             display: none;
             position: fixed;
-            top: 64px;
-            left: 0;
-            right: 0;
-            bottom: 0;
+            top: 64px; left: 0; right: 0; bottom: 0;
             background: var(--bg);
             z-index: 999;
             padding: 24px;
@@ -255,11 +434,7 @@
             transition: opacity 0.3s, transform 0.3s;
         }
 
-        .mobile-menu.active {
-            opacity: 1;
-            transform: translateY(0);
-            pointer-events: auto;
-        }
+        .mobile-menu.active { opacity: 1; transform: translateY(0); pointer-events: auto; }
 
         .mobile-menu .nav-link {
             font-size: 1.1rem;
@@ -270,17 +445,9 @@
         }
 
         @media (max-width: 768px) {
-            .nav-links {
-                display: none;
-            }
-
-            .nav-hamburger {
-                display: flex;
-            }
-
-            .mobile-menu {
-                display: flex;
-            }
+            .nav-links { display: none; }
+            .nav-hamburger { display: flex; }
+            .mobile-menu { display: flex; }
         }
 
         /* ===== HERO ===== */
@@ -322,11 +489,7 @@
             line-height: 1.7;
         }
 
-        .hero .tagline em {
-            color: var(--accent);
-            font-style: normal;
-            font-weight: 500;
-        }
+        .hero .tagline em { color: var(--accent); font-style: normal; font-weight: 500; }
 
         .scroll-indicator {
             position: absolute;
@@ -340,21 +503,10 @@
             animation: float 3s ease-in-out infinite;
         }
 
-        .scroll-indicator svg {
-            width: 20px;
-            height: 20px;
-            animation: bounce 2s infinite;
-        }
+        .scroll-indicator svg { width: 20px; height: 20px; animation: bounce 2s infinite; }
 
-        @keyframes float {
-            0%, 100% { opacity: 0.5; }
-            50% { opacity: 1; }
-        }
-
-        @keyframes bounce {
-            0%, 100% { transform: translateY(0); }
-            50% { transform: translateY(6px); }
-        }
+        @keyframes float { 0%, 100% { opacity: 0.5; } 50% { opacity: 1; } }
+        @keyframes bounce { 0%, 100% { transform: translateY(0); } 50% { transform: translateY(6px); } }
 
         /* ===== SECTIONS ===== */
         section {
@@ -379,11 +531,35 @@
             font-weight: 600;
         }
 
-        .section-line {
-            flex: 1;
-            height: 1px;
-            background: var(--border);
+        .section-line { flex: 1; height: 1px; background: var(--border); }
+
+        /* ===== SHARED: LOGO TILES ===== */
+        .tile-initials {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--accent);
+            color: var(--bg);
+            font-family: 'Sora', sans-serif;
+            font-weight: 700;
+            font-size: 0.75rem;
+            letter-spacing: 0;
         }
+
+        .work-row-logo.tile-initials,
+        .modal-logo.tile-initials,
+        .lightbox-logo.tile-initials,
+        .work-card-logo.tile-initials { background: var(--accent); color: var(--bg); }
+
+        .tile-building {
+            display: inline-flex;
+            align-items: center;
+            justify-content: center;
+            background: var(--bg-elevated);
+            color: var(--text-subtle);
+        }
+
+        .tile-building svg { width: 100%; height: 100%; }
 
         /* ===== WORK GRID ===== */
         .work-grid {
@@ -393,9 +569,7 @@
         }
 
         @media (max-width: 400px) {
-            .work-grid {
-                grid-template-columns: 1fr;
-            }
+            .work-grid { grid-template-columns: 1fr; }
         }
 
         .work-card {
@@ -404,21 +578,20 @@
             border-radius: 20px;
             overflow: hidden;
             cursor: pointer;
-            transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1), 
-                        box-shadow 0.4s ease,
-                        border-color 0.3s ease;
+            transition: transform 0.4s var(--ease), box-shadow 0.4s ease, border-color 0.3s ease;
             position: relative;
+            outline: none;
         }
 
-        .work-card:hover {
+        .work-card:hover,
+        .work-card:focus-visible {
             transform: translateY(-8px);
             box-shadow: var(--shadow-lg);
             border-color: var(--border-hover);
         }
 
-        .work-card:active {
-            transform: translateY(-4px) scale(0.99);
-        }
+        .work-card:focus-visible { border-color: var(--accent); }
+        .work-card:active { transform: translateY(-4px) scale(0.99); }
 
         .work-card-image {
             width: 100%;
@@ -428,21 +601,62 @@
             overflow: hidden;
         }
 
-        .work-card-image img {
+        .work-card-image > img,
+        .work-card-image > video {
             width: 100%;
             height: 100%;
             object-fit: cover;
-            transition: transform 0.5s cubic-bezier(0.2, 0.8, 0.2, 1);
+            display: block;
+            transition: transform 0.5s var(--ease);
         }
 
-        .work-card:hover .work-card-image img {
-            transform: scale(1.08);
+        .work-card:hover .work-card-image > img,
+        .work-card:hover .work-card-image > video { transform: scale(1.08); }
+
+        /* Placeholder when a project has no media yet */
+        .media-placeholder {
+            width: 100%;
+            height: 100%;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            position: relative;
+            background-color: var(--bg-elevated);
+            background-image:
+                linear-gradient(var(--border) 1px, transparent 1px),
+                linear-gradient(90deg, var(--border) 1px, transparent 1px);
+            background-size: 28px 28px;
+            background-position: center;
         }
 
-        .click-hint {
+        .media-placeholder::before {
+            content: '';
             position: absolute;
-            bottom: 12px;
-            right: 12px;
+            inset: 0;
+            background: radial-gradient(circle at center, var(--accent-glow) 0%, transparent 55%),
+                        radial-gradient(circle at center, transparent 30%, var(--bg-elevated) 85%);
+        }
+
+        .media-placeholder span {
+            position: relative;
+            width: 72px;
+            height: 72px;
+            border-radius: 18px;
+            background: var(--accent);
+            color: var(--bg);
+            font-family: 'Sora', sans-serif;
+            font-weight: 700;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            box-shadow: 0 10px 30px var(--accent-glow);
+            transition: transform 0.5s var(--ease);
+        }
+
+        .work-card:hover .media-placeholder span { transform: scale(1.08) rotate(-3deg); }
+
+        .chip {
             background: var(--bg-alt);
             border: 1px solid var(--border);
             padding: 6px 12px;
@@ -452,24 +666,26 @@
             display: flex;
             align-items: center;
             gap: 6px;
+            font-weight: 500;
+        }
+
+        .chip svg { width: 12px; height: 12px; }
+
+        .media-badge { position: absolute; top: 12px; left: 12px; }
+
+        .click-hint {
+            position: absolute;
+            bottom: 12px;
+            right: 12px;
             opacity: 0;
             transform: translateY(8px);
             transition: opacity 0.3s, transform 0.3s;
         }
 
-        .work-card:hover .click-hint {
-            opacity: 1;
-            transform: translateY(0);
-        }
+        .work-card:hover .click-hint,
+        .work-card:focus-visible .click-hint { opacity: 1; transform: translateY(0); }
 
-        .click-hint svg {
-            width: 12px;
-            height: 12px;
-        }
-
-        .work-card-content {
-            padding: 24px;
-        }
+        .work-card-content { padding: 24px; }
 
         .work-card-header {
             display: flex;
@@ -488,20 +704,201 @@
             flex-shrink: 0;
         }
 
-        .work-card-content h3 {
-            font-size: 1.1rem;
+        .work-card-logo.tile-initials { background: var(--accent); padding: 0; }
+
+        .work-card-content h3 { font-size: 1.1rem; font-weight: 600; transition: color 0.2s; }
+        .work-card:hover .work-card-content h3 { color: var(--accent); }
+
+        .work-card-content p { font-size: 0.9rem; color: var(--text-muted); margin-top: 4px; }
+
+        /* ===== VIEW ALL WORK ===== */
+        .work-more {
+            display: flex;
+            justify-content: center;
+            margin-top: 48px;
+        }
+
+        .work-more-btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 12px;
+            padding: 14px 20px 14px 26px;
+            border-radius: 14px;
+            border: 1px solid var(--border);
+            background: var(--bg-alt);
+            color: var(--text);
+            font-family: 'Sora', sans-serif;
             font-weight: 600;
+            font-size: 0.9rem;
+            cursor: pointer;
+            transition: border-color 0.3s, color 0.3s, box-shadow 0.3s, transform 0.2s;
+        }
+
+        .work-more-btn:hover {
+            border-color: var(--accent);
+            color: var(--accent);
+            box-shadow: 0 0 0 4px var(--accent-glow);
+            transform: translateY(-2px);
+        }
+
+        .work-more-btn:active { transform: translateY(0) scale(0.98); }
+
+        .work-more-btn .count {
+            font-size: 0.72rem;
+            padding: 2px 9px;
+            border-radius: 20px;
+            background: var(--bg-elevated);
+            color: var(--text-muted);
+            transition: background 0.3s, color 0.3s;
+        }
+
+        .work-more-btn:hover .count { background: var(--accent-glow); color: var(--accent); }
+
+        .work-more-btn svg { width: 16px; height: 16px; transition: transform 0.4s var(--ease); }
+        .work-more-btn[aria-expanded="true"] svg { transform: rotate(180deg); }
+
+        .work-list-wrap {
+            display: grid;
+            grid-template-rows: 0fr;
+            margin-top: 0;
+            transition: grid-template-rows 0.55s var(--ease), margin-top 0.55s var(--ease);
+        }
+
+        .work-list-wrap.open { grid-template-rows: 1fr; margin-top: 28px; }
+        .work-list-inner { overflow: hidden; min-height: 0; }
+
+        .work-list {
+            background: var(--bg-alt);
+            border: 1px solid var(--border);
+            border-radius: 20px;
+            overflow: hidden;
+        }
+
+        .work-list-head {
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            padding: 18px 24px;
+            border-bottom: 1px solid var(--border);
+            font-family: 'Sora', sans-serif;
+            font-size: 0.7rem;
+            text-transform: uppercase;
+            letter-spacing: 0.2em;
+            color: var(--text-subtle);
+            font-weight: 600;
+        }
+
+        .work-row {
+            display: grid;
+            grid-template-columns: 28px 40px 1fr auto 20px;
+            align-items: center;
+            gap: 18px;
+            width: 100%;
+            padding: 18px 24px;
+            background: none;
+            border: none;
+            border-bottom: 1px solid var(--border);
+            text-align: left;
+            color: inherit;
+            cursor: pointer;
+            transition: background 0.25s;
+            outline: none;
+        }
+
+        .work-row:last-child { border-bottom: none; }
+        .work-row:hover, .work-row:focus-visible { background: var(--bg-elevated); }
+
+        .work-list-wrap.open .work-row {
+            animation: rowIn 0.5s var(--ease) both;
+            animation-delay: calc(var(--i) * 45ms + 120ms);
+        }
+
+        @keyframes rowIn {
+            from { opacity: 0; transform: translateY(10px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+
+        .work-row-num {
+            font-family: 'Sora', sans-serif;
+            font-size: 0.8rem;
+            color: var(--text-subtle);
+            font-variant-numeric: tabular-nums;
+        }
+
+        .work-row-logo {
+            width: 40px;
+            height: 40px;
+            border-radius: 10px;
+            object-fit: contain;
+            background: var(--bg-elevated);
+            padding: 6px;
+        }
+
+        .work-row-logo.tile-initials { padding: 0; font-size: 0.8rem; }
+
+        .work-row-main { min-width: 0; }
+
+        .work-row-title {
+            display: flex;
+            align-items: center;
+            gap: 8px;
+            font-family: 'Sora', sans-serif;
+            font-weight: 600;
+            font-size: 1rem;
+            letter-spacing: -0.01em;
             transition: color 0.2s;
         }
 
-        .work-card:hover .work-card-content h3 {
-            color: var(--accent);
+        .work-row:hover .work-row-title,
+        .work-row:focus-visible .work-row-title { color: var(--accent); }
+
+        .work-row-media {
+            display: inline-flex;
+            align-items: center;
+            gap: 4px;
+            font-family: 'Inter', sans-serif;
+            font-size: 0.7rem;
+            font-weight: 500;
+            color: var(--text-subtle);
         }
 
-        .work-card-content p {
-            font-size: 0.9rem;
+        .work-row-media svg { width: 12px; height: 12px; }
+
+        .work-row-client {
+            display: block;
+            font-size: 0.85rem;
             color: var(--text-muted);
-            margin-top: 4px;
+            white-space: nowrap;
+            overflow: hidden;
+            text-overflow: ellipsis;
+        }
+
+        .work-row-cat {
+            font-size: 0.75rem;
+            padding: 6px 12px;
+            background: var(--bg-elevated);
+            border: 1px solid var(--border);
+            border-radius: 8px;
+            color: var(--text-muted);
+            white-space: nowrap;
+            transition: border-color 0.2s, color 0.2s;
+        }
+
+        .work-row:hover .work-row-cat { border-color: var(--accent); color: var(--accent); }
+
+        .work-row-arrow {
+            width: 20px;
+            height: 20px;
+            color: var(--text-subtle);
+            transition: transform 0.3s var(--ease), color 0.2s;
+        }
+
+        .work-row:hover .work-row-arrow { transform: translateX(4px); color: var(--accent); }
+
+        @media (max-width: 600px) {
+            .work-row { grid-template-columns: 40px 1fr 20px; gap: 14px; padding: 16px 18px; }
+            .work-row-num, .work-row-cat { display: none; }
+            .work-list-head { padding: 16px 18px; }
         }
 
         /* ===== ABOUT ===== */
@@ -512,10 +909,7 @@
         }
 
         @media (max-width: 900px) {
-            .about-grid {
-                grid-template-columns: 1fr;
-                gap: 60px;
-            }
+            .about-grid { grid-template-columns: 1fr; gap: 60px; }
         }
 
         .about-block h3 {
@@ -534,36 +928,53 @@
             transition: border-color 0.3s;
         }
 
-        .experience-item:hover {
-            border-color: var(--accent);
-        }
+        .experience-item:hover { border-color: var(--accent); }
 
         .experience-item h4 {
             font-size: 1rem;
             font-weight: 600;
-            margin-bottom: 6px;
+            margin-bottom: 8px;
             transition: color 0.2s;
         }
 
-        .experience-item:hover h4 {
-            color: var(--accent);
-        }
+        .experience-item:hover h4 { color: var(--accent); }
 
         .experience-item .meta {
             font-size: 0.85rem;
             color: var(--text-muted);
             margin-bottom: 8px;
+            display: flex;
+            align-items: center;
+            flex-wrap: wrap;
+            gap: 4px 8px;
         }
 
-        .experience-item .meta .company {
-            color: var(--accent);
+        .experience-item .meta .org {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
         }
 
-        .experience-item p {
-            font-size: 0.9rem;
-            color: var(--text-muted);
-            line-height: 1.7;
+        .experience-item .meta .company { color: var(--accent); }
+
+        .org-logo {
+            width: 24px;
+            height: 24px;
+            border-radius: 7px;
+            object-fit: contain;
+            background: #fff;
+            border: 1px solid var(--border);
+            padding: 2px;
+            flex-shrink: 0;
+            transition: border-color 0.3s, transform 0.3s var(--ease);
         }
+
+        .org-logo.tile-building { background: var(--bg-elevated); padding: 4px; transition: color 0.3s, border-color 0.3s; }
+
+        .experience-item:hover .org-logo { border-color: var(--accent); transform: scale(1.08); }
+        .experience-item:hover .org-logo.tile-building { color: var(--accent); }
+
+        .experience-item p { font-size: 0.9rem; color: var(--text-muted); line-height: 1.7; }
 
         .skills-grid {
             display: flex;
@@ -583,11 +994,7 @@
             cursor: default;
         }
 
-        .skill-tag:hover {
-            border-color: var(--accent);
-            color: var(--accent);
-            transform: translateY(-2px);
-        }
+        .skill-tag:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
 
         /* ===== CLIENTS CAROUSEL ===== */
         .clients-section {
@@ -597,32 +1004,20 @@
             overflow: hidden;
         }
 
-        .clients-carousel-wrapper {
-            position: relative;
-            padding: 48px 0;
-            overflow: hidden;
-        }
+        .clients-carousel-wrapper { position: relative; padding: 48px 0; overflow: hidden; }
 
         .clients-carousel-wrapper::before,
         .clients-carousel-wrapper::after {
             content: '';
             position: absolute;
-            top: 0;
-            bottom: 0;
+            top: 0; bottom: 0;
             width: 100px;
             z-index: 2;
             pointer-events: none;
         }
 
-        .clients-carousel-wrapper::before {
-            left: 0;
-            background: linear-gradient(90deg, var(--bg-alt), transparent);
-        }
-
-        .clients-carousel-wrapper::after {
-            right: 0;
-            background: linear-gradient(-90deg, var(--bg-alt), transparent);
-        }
+        .clients-carousel-wrapper::before { left: 0; background: linear-gradient(90deg, var(--bg-alt), transparent); }
+        .clients-carousel-wrapper::after { right: 0; background: linear-gradient(-90deg, var(--bg-alt), transparent); }
 
         .clients-track {
             display: flex;
@@ -631,17 +1026,11 @@
             width: max-content;
         }
 
-        .clients-track:hover {
-            animation-play-state: paused;
-        }
+        .clients-track:hover { animation-play-state: paused; }
 
         @keyframes scroll {
-            0% {
-                transform: translateX(0);
-            }
-            100% {
-                transform: translateX(-50%);
-            }
+            0% { transform: translateX(0); }
+            100% { transform: translateX(calc(-50% - 30px)); }
         }
 
         .client-item {
@@ -656,23 +1045,12 @@
             padding: 8px;
         }
 
-        .client-item:hover {
-            opacity: 1;
-            filter: grayscale(0%);
-            transform: scale(1.1);
-        }
+        .client-item:hover { opacity: 1; filter: grayscale(0%); transform: scale(1.1); }
 
-        .client-logo {
-            height: 40px;
-            width: auto;
-            max-width: 120px;
-            object-fit: contain;
-        }
+        .client-logo { height: 40px; width: auto; max-width: 120px; object-fit: contain; }
 
         /* ===== RESUME ===== */
-        .resume-section {
-            text-align: center;
-        }
+        .resume-section { text-align: center; }
 
         .resume-card {
             display: inline-flex;
@@ -686,10 +1064,7 @@
             transition: border-color 0.3s, box-shadow 0.3s;
         }
 
-        .resume-card:hover {
-            border-color: var(--accent);
-            box-shadow: 0 0 0 4px var(--accent-glow);
-        }
+        .resume-card:hover { border-color: var(--accent); box-shadow: 0 0 0 4px var(--accent-glow); }
 
         .resume-btn {
             display: inline-flex;
@@ -707,38 +1082,16 @@
             box-shadow: 0 4px 20px var(--accent-glow);
         }
 
-        .resume-btn:hover {
-            background: var(--accent-hover);
-            transform: translateY(-2px);
-            box-shadow: 0 8px 30px var(--accent-glow);
-        }
-
-        .resume-btn:active {
-            transform: translateY(0) scale(0.98);
-        }
-
-        .resume-btn svg {
-            width: 20px;
-            height: 20px;
-        }
+        .resume-btn:hover { background: var(--accent-hover); transform: translateY(-2px); box-shadow: 0 8px 30px var(--accent-glow); }
+        .resume-btn:active { transform: translateY(0) scale(0.98); }
+        .resume-btn svg { width: 20px; height: 20px; }
 
         /* ===== CONTACT ===== */
-        .contact-section {
-            text-align: center;
-            padding-bottom: 120px;
-        }
+        .contact-section { text-align: center; padding-bottom: 120px; }
 
-        .contact-text {
-            color: var(--text-muted);
-            font-size: 1.1rem;
-            margin-bottom: 32px;
-        }
+        .contact-text { color: var(--text-muted); font-size: 1.1rem; margin-bottom: 32px; }
 
-        .contact-icons {
-            display: flex;
-            justify-content: center;
-            gap: 16px;
-        }
+        .contact-icons { display: flex; justify-content: center; gap: 16px; }
 
         .contact-icon {
             width: 56px;
@@ -751,7 +1104,7 @@
             justify-content: center;
             color: var(--text-muted);
             text-decoration: none;
-            transition: all 0.3s cubic-bezier(0.2, 0.8, 0.2, 1);
+            transition: all 0.3s var(--ease);
         }
 
         .contact-icon:hover {
@@ -761,14 +1114,8 @@
             box-shadow: 0 8px 24px var(--accent-glow);
         }
 
-        .contact-icon:active {
-            transform: translateY(-2px) scale(1);
-        }
-
-        .contact-icon svg {
-            width: 24px;
-            height: 24px;
-        }
+        .contact-icon:active { transform: translateY(-2px) scale(1); }
+        .contact-icon svg { width: 24px; height: 24px; }
 
         /* ===== MODAL ===== */
         .modal-overlay {
@@ -785,10 +1132,7 @@
             transition: opacity 0.3s ease;
         }
 
-        .modal-overlay.active {
-            display: flex;
-            opacity: 1;
-        }
+        .modal-overlay.active { display: flex; opacity: 1; }
 
         .modal {
             background: var(--bg-alt);
@@ -800,12 +1144,10 @@
             overflow-y: auto;
             position: relative;
             transform: scale(0.95) translateY(20px);
-            transition: transform 0.4s cubic-bezier(0.2, 0.8, 0.2, 1);
+            transition: transform 0.4s var(--ease);
         }
 
-        .modal-overlay.active .modal {
-            transform: scale(1) translateY(0);
-        }
+        .modal-overlay.active .modal { transform: scale(1) translateY(0); }
 
         .modal-close {
             position: absolute;
@@ -825,65 +1167,139 @@
             transition: background 0.2s, transform 0.2s;
         }
 
-        .modal-close:hover {
-            background: rgba(0,0,0,0.7);
-            transform: scale(1.05);
-        }
+        .modal-close:hover { background: rgba(0,0,0,0.7); transform: scale(1.05); }
+        .modal-close svg { width: 20px; height: 20px; }
 
-        .modal-close svg {
-            width: 20px;
-            height: 20px;
-        }
+        /* Modal media gallery */
+        .modal-media { position: relative; user-select: none; }
 
-        .modal-screenshot-container {
-            position: relative;
-            cursor: pointer;
-        }
-
-        .modal-screenshot {
-            width: 100%;
+        .media-stage {
             height: 280px;
-            object-fit: cover;
-            transition: opacity 0.2s;
             background: var(--bg-elevated);
+            position: relative;
+            overflow: hidden;
         }
 
-        .modal-screenshot:hover {
-            opacity: 0.9;
+        .modal-media:not(.is-video) .media-stage { cursor: zoom-in; }
+
+        .media-stage img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            display: block;
+            transition: opacity 0.2s;
         }
+
+        .media-stage img:hover { opacity: 0.9; }
+
+        .media-stage video {
+            width: 100%;
+            height: 100%;
+            object-fit: contain;
+            background: #000;
+            display: block;
+        }
+
+        .slide-in { animation: slideIn 0.35s ease; }
+
+        @keyframes slideIn {
+            from { opacity: 0; transform: scale(1.02); }
+            to { opacity: 1; transform: scale(1); }
+        }
+
+        .media-nav {
+            position: absolute;
+            top: 50%;
+            transform: translateY(-50%);
+            width: 40px;
+            height: 40px;
+            border-radius: 12px;
+            border: 1px solid var(--border);
+            background: var(--bg-alt);
+            color: var(--text);
+            display: none;
+            align-items: center;
+            justify-content: center;
+            cursor: pointer;
+            z-index: 3;
+            box-shadow: var(--shadow);
+            transition: transform 0.2s, border-color 0.2s, color 0.2s;
+        }
+
+        .modal-media.multi .media-nav { display: flex; }
+        .media-nav.prev { left: 14px; }
+        .media-nav.next { right: 14px; }
+        .media-nav:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-50%) scale(1.06); }
+        .media-nav:active { transform: translateY(-50%) scale(0.95); }
+        .media-nav svg { width: 18px; height: 18px; }
+
+        .modal-media.is-video .media-nav { top: calc(50% - 20px); }
+
+        .media-counter {
+            position: absolute;
+            top: 16px;
+            left: 16px;
+            z-index: 3;
+            display: none;
+            font-variant-numeric: tabular-nums;
+        }
+
+        .modal-media.multi .media-counter { display: flex; }
+
+        .media-dots {
+            position: absolute;
+            bottom: 14px;
+            left: 50%;
+            transform: translateX(-50%);
+            display: none;
+            gap: 6px;
+            padding: 7px 10px;
+            border-radius: 20px;
+            background: rgba(0,0,0,0.35);
+            backdrop-filter: blur(6px);
+            -webkit-backdrop-filter: blur(6px);
+            z-index: 3;
+        }
+
+        .modal-media.multi .media-dots { display: flex; }
+        .modal-media.multi.is-video .media-dots { bottom: 56px; }
+
+        .media-dot {
+            width: 6px;
+            height: 6px;
+            border-radius: 6px;
+            background: rgba(255,255,255,0.5);
+            border: none;
+            padding: 0;
+            cursor: pointer;
+            transition: width 0.3s var(--ease), background 0.3s;
+        }
+
+        .media-dot.active { width: 18px; background: #fff; }
 
         .expand-hint {
             position: absolute;
             bottom: 16px;
             left: 50%;
             transform: translateX(-50%);
-            background: var(--bg-alt);
-            border: 1px solid var(--border);
-            padding: 8px 16px;
-            border-radius: 20px;
-            font-size: 0.75rem;
-            color: var(--text-muted);
-            display: flex;
-            align-items: center;
-            gap: 8px;
             pointer-events: none;
             opacity: 0;
             transition: opacity 0.3s;
+            z-index: 2;
         }
 
-        .modal-screenshot-container:hover .expand-hint {
-            opacity: 1;
-        }
+        .modal-media.multi .expand-hint { left: auto; right: 16px; transform: none; }
+        .modal-media:hover .expand-hint { opacity: 1; }
+        .modal-media.is-video .expand-hint { display: none; }
 
-        .modal-body {
-            padding: 32px;
-        }
+        .modal-body { padding: 32px; }
 
         .modal-header {
             display: flex;
             align-items: center;
             gap: 14px;
             margin-bottom: 16px;
+            padding-right: 44px;
         }
 
         .modal-logo {
@@ -893,24 +1309,15 @@
             object-fit: contain;
             background: var(--bg-elevated);
             padding: 6px;
+            flex-shrink: 0;
         }
 
-        .modal-title-group h2 {
-            font-size: 1.4rem;
-            margin-bottom: 2px;
-        }
+        .modal-logo.tile-initials { padding: 0; font-size: 1rem; }
 
-        .modal-title-group .client {
-            font-size: 0.9rem;
-            color: var(--accent);
-            font-weight: 500;
-        }
+        .modal-title-group h2 { font-size: 1.4rem; margin-bottom: 2px; }
+        .modal-title-group .client { font-size: 0.9rem; color: var(--accent); font-weight: 500; }
 
-        .modal-body > p {
-            color: var(--text-muted);
-            line-height: 1.8;
-            margin-bottom: 28px;
-        }
+        .modal-body > p { color: var(--text-muted); line-height: 1.8; margin-bottom: 28px; }
 
         .modal-link {
             display: inline-flex;
@@ -927,15 +1334,8 @@
             transition: background 0.3s, transform 0.2s;
         }
 
-        .modal-link:hover {
-            background: var(--accent-hover);
-            transform: translateY(-2px);
-        }
-
-        .modal-link svg {
-            width: 18px;
-            height: 18px;
-        }
+        .modal-link:hover { background: var(--accent-hover); transform: translateY(-2px); }
+        .modal-link svg { width: 18px; height: 18px; }
 
         /* ===== LIGHTBOX ===== */
         .lightbox {
@@ -952,15 +1352,11 @@
             transition: opacity 0.3s;
         }
 
-        .lightbox.active {
-            display: flex;
-            opacity: 1;
-        }
+        .lightbox.active { display: flex; opacity: 1; }
 
-        .lightbox-close {
+        .lightbox-close,
+        .lightbox-nav {
             position: absolute;
-            top: 24px;
-            right: 24px;
             width: 48px;
             height: 48px;
             border: none;
@@ -971,24 +1367,36 @@
             display: flex;
             align-items: center;
             justify-content: center;
-            transition: background 0.2s;
+            transition: background 0.2s, transform 0.2s;
+            z-index: 2;
         }
 
-        .lightbox-close:hover {
-            background: rgba(255,255,255,0.2);
-        }
+        .lightbox-close { top: 24px; right: 24px; }
+        .lightbox-close:hover, .lightbox-nav:hover { background: rgba(255,255,255,0.2); }
+        .lightbox-close svg, .lightbox-nav svg { width: 24px; height: 24px; }
 
-        .lightbox-close svg {
-            width: 24px;
-            height: 24px;
-        }
+        .lightbox-nav { top: 50%; transform: translateY(-50%); display: none; }
+        .lightbox-nav:active { transform: translateY(-50%) scale(0.94); }
+        .lightbox.multi .lightbox-nav { display: flex; }
+        .lightbox-nav.prev { left: 24px; }
+        .lightbox-nav.next { right: 24px; }
 
-        .lightbox-image {
+        .lightbox-stage {
+            display: flex;
+            align-items: center;
+            justify-content: center;
             max-width: 90%;
+            user-select: none;
+        }
+
+        .lightbox-stage img,
+        .lightbox-stage video {
+            max-width: 100%;
             max-height: 75vh;
             object-fit: contain;
             border-radius: 12px;
             box-shadow: 0 20px 60px rgba(0,0,0,0.5);
+            display: block;
         }
 
         .lightbox-caption {
@@ -999,7 +1407,7 @@
             color: white;
         }
 
-        .lightbox-caption img {
+        .lightbox-logo {
             width: 32px;
             height: 32px;
             border-radius: 8px;
@@ -1008,10 +1416,30 @@
             padding: 4px;
         }
 
-        .lightbox-caption span {
-            font-family: 'Sora', sans-serif;
-            font-size: 0.95rem;
-            font-weight: 500;
+        .lightbox-logo.tile-initials { padding: 0; }
+
+        .lightbox-caption span { font-family: 'Sora', sans-serif; font-size: 0.95rem; font-weight: 500; }
+
+        .lightbox-counter {
+            display: none;
+            font-family: 'Inter', sans-serif !important;
+            font-size: 0.8rem !important;
+            color: rgba(255,255,255,0.6);
+            padding-left: 12px;
+            border-left: 1px solid rgba(255,255,255,0.2);
+            font-variant-numeric: tabular-nums;
+        }
+
+        .lightbox.multi .lightbox-counter { display: inline; }
+
+        @media (max-width: 600px) {
+            .lightbox { padding: 24px 12px; }
+            .lightbox-stage { max-width: 100%; }
+            .lightbox-nav { top: auto; bottom: 24px; transform: none; }
+            .lightbox-nav:active { transform: scale(0.94); }
+            .lightbox-nav.prev { left: 24px; }
+            .lightbox-nav.next { right: 24px; }
+            .media-stage { height: 230px; }
         }
 
         /* ===== FOOTER ===== */
@@ -1030,37 +1458,24 @@
             transition: opacity 0.6s ease, transform 0.6s ease;
         }
 
-        .fade-in.visible {
-            opacity: 1;
-            transform: translateY(0);
-        }
+        .fade-in.visible { opacity: 1; transform: translateY(0); }
 
-        ::-webkit-scrollbar {
-            width: 10px;
-        }
+        /* work-card has its own transform on hover — keep both working */
+        .work-card.fade-in.visible { transition: opacity 0.6s ease, transform 0.4s var(--ease), box-shadow 0.4s ease, border-color 0.3s ease; }
 
-        ::-webkit-scrollbar-track {
-            background: var(--bg);
-        }
-
-        ::-webkit-scrollbar-thumb {
-            background: var(--border);
-            border-radius: 5px;
-        }
-
-        ::-webkit-scrollbar-thumb:hover {
-            background: var(--text-subtle);
-        }
+        ::-webkit-scrollbar { width: 10px; }
+        ::-webkit-scrollbar-track { background: var(--bg); }
+        ::-webkit-scrollbar-thumb { background: var(--border); border-radius: 5px; }
+        ::-webkit-scrollbar-thumb:hover { background: var(--text-subtle); }
 
         @media (max-width: 600px) {
-            .resume-card {
-                padding: 32px 24px;
-                width: 100%;
-            }
+            .resume-card { padding: 32px 24px; width: 100%; }
+            .contact-icons { flex-wrap: wrap; }
+        }
 
-            .contact-icons {
-                flex-wrap: wrap;
-            }
+        @media (prefers-reduced-motion: reduce) {
+            *, *::before, *::after { animation-duration: 0.01ms !important; transition-duration: 0.01ms !important; }
+            .clients-track { animation: none; }
         }
     </style>
 </head>
@@ -1116,8 +1531,7 @@
         <h1>Oswald Amoah</h1>
         <p class="occupation">Software Engineer & Project Lead</p>
         <p class="tagline">I depend on an <em><a href="https://www.pulse.com.gh/story/settings-the-art-of-packaging-life-in-ghana-2024072413294175468" style="text-decoration: none; color: inherit;" target="_blank">ancient Ghanaian art</a></em>
- to solve problems. <br><strong>Collaborated with</strong> MTN Ghana, EMET Australia, Haddy&Me, OmanyeAba, et al.
-
+            to solve problems. <br><strong>Collaborated with</strong> MTN Ghana, EMET Australia, Haddy&amp;Me, OmanyeAba, et al.</p>
 
         <div class="scroll-indicator">
             <span>Scroll to explore</span>
@@ -1127,192 +1541,31 @@
         </div>
     </section>
 
-    <!-- WORK -->
+    <!-- WORK  (filled from PROJECTS at the top of this file) -->
     <section id="work">
         <div class="section-header">
-            <span class="section-title">Work</span>
+            <span class="section-title">Selected Work</span>
             <div class="section-line"></div>
         </div>
 
-        <div class="work-grid">
+        <div class="work-grid" id="workGrid"></div>
 
-            <!-- MTN -->
-            <div class="work-card fade-in" 
-                 data-title="MTN Fibre Network Design"
-                 data-client="MTN Ghana"
-                 data-desc="Conducted site surveys and led a network design team in planning over 500km of MTN Fibre routes across Ghana, while developing an internal distance automation tool to improve data accuracy."
-                 data-logo="https://www.dropbox.com/scl/fi/mwehughxcqgabvq2qlob8/mtn.jpg?rlkey=bvpdao8r083igaa62mm8i85pv&st=0s2v7vzu&raw=1"
-                 data-screenshot="https://www.dropbox.com/scl/fi/cvotkb89fnm766qju2xdt/mtn.png?rlkey=5es9zn9g2lu0jbaig8lx32cpu&st=vrbnaqhh&raw=1"
-                 data-link="https://github.com/oswaldamoah/civiltocable">
-                <div class="work-card-image">
-                    <img src="https://www.dropbox.com/scl/fi/cvotkb89fnm766qju2xdt/mtn.png?rlkey=5es9zn9g2lu0jbaig8lx32cpu&st=vrbnaqhh&raw=1" alt="MTN Fibre Network Design">
-                    <div class="click-hint">
-                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                            <path d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"/>
-                        </svg>
-                        Click to view
-                    </div>
-                </div>
-                <div class="work-card-content">
-                    <div class="work-card-header">
-                        <img src="https://www.dropbox.com/scl/fi/mwehughxcqgabvq2qlob8/mtn.jpg?rlkey=bvpdao8r083igaa62mm8i85pv&st=0s2v7vzu&raw=1" alt="MTN" class="work-card-logo">
-                        <h3>MTN Fibre Network Design</h3>
-                    </div>
-                    <p>Telecommunications</p>
-                </div>
-            </div>
-
-            <!-- Haddy & Me -->
-            <div class="work-card fade-in"
-                 data-title="HaddyandMe Store"
-                 data-client="Haddy & Me"
-                 data-desc="Fashion and lifestyle e-commerce store with intuitive product discovery and smooth shopping experience built with modern web technologies."
-                 data-logo="https://www.dropbox.com/scl/fi/r236dna6n5r5otre8yy69/haddyandme.png?rlkey=36xb77yjs3eyl8z3x9iw826hl&st=vy349omq&raw=1"
-                 data-screenshot="https://www.dropbox.com/scl/fi/p962c9z0vf2275eg81y9w/haddyandme.png?rlkey=9jrk5eja8kerckn8hktmpvwyv&st=xbcon3nw&raw=1"
-                 data-link="https://haddyandme.com">
-                <div class="work-card-image">
-                    <img src="https://www.dropbox.com/scl/fi/p962c9z0vf2275eg81y9w/haddyandme.png?rlkey=9jrk5eja8kerckn8hktmpvwyv&st=xbcon3nw&raw=1" alt="HaddyandMe Store">
-                    <div class="click-hint">
-                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                            <path d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"/>
-                        </svg>
-                        Click to view
-                    </div>
-                </div>
-                <div class="work-card-content">
-                    <div class="work-card-header">
-                        <img src="https://www.dropbox.com/scl/fi/r236dna6n5r5otre8yy69/haddyandme.png?rlkey=36xb77yjs3eyl8z3x9iw826hl&st=vy349omq&raw=1" alt="Haddy & Me" class="work-card-logo">
-                        <h3>HaddyandMe Store</h3>
-                    </div>
-                    <p>E-commerce Platform</p>
-                </div>
-            </div>
-
-            <!-- Omanye Aba -->
-            <div class="work-card fade-in"
-                 data-title="Omanye Aba Rentals"
-                 data-client="Omanye Aba"
-                 data-desc="Event rental and trading platform for listings and service inquiries with seamless user experience."
-                 data-logo="https://www.dropbox.com/scl/fi/r1aysg8glwkun0uyj3zhw/omanyeaba.png?rlkey=7pvz77kkblojcxntkzwtl44yo&st=j7jwthsm&raw=1"
-                 data-screenshot="https://www.dropbox.com/scl/fi/gho1e9wadfdf3vr5wkntp/omanyeaba.png?rlkey=w2rc1xs8ilrnwwapqky94c7yp&st=z66wyudb&raw=1"
-                 data-link="https://omanyeaba.com">
-                <div class="work-card-image">
-                    <img src="https://www.dropbox.com/scl/fi/gho1e9wadfdf3vr5wkntp/omanyeaba.png?rlkey=w2rc1xs8ilrnwwapqky94c7yp&st=z66wyudb&raw=1" alt="Omanye Aba Rentals">
-                    <div class="click-hint">
-                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                            <path d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"/>
-                        </svg>
-                        Click to view
-                    </div>
-                </div>
-                <div class="work-card-content">
-                    <div class="work-card-header">
-                        <img src="https://www.dropbox.com/scl/fi/r1aysg8glwkun0uyj3zhw/omanyeaba.png?rlkey=7pvz77kkblojcxntkzwtl44yo&st=j7jwthsm&raw=1" alt="Omanye Aba" class="work-card-logo">
-                        <h3>Omanye Aba Rentals</h3>
-                    </div>
-                    <p>Rentals Platform</p>
-                </div>
-            </div>
-
-            <!-- Mindful Circle (replaces HomzAndKidz) -->
-            <div class="work-card fade-in"
-                 data-title="Mindful Circle"
-                 data-client="Mindful Circle"
-                 data-desc="A modern community platform that makes it easy for people to discover events, connect with the community, and offer support for mental health awareness."
-                 data-logo="https://www.dropbox.com/scl/fi/6r1v245dxw7slw0749ism/mindfulcircle.png?rlkey=r7tgv83rvqorj2zpgspdc78h4&st=dim6ix9i&raw=1"
-                 data-screenshot="https://www.dropbox.com/scl/fi/du22bxf6rzjp9jvcc43xr/mindfulcircle.png?rlkey=rxusvb5dy3720acv6j602gy1r&st=xqefi3kx&raw=1"
-                 data-link="https://mindfulcircle.vercel.app">
-                <div class="work-card-image">
-                    <img src="https://www.dropbox.com/scl/fi/du22bxf6rzjp9jvcc43xr/mindfulcircle.png?rlkey=rxusvb5dy3720acv6j602gy1r&st=xqefi3kx&raw=1" alt="Mindful Circle">
-                    <div class="click-hint">
-                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                            <path d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"/>
-                        </svg>
-                        Click to view
-                    </div>
-                </div>
-                <div class="work-card-content">
-                    <div class="work-card-header">
-                        <img src="https://www.dropbox.com/scl/fi/6r1v245dxw7slw0749ism/mindfulcircle.png?rlkey=r7tgv83rvqorj2zpgspdc78h4&st=dim6ix9i&raw=1" alt="Mindful Circle" class="work-card-logo">
-                        <h3>Mindful Circle</h3>
-                    </div>
-                    <p>Mental Health Support</p>
-                </div>
-            </div>
-
-            <!-- Cordova Remodeling, Houston TX -->
-<div class="work-card fade-in"
-     data-title="Cordova Remodeling, Houston TX"
-     data-client="Cordova Remodeling, Houston TX"
-     data-desc="Framing, foundation and building repair, remodeling, trim carpentry and wood floors."
-
-     data-logo="https://www.dropbox.com/scl/fi/mhin5jnzsbwlihvn3wkbx/cordovaremodeling_logo.png?rlkey=xso48iyz00fy4tc0k94z6qj32&st=gdcukoj5&dl=0&raw=1"
-     data-screenshot="https://www.dropbox.com/scl/fi/paiagyvpauovobemukflg/cordovaremodeling.png?rlkey=m3ki8vs036svg2rqggyzw9atj&st=mpb1be85&dl=0&raw=1"
-     data-link="https://cordovaremodeling.vercel.app/">
-
-    <div class="work-card-image">
-        <!-- WEBSITE SCREENSHOT PLACEHOLDER -->
-        <img
-            src="https://www.dropbox.com/scl/fi/paiagyvpauovobemukflg/cordovaremodeling.png?rlkey=m3ki8vs036svg2rqggyzw9atj&st=mpb1be85&dl=0&raw=1"
-            alt="Cordova Remodeling Website"
-        >
-
-        <div class="click-hint">
-            <svg fill="none" stroke="currentColor" stroke-width="2"
-                 viewBox="0 0 24 24">
-                <path d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"/>
-            </svg>
-            Click to view
-        </div>
-    </div>
-
-    <div class="work-card-content">
-        <div class="work-card-header">
-
-            <!-- COMPANY LOGO PLACEHOLDER -->
-            <img
-                src="https://www.dropbox.com/scl/fi/mhin5jnzsbwlihvn3wkbx/cordovaremodeling_logo.png?rlkey=xso48iyz00fy4tc0k94z6qj32&st=gdcukoj5&dl=0&raw=1"
-                alt="Cordova Remodeling Logo"
-                class="work-card-logo"
-            >
-
-            <h3>Cordova Remodeling, Houston</h3>
+        <div class="work-more" id="workMore">
+            <button class="work-more-btn" id="workMoreBtn" aria-expanded="false" aria-controls="workListWrap">
+                <span class="label">View all work</span>
+                <span class="count" id="workCount"></span>
+                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M19 9l-7 7-7-7"/></svg>
+            </button>
         </div>
 
-        <p>Website</p>
-    </div>
-</div>
-
-            <!-- Free Plagiarism Checker -->
-            <div class="work-card fade-in"
-                 data-title="Free Plagiarism Checker"
-                 data-client="Personal Project"
-                 data-desc="Lightweight plagiarism detection tool — a free TurnItIn alternative for students and writers to check their work."
-                 data-logo=""
-                 data-screenshot="https://www.dropbox.com/scl/fi/79i071seozgat1sldrflv/freeplagiarismchecker.png?rlkey=pa0db1pj20zpu9827u5u8om90&st=vjgb6oqg&raw=1"
-                 data-link="https://github.com/oswaldamoah/free-plagiarism-checker">
-                <div class="work-card-image">
-                    <img src="https://www.dropbox.com/scl/fi/79i071seozgat1sldrflv/freeplagiarismchecker.png?rlkey=pa0db1pj20zpu9827u5u8om90&st=vjgb6oqg&raw=1" alt="Free Plagiarism Checker">
-                    <div class="click-hint">
-                        <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                            <path d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"/>
-                        </svg>
-                        Click to view
-                    </div>
-                </div>
-                <div class="work-card-content">
-                    <div class="work-card-header">
-                        <div class="work-card-logo" style="background: var(--accent); display: flex; align-items: center; justify-content: center; color: white; font-weight: 700; font-size: 0.75rem;">FP</div>
-                        <h3>Free Plagiarism Checker</h3>
-                    </div>
-                    <p>Utility Tool</p>
-                </div>
+        <div class="work-list-wrap" id="workListWrap">
+            <div class="work-list-inner">
+                <div class="work-list" id="workList"></div>
             </div>
-
         </div>
     </section>
 
-    <!-- ABOUT -->
+    <!-- ABOUT  (filled from EXPERIENCE / EDUCATION / SKILLS) -->
     <section id="about">
         <div class="section-header">
             <span class="section-title">About</span>
@@ -1320,71 +1573,22 @@
         </div>
 
         <div class="about-grid">
-
             <div class="about-block">
                 <h3>Experience</h3>
-
-                <div class="experience-item fade-in">
-                    <h4>Technical Team Lead</h4>
-                    <p class="meta"><span class="company">Flourishing Field International</span> · 2020 - Present</p>
-                    <p>Coordinate technical operations across data, multimedia, and software units. Led teams of 10-15 in structured weekly tasks, improving workflow clarity and execution.</p>
-                </div>
-
-                <div class="experience-item fade-in">
-                    <h4>Product Manager</h4>
-                    <p class="meta"><span class="company">BitByBit</span> · 2023 - Present</p>
-                    <p>Led product development initiatives across design and engineering teams, translating requirements into functional web experiences.</p>
-                </div>
-
-                <div class="experience-item fade-in">
-                    <h4>Software Development Intern</h4>
-                    <p class="meta"><span class="company">El Cuto Consult</span> · 2024</p>
-                    <p>Implemented USSD services and ASP.NET Core applications. Contributed to website updates and internal development tasks.</p>
-                </div>
-
-                <div class="experience-item fade-in">
-                    <h4>Freelancer</h4>
-                    <p class="meta"><span class="company">Project Palace</span> · June 2025 - Present</p>
-                    <p>Delivering high-quality results through effective client communication and thorough project documentation.</p>
-                </div>
+                <div id="experienceList"></div>
             </div>
 
             <div class="about-block">
                 <h3>Education</h3>
-
-                <div class="experience-item fade-in">
-                    <h4>BSc. Computer Science</h4>
-                    <p class="meta"><span class="company">University of Ghana</span> · Class of 2026</p>
-                </div>
-
-                <div class="experience-item fade-in">
-                    <h4>High School Diploma</h4>
-                    <p class="meta"><span class="company">Ghana Christian International High School</span> · 2019 - 2022</p>
-                    <p>SAT, WASSCE · IC3 Digital Literacy Certification</p>
-                </div>
+                <div id="educationList"></div>
 
                 <h3 style="margin-top: 48px;">Skills</h3>
-
-                <div class="skills-grid">
-                    <span class="skill-tag">React</span>
-                    <span class="skill-tag">Node.js</span>
-                    <span class="skill-tag">MongoDB</span>
-                    <span class="skill-tag">Express</span>
-                    <span class="skill-tag">React Native</span>
-                    <span class="skill-tag">PWAs</span>
-                    <span class="skill-tag">Python</span>
-                    <span class="skill-tag">C#</span>
-                    <span class="skill-tag">SQL</span>
-                    <span class="skill-tag">AWS</span>
-                    <span class="skill-tag">AutoCAD</span>
-                    <span class="skill-tag">Jira</span>
-                    <span class="skill-tag">Trello</span>
-                </div>
+                <div class="skills-grid" id="skillsGrid"></div>
             </div>
         </div>
     </section>
 
-    <!-- CLIENTS CAROUSEL -->
+    <!-- CLIENTS CAROUSEL  (filled from CLIENTS) -->
     <section id="clients" class="clients-section">
         <div class="section-header" style="max-width: 1200px; margin: 0 auto; padding: 100px 24px 0;">
             <span class="section-title">Collaborated With</span>
@@ -1392,67 +1596,7 @@
         </div>
 
         <div class="clients-carousel-wrapper">
-            <div class="clients-track" id="clientsTrack">
-                <!-- First set -->
-                 <div class="client-item">
-                    <img src="https://www.dropbox.com/scl/fi/mwehughxcqgabvq2qlob8/mtn.jpg?rlkey=bvpdao8r083igaa62mm8i85pv&st=0s2v7vzu&raw=1" alt="MTN" class="client-logo">
-                </div>
-
-                <div class="client-item">
-                    <img src="https://www.dropbox.com/scl/fi/nnfgrmxzlriduzf48cv45/gccc.png?rlkey=0o70uzror6x6kqu54zc2dh03v&st=89o7tth9&raw=1" alt="Cordova Remodeling, Houston TX" class="client-logo">
-                </div>
-
-                <div class="client-item">
-                    <img src="https://www.dropbox.com/scl/fi/r1aysg8glwkun0uyj3zhw/omanyeaba.png?rlkey=7pvz77kkblojcxntkzwtl44yo&st=j7jwthsm&raw=1" alt="Omanye Aba" class="client-logo">
-                </div>
-
-                <div class="client-item">
-                    <img src="https://www.dropbox.com/scl/fi/6r1v245dxw7slw0749ism/mindfulcircle.png?rlkey=r7tgv83rvqorj2zpgspdc78h4&st=dim6ix9i&raw=1" alt="Mindful Circle" class="client-logo">
-                </div>
-
-                <div class="client-item">
-                    <img src="https://www.dropbox.com/scl/fi/r236dna6n5r5otre8yy69/haddyandme.png?rlkey=36xb77yjs3eyl8z3x9iw826hl&st=vy349omq&raw=1" alt="Haddy & Me" class="client-logo">
-                </div>
-
-                <div class="client-item">
-                    <img src="https://www.dropbox.com/scl/fi/roeb219i1bokhakpm7pzv/ffim.ico?rlkey=i8v9zmsppy5wvox2e9a04i9vw&st=lk9g23f9&raw=1" alt="Flourishing Field International Ministries" class="client-logo">
-                </div>
-
-                <div class="client-item">
-                    <img src="https://www.dropbox.com/scl/fi/euuvvc0ua1m1gura28wn6/homzandkidz.png?rlkey=g8fgxr0audx77gam8jbnpasl3&st=6gvrsx77&raw=1" alt="Homz & Kidz" class="client-logo">
-                </div>
-
-                <div class="client-item">
-                    <img src="https://www.dropbox.com/scl/fi/7dy77y6jdamo11lnea831/emetlogo.png?rlkey=d3jiui9z02b970j2l3vq5wrtj&st=x4914vv1&raw=1" alt="EMET Australia" class="client-logo">
-                </div>
-
-                <!-- Duplicate set for seamless loop -->
-                <div class="client-item">
-                    <img src="https://www.dropbox.com/scl/fi/mwehughxcqgabvq2qlob8/mtn.jpg?rlkey=bvpdao8r083igaa62mm8i85pv&st=0s2v7vzu&raw=1" alt="MTN" class="client-logo">
-                </div>
-
-                <div class="client-item">
-                    <img src="https://www.dropbox.com/scl/fi/nnfgrmxzlriduzf48cv45/gccc.png?rlkey=0o70uzror6x6kqu54zc2dh03v&st=89o7tth9&raw=1" alt="Cordova Remodeling, Houston TX" class="client-logo">
-                </div>
-                <div class="client-item">
-                    <img src="https://www.dropbox.com/scl/fi/r1aysg8glwkun0uyj3zhw/omanyeaba.png?rlkey=7pvz77kkblojcxntkzwtl44yo&st=j7jwthsm&raw=1" alt="Omanye Aba" class="client-logo">
-                </div>
-                <div class="client-item">
-                    <img src="https://www.dropbox.com/scl/fi/6r1v245dxw7slw0749ism/mindfulcircle.png?rlkey=r7tgv83rvqorj2zpgspdc78h4&st=dim6ix9i&raw=1" alt="Mindful Circle" class="client-logo">
-                </div>
-                <div class="client-item">
-                    <img src="https://www.dropbox.com/scl/fi/r236dna6n5r5otre8yy69/haddyandme.png?rlkey=36xb77yjs3eyl8z3x9iw826hl&st=vy349omq&raw=1" alt="Haddy & Me" class="client-logo">
-                </div>
-                <div class="client-item">
-                    <img src="https://www.dropbox.com/scl/fi/roeb219i1bokhakpm7pzv/ffim.ico?rlkey=i8v9zmsppy5wvox2e9a04i9vw&st=lk9g23f9&raw=1" alt="Flourishing Field International Ministries" class="client-logo">
-                </div>
-                <div class="client-item">
-                    <img src="https://www.dropbox.com/scl/fi/euuvvc0ua1m1gura28wn6/homzandkidz.png?rlkey=g8fgxr0audx77gam8jbnpasl3&st=6gvrsx77&raw=1" alt="Homz & Kidz" class="client-logo">
-                </div>
-                <div class="client-item">
-                    <img src="https://www.dropbox.com/scl/fi/7dy77y6jdamo11lnea831/emetlogo.png?rlkey=d3jiui9z02b970j2l3vq5wrtj&st=x4914vv1&raw=1" alt="EMET Australia" class="client-logo">
-                </div>
-            </div>
+            <div class="clients-track" id="clientsTrack"></div>
         </div>
     </section>
 
@@ -1504,42 +1648,40 @@
                     <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-5.214-6.817L4.99 21.75H1.68l7.73-8.835L1.254 2.25H8.08l4.713 6.231zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
                 </svg>
             </a>
-
         </div>
     </section>
 
     <!-- FOOTER -->
     <footer class="footer">
-<p>© <span id="current-year"></span> Oswald Amoah.</p>
-   </footer>
+        <p>© <span id="current-year"></span> Oswald Amoah.</p>
+    </footer>
 
-<!-- Year Script -->
-   <script>
-  document.getElementById('current-year').textContent = new Date().getFullYear();
-</script> 
-
-    <!-- MODAL -->
+    <!-- PROJECT MODAL -->
     <div class="modal-overlay" id="modal">
-        <div class="modal">
-            <button class="modal-close" id="modalClose">
-                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                    <path d="M6 18L18 6M6 6l12 12"/>
-                </svg>
+        <div class="modal" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
+            <button class="modal-close" id="modalClose" aria-label="Close">
+                <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12"/></svg>
             </button>
 
-            <div class="modal-screenshot-container" id="modalScreenshotContainer">
-                <img src="" alt="" class="modal-screenshot" id="modalScreenshot">
-                <div class="expand-hint">
-                    <svg width="14" height="14" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                        <path d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/>
-                    </svg>
+            <div class="modal-media" id="modalMedia">
+                <div class="media-stage" id="mediaStage"></div>
+                <button class="media-nav prev" id="mediaPrev" aria-label="Previous">
+                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M15 19l-7-7 7-7"/></svg>
+                </button>
+                <button class="media-nav next" id="mediaNext" aria-label="Next">
+                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg>
+                </button>
+                <div class="media-counter chip" id="mediaCounter"></div>
+                <div class="media-dots" id="mediaDots"></div>
+                <div class="expand-hint chip">
+                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4"/></svg>
                     Click to expand
                 </div>
             </div>
 
             <div class="modal-body">
                 <div class="modal-header">
-                    <img id="modalLogo" class="modal-logo" src="" alt="">
+                    <div id="modalLogoWrap"></div>
                     <div class="modal-title-group">
                         <h2 id="modalTitle"></h2>
                         <span class="client" id="modalClient"></span>
@@ -1550,9 +1692,7 @@
 
                 <a href="" target="_blank" class="modal-link" id="modalLink">
                     View Project
-                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                        <path d="M17 8l4 4m0 0l-4 4m4-4H3"/>
-                    </svg>
+                    <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>
                 </a>
             </div>
         </div>
@@ -1560,53 +1700,264 @@
 
     <!-- LIGHTBOX -->
     <div class="lightbox" id="lightbox">
-        <button class="lightbox-close" id="lightboxClose">
-            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-                <path d="M6 18L18 6M6 6l12 12"/>
-            </svg>
+        <button class="lightbox-close" id="lightboxClose" aria-label="Close">
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M6 18L18 6M6 6l12 12"/></svg>
+        </button>
+        <button class="lightbox-nav prev" id="lightboxPrev" aria-label="Previous">
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M15 19l-7-7 7-7"/></svg>
+        </button>
+        <button class="lightbox-nav next" id="lightboxNext" aria-label="Next">
+            <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M9 5l7 7-7 7"/></svg>
         </button>
 
-        <img src="" alt="" class="lightbox-image" id="lightboxImage">
+        <div class="lightbox-stage" id="lightboxStage"></div>
 
-        <div class="lightbox-caption" id="lightboxCaption">
-            <img src="" alt="" id="lightboxLogo">
+        <div class="lightbox-caption">
+            <span id="lightboxLogoWrap" style="display:flex"></span>
             <span id="lightboxCompany"></span>
+            <span class="lightbox-counter" id="lightboxCounter"></span>
         </div>
     </div>
 
+    <!-- ═══════════════ PAGE LOGIC — no need to edit below for content ═══════════════ -->
     <script>
-        // ===== HAPTIC FEEDBACK =====
-        const haptic = (pattern = 10) => {
-            if (navigator.vibrate) {
-                navigator.vibrate(pattern);
-            }
+    (() => {
+        // ===== HELPERS =====
+        const $ = (sel, root = document) => root.querySelector(sel);
+
+        const haptic = (pattern = 10) => { if (navigator.vibrate) navigator.vibrate(pattern); };
+
+        const esc = (s) => String(s ?? '').replace(/[&<>"']/g, c =>
+            ({ '&': '&amp;', '<': '&lt;', '>': '&gt;', '"': '&quot;', "'": '&#39;' }[c]));
+
+        const initials = (text) => String(text || '')
+            .replace(/[^A-Za-z0-9 ]/g, ' ')
+            .split(/\s+/).filter(Boolean).slice(0, 2)
+            .map(w => w[0]).join('').toUpperCase();
+
+        // Dropbox share links → direct file links (dl=0 → raw=1)
+        const raw = (url) => {
+            if (!url) return '';
+            if (!/dropbox\.com/i.test(url)) return url;
+            try {
+                const u = new URL(url);
+                u.searchParams.delete('dl');
+                u.searchParams.set('raw', '1');
+                return u.toString();
+            } catch { return url; }
         };
 
+        const isVideoUrl = (url) => {
+            try { return /\.(mp4|webm|mov|m4v|ogv)$/i.test(new URL(url, location.href).pathname); }
+            catch { return /\.(mp4|webm|mov|m4v|ogv)(\?|#|$)/i.test(url); }
+        };
+
+        const normMedia = (m) => {
+            const item = typeof m === 'string' ? { src: m } : { ...m };
+            item.src = raw(item.src);
+            item.poster = raw(item.poster);
+            item.type = item.type || (isVideoUrl(item.src) ? 'video' : 'image');
+            return item;
+        };
+
+        const ICONS = {
+            building: '<svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.8" stroke-linecap="round" stroke-linejoin="round"><path d="M3 21h18"/><path d="M5 21V4a1 1 0 0 1 1-1h8a1 1 0 0 1 1 1v17"/><path d="M15 9h3a1 1 0 0 1 1 1v11"/><path d="M8 7h1M11 7h1M8 10.5h1M11 10.5h1M8 14h1M11 14h1"/><path d="M9 21v-3h2v3"/></svg>',
+            cursor: '<svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M15 15l-2 5L9 9l11 4-5 2zm0 0l5 5M7.188 2.239l.777 2.897M5.136 7.965l-2.898-.777M13.95 4.05l-2.122 2.122m-5.657 5.656l-2.12 2.122"/></svg>',
+            stack: '<svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="7" width="14" height="14" rx="2"/><path d="M7 3h12a2 2 0 0 1 2 2v12"/></svg>',
+            play: '<svg fill="currentColor" viewBox="0 0 24 24"><path d="M8 5.14v13.72a1 1 0 0 0 1.5.86l11-6.86a1 1 0 0 0 0-1.72l-11-6.86A1 1 0 0 0 8 5.14z"/></svg>',
+            arrow: '<svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24"><path d="M17 8l4 4m0 0l-4 4m4-4H3"/></svg>',
+        };
+
+        // Logo tile: image if present, otherwise initials / building icon.
+        // If an image fails to load, it swaps to the fallback automatically.
+        const placeholderHTML = (label) =>
+            `<div class="media-placeholder"><span>${esc(initials(label))}</span></div>`;
+
+        const fallbackTile = (type, label, cls) => type === 'placeholder'
+            ? placeholderHTML(label)
+            : type === 'building'
+            ? `<span class="${cls} tile-building" role="img" aria-label="${esc(label)}">${ICONS.building}</span>`
+            : `<span class="${cls} tile-initials" role="img" aria-label="${esc(label)}">${esc(initials(label))}</span>`;
+
+        const logoTile = (src, label, cls, fallback = 'initials') => {
+            src = raw(src);
+            return src
+                ? `<img class="${cls}" src="${esc(src)}" alt="${esc(label)}" loading="lazy" data-fallback="${fallback}" data-label="${esc(label)}">`
+                : fallbackTile(fallback, label, cls);
+        };
+
+        document.addEventListener('error', (e) => {
+            const el = e.target;
+            if (el.tagName === 'IMG' && el.dataset.fallback) {
+                el.outerHTML = fallbackTile(el.dataset.fallback, el.dataset.label, el.className);
+            }
+        }, true);
+
+        const mediaHTML = (m, context, alt) => {
+            if (m.type === 'video') {
+                const poster = m.poster ? ` poster="${esc(m.poster)}"` : '';
+                if (context === 'card')
+                    return `<video src="${esc(m.src)}#t=0.1"${poster} muted loop playsinline preload="metadata"></video>`;
+                if (context === 'lightbox')
+                    return `<video src="${esc(m.src)}"${poster} controls autoplay playsinline></video>`;
+                return `<video src="${esc(m.src)}"${poster} controls playsinline preload="metadata"></video>`;
+            }
+            return context === 'card'
+                ? `<img src="${esc(m.src)}" alt="${esc(alt)}" loading="lazy" data-fallback="placeholder" data-label="${esc(alt)}">`
+                : `<img src="${esc(m.src)}" alt="${esc(alt)}">`;
+        };
+
+        const pauseVideos = (root) => root.querySelectorAll('video').forEach(v => v.pause());
+
+        // ===== DATA =====
+        const projects = PROJECTS.map((p, index) => ({
+            ...p,
+            index,
+            logo: raw(p.logo),
+            media: (p.media || []).filter(Boolean).map(normMedia),
+        }));
+
+        // ===== RENDER: WORK GALLERY =====
+        const cardHTML = (p) => {
+            const first = p.media[0];
+            const visual = first
+                ? mediaHTML(first, 'card', p.title)
+                : placeholderHTML(p.title);
+
+            let badge = '';
+            if (p.media.length > 1) badge = `<div class="media-badge chip">${ICONS.stack}${p.media.length}</div>`;
+            else if (first?.type === 'video') badge = `<div class="media-badge chip">${ICONS.play}Video</div>`;
+
+            return `
+            <div class="work-card fade-in" tabindex="0" role="button" data-project="${p.index}" aria-label="View ${esc(p.title)}">
+                <div class="work-card-image">
+                    ${visual}
+                    ${badge}
+                    <div class="click-hint chip">${ICONS.cursor}Click to view</div>
+                </div>
+                <div class="work-card-content">
+                    <div class="work-card-header">
+                        ${logoTile(p.logo, p.title, 'work-card-logo', 'initials')}
+                        <h3>${esc(p.title)}</h3>
+                    </div>
+                    <p>${esc(p.category)}</p>
+                </div>
+            </div>`;
+        };
+
+        const featured = projects.filter(p => p.featured);
+        $('#workGrid').innerHTML = featured.map(cardHTML).join('');
+
+        // Play card videos on hover
+        document.querySelectorAll('.work-card').forEach(card => {
+            const v = card.querySelector('.work-card-image > video');
+            if (!v) return;
+            card.addEventListener('mouseenter', () => v.play().catch(() => {}));
+            card.addEventListener('mouseleave', () => v.pause());
+        });
+
+        // ===== RENDER: ALL WORK LIST =====
+        const rowHTML = (p, i) => {
+            const mediaCount = p.media.length > 1
+                ? `<span class="work-row-media">${ICONS.stack}${p.media.length}</span>`
+                : (p.media[0]?.type === 'video' ? `<span class="work-row-media">${ICONS.play}Video</span>` : '');
+            return `
+            <button class="work-row" data-project="${p.index}" style="--i:${i}">
+                <span class="work-row-num">${String(i + 1).padStart(2, '0')}</span>
+                ${logoTile(p.logo, p.title, 'work-row-logo', 'initials')}
+                <span class="work-row-main">
+                    <span class="work-row-title">${esc(p.title)}${mediaCount}</span>
+                    <span class="work-row-client">${esc(p.client)}</span>
+                </span>
+                <span class="work-row-cat">${esc(p.category)}</span>
+                <span class="work-row-arrow">${ICONS.arrow}</span>
+            </button>`;
+        };
+
+        $('#workList').innerHTML = `
+            <div class="work-list-head"><span>All Projects</span><span>${projects.length}</span></div>
+            ${projects.map(rowHTML).join('')}`;
+
+        $('#workCount').textContent = projects.length;
+        if (projects.length <= featured.length) $('#workMore').style.display = 'none';
+
+        const workMoreBtn = $('#workMoreBtn');
+        const workListWrap = $('#workListWrap');
+
+        // Rows are hidden while collapsed — keep them out of the tab order
+        const setRowsFocusable = (on) =>
+            workListWrap.querySelectorAll('.work-row').forEach(r => r.tabIndex = on ? 0 : -1);
+        setRowsFocusable(false);
+
+        workMoreBtn.addEventListener('click', () => {
+            haptic([8, 12, 8]);
+            const open = !workListWrap.classList.contains('open');
+            workListWrap.classList.toggle('open', open);
+            workMoreBtn.setAttribute('aria-expanded', open);
+            workMoreBtn.querySelector('.label').textContent = open ? 'Hide full list' : 'View all work';
+            setRowsFocusable(open);
+            if (!open && workMoreBtn.getBoundingClientRect().top < 80) {
+                workMoreBtn.scrollIntoView({ behavior: 'smooth', block: 'center' });
+            }
+        });
+
+        // ===== RENDER: EXPERIENCE / EDUCATION =====
+        const timelineHTML = (item) => `
+            <div class="experience-item fade-in">
+                <h4>${esc(item.title)}</h4>
+                <p class="meta">
+                    <span class="org">
+                        ${logoTile(item.logo, item.org, 'org-logo', 'building')}
+                        <span class="company">${esc(item.org)}</span>
+                    </span>
+                    ${item.period ? `<span>·</span><span>${esc(item.period)}</span>` : ''}
+                </p>
+                ${item.description ? `<p>${esc(item.description)}</p>` : ''}
+            </div>`;
+
+        $('#experienceList').innerHTML = EXPERIENCE.map(timelineHTML).join('');
+        $('#educationList').innerHTML = EDUCATION.map(timelineHTML).join('');
+
+        // ===== RENDER: SKILLS =====
+        $('#skillsGrid').innerHTML = SKILLS.map(s => `<span class="skill-tag">${esc(s)}</span>`).join('');
+
+        // ===== RENDER: CLIENTS (duplicated for a seamless loop) =====
+        const clientHTML = (c, hidden) =>
+            `<div class="client-item"${hidden ? ' aria-hidden="true"' : ''}><img src="${esc(raw(c.logo))}" alt="${hidden ? '' : esc(c.name)}" class="client-logo"></div>`;
+        $('#clientsTrack').innerHTML =
+            CLIENTS.map(c => clientHTML(c, false)).join('') + CLIENTS.map(c => clientHTML(c, true)).join('');
+
+        // ===== YEAR =====
+        $('#current-year').textContent = new Date().getFullYear();
+
         // ===== THEME TOGGLE =====
-        const themeToggle = document.getElementById('themeToggle');
+        const themeToggle = $('#themeToggle');
         const sunIcon = themeToggle.querySelector('.sun-icon');
         const moonIcon = themeToggle.querySelector('.moon-icon');
 
+        const store = {
+            get: (k) => { try { return localStorage.getItem(k); } catch { return null; } },
+            set: (k, v) => { try { localStorage.setItem(k, v); } catch {} },
+        };
+
         const setTheme = (theme) => {
             document.body.dataset.theme = theme;
-            localStorage.setItem('theme', theme);
+            store.set('theme', theme);
             sunIcon.style.display = theme === 'dark' ? 'block' : 'none';
             moonIcon.style.display = theme === 'dark' ? 'none' : 'block';
         };
 
-        const savedTheme = localStorage.getItem('theme') || 
-            (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light');
-        setTheme(savedTheme);
+        setTheme(store.get('theme') ||
+            (window.matchMedia('(prefers-color-scheme: dark)').matches ? 'dark' : 'light'));
 
         themeToggle.addEventListener('click', () => {
             haptic(8);
-            const isDark = document.body.dataset.theme === 'dark';
-            setTheme(isDark ? 'light' : 'dark');
+            setTheme(document.body.dataset.theme === 'dark' ? 'light' : 'dark');
         });
 
         // ===== MOBILE MENU =====
-        const hamburger = document.getElementById('hamburger');
-        const mobileMenu = document.getElementById('mobileMenu');
+        const hamburger = $('#hamburger');
+        const mobileMenu = $('#mobileMenu');
 
         hamburger.addEventListener('click', () => {
             haptic(10);
@@ -1627,18 +1978,14 @@
         });
 
         // ===== SCROLL ANIMATIONS =====
-        const observerOptions = {
-            threshold: 0.1,
-            rootMargin: '0px 0px -50px 0px'
-        };
-
         const observer = new IntersectionObserver((entries) => {
             entries.forEach(entry => {
                 if (entry.isIntersecting) {
                     entry.target.classList.add('visible');
+                    observer.unobserve(entry.target);
                 }
             });
-        }, observerOptions);
+        }, { threshold: 0.1, rootMargin: '0px 0px -50px 0px' });
 
         document.querySelectorAll('.fade-in').forEach(el => observer.observe(el));
 
@@ -1649,154 +1996,200 @@
         window.addEventListener('scroll', () => {
             let current = '';
             sections.forEach(section => {
-                const sectionTop = section.offsetTop - 100;
-                if (scrollY >= sectionTop) {
-                    current = section.getAttribute('id');
-                }
+                if (scrollY >= section.offsetTop - 100) current = section.id;
             });
-
             navLinks.forEach(link => {
-                link.classList.remove('active');
-                if (link.getAttribute('href') === `#${current}`) {
-                    link.classList.add('active');
-                }
+                link.classList.toggle('active', link.getAttribute('href') === `#${current}`);
             });
-        });
+        }, { passive: true });
 
-        // ===== MODAL =====
-        const modal = document.getElementById('modal');
-        const modalClose = document.getElementById('modalClose');
-        const modalTitle = document.getElementById('modalTitle');
-        const modalClient = document.getElementById('modalClient');
-        const modalDesc = document.getElementById('modalDesc');
-        const modalLogo = document.getElementById('modalLogo');
-        const modalLink = document.getElementById('modalLink');
-        const modalScreenshot = document.getElementById('modalScreenshot');
-        const modalScreenshotContainer = document.getElementById('modalScreenshotContainer');
+        // ===== PROJECT MODAL + GALLERY =====
+        const modal = $('#modal');
+        const modalBox = modal.querySelector('.modal');
+        const modalMedia = $('#modalMedia');
+        const mediaStage = $('#mediaStage');
+        const mediaDots = $('#mediaDots');
+        const mediaCounter = $('#mediaCounter');
+        const modalLink = $('#modalLink');
 
-        let currentScreenshot = '';
-        let currentLogo = '';
-        let currentClient = '';
+        const lightbox = $('#lightbox');
+        const lightboxStage = $('#lightboxStage');
 
-        document.querySelectorAll('.work-card').forEach(card => {
-            card.addEventListener('click', () => {
-                haptic([10, 20, 10]);
+        const state = { project: null, index: 0, swiped: false };
 
-                modalTitle.textContent = card.dataset.title;
-                modalClient.textContent = card.dataset.client;
-                modalDesc.textContent = card.dataset.desc;
-                modalLink.href = card.dataset.link;
+        const renderSlide = () => {
+            const p = state.project;
+            const m = p.media[state.index];
+            if (!m) return;
+            pauseVideos(mediaStage);
+            mediaStage.innerHTML = mediaHTML(m, 'modal', p.title);
+            mediaStage.firstElementChild.classList.add('slide-in');
+            modalMedia.classList.toggle('is-video', m.type === 'video');
+            mediaCounter.textContent = `${state.index + 1} / ${p.media.length}`;
+            mediaDots.querySelectorAll('.media-dot').forEach((d, i) => d.classList.toggle('active', i === state.index));
+        };
 
-                currentScreenshot = card.dataset.screenshot;
-                currentLogo = card.dataset.logo;
-                currentClient = card.dataset.client;
-
-                // Screenshot
-                if (card.dataset.screenshot) {
-                    modalScreenshot.src = card.dataset.screenshot;
-                    modalScreenshot.style.display = 'block';
-                } else {
-                    modalScreenshot.style.display = 'none';
-                }
-
-                // Logo
-                if (card.dataset.logo) {
-                    modalLogo.src = card.dataset.logo;
-                    modalLogo.style.display = 'block';
-                } else {
-                    modalLogo.style.display = 'none';
-                }
-
-                modal.classList.add('active');
-                document.body.style.overflow = 'hidden';
-            });
-        });
-
-        modalScreenshotContainer.addEventListener('click', () => {
-            if (currentScreenshot) {
-                haptic(15);
-                openLightbox(currentScreenshot, currentLogo, currentClient);
-            }
-        });
-
-        modalClose.addEventListener('click', () => {
+        const go = (delta) => {
+            const total = state.project?.media.length || 0;
+            if (total < 2) return;
+            state.index = (state.index + delta + total) % total;
             haptic(6);
-            closeModal();
-        });
+            renderSlide();
+            if (lightbox.classList.contains('active')) renderLightbox();
+        };
 
-        modal.addEventListener('click', (e) => {
-            if (e.target === modal) {
-                haptic(6);
-                closeModal();
-            }
-        });
+        const goTo = (i) => {
+            state.index = i;
+            haptic(6);
+            renderSlide();
+        };
+
+        const openProject = (index) => {
+            const p = projects[index];
+            if (!p) return;
+            haptic([10, 20, 10]);
+            state.project = p;
+            state.index = 0;
+
+            $('#modalTitle').textContent = p.title;
+            $('#modalClient').textContent = p.client || '';
+            $('#modalDesc').textContent = p.description || '';
+            $('#modalLogoWrap').innerHTML = logoTile(p.logo, p.title, 'modal-logo', 'initials');
+
+            if (p.link) { modalLink.href = p.link; modalLink.style.display = ''; }
+            else { modalLink.style.display = 'none'; }
+
+            const total = p.media.length;
+            modalMedia.style.display = total ? '' : 'none';
+            modalMedia.classList.toggle('multi', total > 1);
+            mediaDots.innerHTML = total > 1
+                ? p.media.map((_, i) => `<button class="media-dot" data-i="${i}" aria-label="Go to item ${i + 1}"></button>`).join('')
+                : '';
+            if (total) renderSlide();
+
+            modalBox.scrollTop = 0;
+            modal.classList.add('active');
+            document.body.style.overflow = 'hidden';
+            $('#modalClose').focus({ preventScroll: true });
+        };
 
         const closeModal = () => {
+            pauseVideos(mediaStage);
+            mediaStage.innerHTML = '';
             modal.classList.remove('active');
             document.body.style.overflow = '';
         };
 
-        // ===== LIGHTBOX =====
-        const lightbox = document.getElementById('lightbox');
-        const lightboxClose = document.getElementById('lightboxClose');
-        const lightboxImage = document.getElementById('lightboxImage');
-        const lightboxLogo = document.getElementById('lightboxLogo');
-        const lightboxCompany = document.getElementById('lightboxCompany');
+        // Open from gallery cards and list rows
+        document.addEventListener('click', (e) => {
+            const trigger = e.target.closest('[data-project]');
+            if (trigger) openProject(Number(trigger.dataset.project));
+        });
 
-        const openLightbox = (screenshot, logo, company) => {
-            lightboxImage.src = screenshot;
-            lightboxCompany.textContent = company;
-
-            if (logo) {
-                lightboxLogo.src = logo;
-                lightboxLogo.style.display = 'block';
-            } else {
-                lightboxLogo.style.display = 'none';
+        $('#workGrid').addEventListener('keydown', (e) => {
+            const card = e.target.closest('.work-card');
+            if (card && (e.key === 'Enter' || e.key === ' ')) {
+                e.preventDefault();
+                openProject(Number(card.dataset.project));
             }
+        });
 
+        $('#mediaPrev').addEventListener('click', (e) => { e.stopPropagation(); go(-1); });
+        $('#mediaNext').addEventListener('click', (e) => { e.stopPropagation(); go(1); });
+
+        mediaDots.addEventListener('click', (e) => {
+            const dot = e.target.closest('.media-dot');
+            if (dot) { e.stopPropagation(); goTo(Number(dot.dataset.i)); }
+        });
+
+        mediaStage.addEventListener('click', () => {
+            if (state.swiped) return;
+            const m = state.project?.media[state.index];
+            if (m && m.type === 'image') { haptic(15); openLightbox(); }
+        });
+
+        $('#modalClose').addEventListener('click', () => { haptic(6); closeModal(); });
+        modal.addEventListener('click', (e) => { if (e.target === modal) { haptic(6); closeModal(); } });
+
+        // ===== LIGHTBOX =====
+        const renderLightbox = () => {
+            const p = state.project;
+            const m = p.media[state.index];
+            const label = p.client || p.title;
+            pauseVideos(lightboxStage);
+            lightboxStage.innerHTML = mediaHTML(m, 'lightbox', p.title);
+            lightboxStage.firstElementChild.classList.add('slide-in');
+            $('#lightboxLogoWrap').innerHTML = logoTile(p.logo, p.title, 'lightbox-logo', 'initials');
+            $('#lightboxCompany').textContent = label;
+            $('#lightboxCounter').textContent = `${state.index + 1} / ${p.media.length}`;
+            lightbox.classList.toggle('multi', p.media.length > 1);
+        };
+
+        const openLightbox = () => {
+            pauseVideos(mediaStage);
+            renderLightbox();
             lightbox.classList.add('active');
         };
 
         const closeLightbox = () => {
             haptic(6);
+            pauseVideos(lightboxStage);
+            lightboxStage.innerHTML = '';
             lightbox.classList.remove('active');
         };
 
-        lightboxClose.addEventListener('click', closeLightbox);
+        $('#lightboxClose').addEventListener('click', closeLightbox);
+        $('#lightboxPrev').addEventListener('click', (e) => { e.stopPropagation(); go(-1); });
+        $('#lightboxNext').addEventListener('click', (e) => { e.stopPropagation(); go(1); });
         lightbox.addEventListener('click', (e) => {
-            if (e.target === lightbox) closeLightbox();
+            if (state.swiped) return;
+            if (e.target === lightbox || e.target === lightboxStage) closeLightbox();
         });
 
-        // ===== KEYBOARD SHORTCUTS =====
-        document.addEventListener('keydown', (e) => {
-            if (e.key === 'Escape') {
-                if (lightbox.classList.contains('active')) {
-                    closeLightbox();
-                } else if (modal.classList.contains('active')) {
-                    closeModal();
+        // ===== SWIPE (touch) =====
+        const enableSwipe = (el) => {
+            let x0 = null, y0 = null;
+            el.addEventListener('touchstart', (e) => {
+                x0 = e.touches[0].clientX;
+                y0 = e.touches[0].clientY;
+            }, { passive: true });
+            el.addEventListener('touchend', (e) => {
+                if (x0 === null) return;
+                const dx = e.changedTouches[0].clientX - x0;
+                const dy = e.changedTouches[0].clientY - y0;
+                x0 = null;
+                if (Math.abs(dx) > 40 && Math.abs(dx) > Math.abs(dy)) {
+                    state.swiped = true;
+                    go(dx < 0 ? 1 : -1);
+                    setTimeout(() => { state.swiped = false; }, 350);
                 }
+            });
+        };
+        enableSwipe(mediaStage);
+        enableSwipe(lightboxStage);
+
+        // ===== KEYBOARD =====
+        document.addEventListener('keydown', (e) => {
+            const lbOpen = lightbox.classList.contains('active');
+            const mOpen = modal.classList.contains('active');
+            if (e.key === 'Escape') {
+                if (lbOpen) closeLightbox();
+                else if (mOpen) closeModal();
+            }
+            if ((lbOpen || mOpen) && (e.key === 'ArrowRight' || e.key === 'ArrowLeft')) {
+                if (e.target.tagName === 'VIDEO') return; // let video seek
+                e.preventDefault();
+                go(e.key === 'ArrowRight' ? 1 : -1);
             }
         });
 
-        // ===== CONTACT ICON HAPTICS =====
-        document.querySelectorAll('.contact-icon').forEach(icon => {
-            icon.addEventListener('click', () => haptic(8));
-        });
-
-        // ===== RESUME BUTTON HAPTIC =====
-        document.querySelector('.resume-btn')?.addEventListener('click', () => haptic([10, 15, 10]));
-
-        // ===== SKILL TAG HOVER HAPTIC =====
-        document.querySelectorAll('.skill-tag').forEach(tag => {
-            tag.addEventListener('mouseenter', () => haptic(4));
-        });
-
-        // ===== CLIENT LOGO HOVER HAPTIC =====
-        document.querySelectorAll('.client-item').forEach(item => {
-            item.addEventListener('mouseenter', () => haptic(3));
-        });
+        // ===== HAPTICS =====
+        document.querySelectorAll('.contact-icon').forEach(icon => icon.addEventListener('click', () => haptic(8)));
+        $('.resume-btn')?.addEventListener('click', () => haptic([10, 15, 10]));
+        document.querySelectorAll('.skill-tag').forEach(tag => tag.addEventListener('mouseenter', () => haptic(4)));
+        document.querySelectorAll('.client-item').forEach(item => item.addEventListener('mouseenter', () => haptic(3)));
+    })();
     </script>
 
 </body>
 </html>
-```
