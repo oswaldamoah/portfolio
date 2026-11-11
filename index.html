@@ -55,7 +55,7 @@ const PROFILE = {
    category     Short label under the card title
    description  Paragraph shown in the popup
    logo         Logo URL. Leave "" to show the project's initials instead
-   media        One or more images/videos. 1 item = single image.
+   media      One or more images/videos. 1 item = single image.
                 2+ items = swipeable gallery with arrows in the popup.
                 Videos are detected by extension (.mp4 .webm .mov),
                 or write { src: "...", type: "video", poster: "img.png" }
@@ -66,10 +66,13 @@ const PROFILE = {
 const PROJECTS = [
     {
         title: "MTN Fibre Network Design",
-        client: "MTN Ghana",
+        client: "Global Enertech & Sourcing Ltd for MTN Ghana",
         category: "Telecommunications",
-        description: "Conducted site surveys and led a network design team in planning over 500km of MTN Fibre routes across Ghana, while developing an internal distance automation tool to improve data accuracy.",
-        logo: "https://www.dropbox.com/scl/fi/mwehughxcqgabvq2qlob8/mtn.jpg?rlkey=bvpdao8r083igaa62mm8i85pv&st=0s2v7vzu&raw=1",
+        description: "Survey and design partner to Global Enertech & Sourcing Ltd (GESL) on its fibre network contract with MTN Ghana. Conducted site surveys and led the network design team in planning over 500km of MTN fibre routes across Ghana, and developed an internal distance automation tool to improve data accuracy.",
+        logo: [
+            { name: "Global Enertech & Sourcing", src: "https://www.dropbox.com/scl/fi/i7ahfq4af1f15ajqa8y8l/gesl.png?rlkey=b63kvr9om0j843xptyovec6if&st=uujqgtzj&dl=0" },
+            { name: "MTN Ghana", src: "https://www.dropbox.com/scl/fi/mwehughxcqgabvq2qlob8/mtn.jpg?rlkey=bvpdao8r083igaa62mm8i85pv&st=0s2v7vzu&raw=1" },
+        ],
         media: [
             "https://www.dropbox.com/scl/fi/bffgt3gyg2cu7s9t2vm5n/s4_kmz.jpg?rlkey=9ljhl0pq8nt2fb9xkhrmnvx0d&st=i07mrie4&raw=1",
             "https://www.dropbox.com/scl/fi/nnmo82b8c1bwooybulaj9/s2_field.jpg?rlkey=ch6k8ezmfrg1kb37m1shqfbk8&st=gpu61j3x&raw=1",
@@ -611,6 +614,45 @@ const CLIENTS = [
         }
 
         .tile-building svg { width: 100%; height: 100%; }
+
+        /* Scrapbook pair: two logos overlapped, slightly tilted */
+        .logo-stack {
+            position: relative;
+            display: inline-flex;
+            align-items: center;
+            flex-shrink: 0;
+            isolation: isolate;
+        }
+
+        .logo-stack > :is(img, span) {
+            position: relative;
+            background: #fff;
+            border: 2px solid #fff;
+            box-shadow: 0 3px 10px rgba(0,0,0,0.16);
+            transition: transform 0.4s var(--ease);
+        }
+
+        .logo-stack > :nth-child(1) { z-index: 1; transform: rotate(-7deg); }
+        .logo-stack > :nth-child(n+2) { z-index: 2; margin-left: calc(var(--stack-overlap) * -1); transform: rotate(6deg) translateY(3px); }
+
+        .work-card:hover .logo-stack > :nth-child(1),
+        .work-row:hover .logo-stack > :nth-child(1),
+        .logo-stack:hover > :nth-child(1) { transform: rotate(-11deg) translateX(-2px); }
+        .work-card:hover .logo-stack > :nth-child(n+2),
+        .work-row:hover .logo-stack > :nth-child(n+2),
+        .logo-stack:hover > :nth-child(n+2) { transform: rotate(9deg) translate(2px, 2px); }
+
+        .work-card-logo-stack { --stack-overlap: 12px; }
+        .work-card-logo-stack > .work-card-logo { width: 32px; height: 32px; padding: 3px; }
+
+        .work-row-logo-stack { --stack-overlap: 16px; width: 40px; }
+        .work-row-logo-stack > .work-row-logo { width: 32px; height: 32px; padding: 3px; flex-shrink: 0; }
+
+        .modal-logo-stack { --stack-overlap: 16px; }
+        .modal-logo-stack > .modal-logo { padding: 4px; }
+
+        .lightbox-logo-stack { --stack-overlap: 12px; }
+        .lightbox-logo-stack > .lightbox-logo { padding: 3px; }
 
         /* ===== WORK GRID ===== */
         .work-grid {
@@ -1902,6 +1944,16 @@ const CLIENTS = [
             : `<span class="${cls} tile-initials" role="img" aria-label="${esc(label)}">${esc(initials(label))}</span>`;
 
         const logoTile = (src, label, cls, fallback = 'initials') => {
+            // A list of logos → overlapping scrapbook pair
+            if (Array.isArray(src)) {
+                const list = src.filter(Boolean).map(l => typeof l === 'string' ? { src: l } : l);
+                if (list.length > 1) {
+                    return `<span class="logo-stack ${cls}-stack" role="img" aria-label="${esc(list.map(l => l.name || label).join(' & '))}">` +
+                        list.map(l => logoTile(l.src, l.name || label, cls, fallback)).join('') +
+                        `</span>`;
+                }
+                src = list[0]?.src || '';
+            }
             src = raw(src);
             return src
                 ? `<img class="${cls}" src="${esc(src)}" alt="${esc(label)}" loading="lazy" data-fallback="${fallback}" data-label="${esc(label)}">`
@@ -1937,7 +1989,7 @@ const CLIENTS = [
         const projects = PROJECTS.map((p, index) => ({
             ...p,
             index,
-            logo: raw(p.logo),
+            logo: Array.isArray(p.logo) ? p.logo : raw(p.logo),
             media: (p.media || []).filter(Boolean).map(normMedia),
         }));
 
