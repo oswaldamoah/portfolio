@@ -56,7 +56,12 @@ const PROJECTS = [
         description: "Conducted site surveys and led a network design team in planning over 500km of MTN Fibre routes across Ghana, while developing an internal distance automation tool to improve data accuracy.",
         logo: "https://www.dropbox.com/scl/fi/mwehughxcqgabvq2qlob8/mtn.jpg?rlkey=bvpdao8r083igaa62mm8i85pv&st=0s2v7vzu&raw=1",
         media: [
-            "https://www.dropbox.com/scl/fi/cvotkb89fnm766qju2xdt/mtn.png?rlkey=5es9zn9g2lu0jbaig8lx32cpu&st=vrbnaqhh&raw=1",
+            "https://www.dropbox.com/scl/fi/nnmo82b8c1bwooybulaj9/s2_field.jpg?rlkey=ch6k8ezmfrg1kb37m1shqfbk8&st=gpu61j3x&raw=1",
+            "https://www.dropbox.com/scl/fi/x9sil1n5u8eea2vuv91l3/s1_asbuilt.jpg?rlkey=p7vyx7rwkt9czxd6w4133v5fs&st=s2y1pse8&raw=1",
+            "https://www.dropbox.com/scl/fi/bffgt3gyg2cu7s9t2vm5n/s4_kmz.jpg?rlkey=9ljhl0pq8nt2fb9xkhrmnvx0d&st=i07mrie4&raw=1",
+            "https://www.dropbox.com/scl/fi/vr5dtrgj340gl57oxcpzu/s3_dist.jpg?rlkey=2oqpk3khp8i1tkhu7d6tfkcgl&st=k8frtxrs&raw=1",
+            "https://www.dropbox.com/scl/fi/g8xb3sk1xsk1uaz04ntd6/s7_feeder.jpg?rlkey=cf852uamvnfu8swqzfocw2e8z&st=g0t0tc66&raw=1",
+            "https://www.dropbox.com/scl/fi/3osawadph6p3em88h5gt8/s5_tower.jpg?rlkey=k9wtscu4edc9rrg4kg38luvx5&st=nvh4y2p1&raw=1",
         ],
         link: "https://github.com/oswaldamoah/civiltocable",
         featured: true,
@@ -74,13 +79,17 @@ const PROJECTS = [
         featured: true,
     },
     {
-        // TODO: add screenshots/videos, a logo and a link when ready
+        // TODO: add a link when ready
         title: "Telecom Site Manager",
         client: "Telecommunications",
         category: "Operations Platform",
         description: "A web platform for managing telecom sites in one place: tracking site records, survey data and maintenance status, and keeping field teams and project leads aligned on progress.",
-        logo: "",
-        media: [],
+        logo: "https://www.dropbox.com/scl/fi/0x9rl12jx5ur6vivsknyd/tsm.png?rlkey=t94f1ps2arev0yrx23gq7uako&st=pjyt7bv0&raw=1",
+        media: [
+            "https://www.dropbox.com/scl/fi/l73zz47zzsp8pe1gq5029/tsm0.png?rlkey=2qcxa6x7j6m4scxck09o2to0c&st=iv629iov&raw=1",
+            "https://www.dropbox.com/scl/fi/6mem6gw7d8rpu3g9ctusj/tsm1.png?rlkey=nr4cjed1kxijkj2i29do1nhuw&st=9y77w30b&raw=1",
+            "https://www.dropbox.com/scl/fi/uvza5yxs20sfsikweuio4/tsm2.png?rlkey=vy4ztme0o5k3s7r2837zt4wll&st=ef10bici&raw=1",
+        ],
         link: "",
         featured: true,
     },
@@ -125,7 +134,7 @@ const PROJECTS = [
         client: "Personal Project",
         category: "Utility Tool",
         description: "Lightweight plagiarism detection tool — a free TurnItIn alternative for students and writers to check their work.",
-        logo: "",
+        logo: "https://www.dropbox.com/scl/fi/zxerfh7brypdlt8ijjkol/logo.png?rlkey=p28fr7wxbvd1jprwh4e6ja01x&st=v373r97l&raw=1",
         media: [
             "https://www.dropbox.com/scl/fi/79i071seozgat1sldrflv/freeplagiarismchecker.png?rlkey=pa0db1pj20zpu9827u5u8om90&st=vjgb6oqg&raw=1",
         ],
@@ -186,7 +195,7 @@ const EXPERIENCE = [
     {
         title: "Technical Writer",
         org: "University of Ghana",
-        logo: "",
+        logo: "https://www.dropbox.com/scl/fi/kzsxwo85c58qsv6zckbip/universityofghana.png?rlkey=gwtzu448a6a1wk2j2uafd8grz&st=sokpqfgx&raw=1",
         period: "2024",
         description: "Documented sprints, timelines and product requirements, turning technical progress into clear reports. Worked under Dr. Prince Alvin Kwabena Ansah and Mr. Mark Atta Mensah.",
     },
@@ -206,14 +215,14 @@ const EDUCATION = [
     {
         title: "BSc. Computer Science",
         org: "University of Ghana",
-        logo: "",
+        logo: "https://www.dropbox.com/scl/fi/kzsxwo85c58qsv6zckbip/universityofghana.png?rlkey=gwtzu448a6a1wk2j2uafd8grz&st=sokpqfgx&raw=1",
         period: "Class of 2026",
         description: "",
     },
     {
         title: "High School Diploma",
         org: "Ghana Christian International High School",
-        logo: "",
+        logo: "https://www.dropbox.com/scl/fi/rq75x3yisq5pfwso0p2lv/GCIHS_Icon.png?rlkey=b9loskavqs0z6qfsuc1i9pna5&st=giksqtdu&raw=1",
         period: "2019 - 2022",
         description: "SAT, WASSCE · IC3 Digital Literacy Certification",
     },
@@ -221,10 +230,27 @@ const EDUCATION = [
 
 /* ──────────────────────────────────────────────────────────────────────
    SKILLS
+   ──────────────────────────────────────────────────────────────────────
+   name         Shown on the tag
+   icon         Logo URL (optional). Find more at https://devicon.dev
+                or https://simpleicons.org. A plain "Name" string works too.
+   invertDark   true for dark/black logos so they stay visible in dark mode
    ────────────────────────────────────────────────────────────────────── */
 const SKILLS = [
-    "React", "Node.js", "MongoDB", "Express", "React Native", "PWAs",
-    "Python", "C#", "SQL", "AWS", "AutoCAD", "Jira", "Trello",
+    { name: "React",        icon: "https://cdn.jsdelivr.net/npm/devicon@2.18.0/icons/react/react-original.svg" },
+    { name: "Node.js",      icon: "https://cdn.jsdelivr.net/npm/devicon@2.18.0/icons/nodejs/nodejs-original.svg" },
+    { name: "MongoDB",      icon: "https://cdn.jsdelivr.net/npm/devicon@2.18.0/icons/mongodb/mongodb-original.svg" },
+    { name: "Express",      icon: "https://cdn.jsdelivr.net/npm/devicon@2.18.0/icons/express/express-original.svg", invertDark: true },
+    { name: "React Native", icon: "https://cdn.jsdelivr.net/npm/devicon@2.18.0/icons/react/react-original.svg" },
+    { name: "PWAs",         icon: "https://cdn.simpleicons.org/pwa/5A0FC8", invertDark: true },
+    { name: "Python",       icon: "https://cdn.jsdelivr.net/npm/devicon@2.18.0/icons/python/python-original.svg" },
+    { name: "C#",           icon: "https://cdn.jsdelivr.net/npm/devicon@2.18.0/icons/csharp/csharp-original.svg" },
+    "SQL",
+    { name: "AWS",          icon: "https://cdn.jsdelivr.net/npm/devicon@2.18.0/icons/amazonwebservices/amazonwebservices-original.svg", invertDark: true },
+    { name: "AutoCAD",      icon: "https://cdn.simpleicons.org/autocad/E51050" },
+    { name: "Jira",         icon: "https://cdn.jsdelivr.net/npm/devicon@2.18.0/icons/jira/jira-original.svg" },
+    { name: "Trello",       icon: "https://cdn.jsdelivr.net/npm/devicon@2.18.0/icons/trello/trello-original.svg" },
+    { name: "Slack",        icon: "https://cdn.jsdelivr.net/npm/devicon@2.18.0/icons/slack/slack-original.svg" },
 ];
 
 /* ──────────────────────────────────────────────────────────────────────
@@ -952,24 +978,24 @@ const CLIENTS = [
         .experience-item .meta .org {
             display: inline-flex;
             align-items: center;
-            gap: 8px;
+            gap: 10px;
         }
 
         .experience-item .meta .company { color: var(--accent); }
 
         .org-logo {
-            width: 24px;
-            height: 24px;
-            border-radius: 7px;
+            width: 36px;
+            height: 36px;
+            border-radius: 10px;
             object-fit: contain;
             background: #fff;
             border: 1px solid var(--border);
-            padding: 2px;
+            padding: 3px;
             flex-shrink: 0;
             transition: border-color 0.3s, transform 0.3s var(--ease);
         }
 
-        .org-logo.tile-building { background: var(--bg-elevated); padding: 4px; transition: color 0.3s, border-color 0.3s; }
+        .org-logo.tile-building { background: var(--bg-elevated); padding: 7px; transition: color 0.3s, border-color 0.3s; }
 
         .experience-item:hover .org-logo { border-color: var(--accent); transform: scale(1.08); }
         .experience-item:hover .org-logo.tile-building { color: var(--accent); }
@@ -995,6 +1021,24 @@ const CLIENTS = [
         }
 
         .skill-tag:hover { border-color: var(--accent); color: var(--accent); transform: translateY(-2px); }
+
+        .skill-tag {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+        }
+
+        .skill-icon {
+            width: 16px;
+            height: 16px;
+            object-fit: contain;
+            flex-shrink: 0;
+            transition: transform 0.3s var(--ease);
+        }
+
+        .skill-tag:hover .skill-icon { transform: scale(1.15) rotate(-6deg); }
+
+        [data-theme="dark"] .skill-icon.invert-dark { filter: invert(1) hue-rotate(180deg); }
 
         /* ===== CLIENTS CAROUSEL ===== */
         .clients-section {
@@ -1788,6 +1832,7 @@ const CLIENTS = [
 
         document.addEventListener('error', (e) => {
             const el = e.target;
+            if (el.tagName === 'IMG' && el.dataset.fallback === 'hide') { el.remove(); return; }
             if (el.tagName === 'IMG' && el.dataset.fallback) {
                 el.outerHTML = fallbackTile(el.dataset.fallback, el.dataset.label, el.className);
             }
@@ -1919,7 +1964,13 @@ const CLIENTS = [
         $('#educationList').innerHTML = EDUCATION.map(timelineHTML).join('');
 
         // ===== RENDER: SKILLS =====
-        $('#skillsGrid').innerHTML = SKILLS.map(s => `<span class="skill-tag">${esc(s)}</span>`).join('');
+        $('#skillsGrid').innerHTML = SKILLS.map(skill => {
+            const sk = typeof skill === 'string' ? { name: skill } : skill;
+            const icon = sk.icon
+                ? `<img class="skill-icon${sk.invertDark ? ' invert-dark' : ''}" src="${esc(raw(sk.icon))}" alt="" loading="lazy" data-fallback="hide">`
+                : '';
+            return `<span class="skill-tag">${icon}${esc(sk.name)}</span>`;
+        }).join('');
 
         // ===== RENDER: CLIENTS (duplicated for a seamless loop) =====
         const clientHTML = (c, hidden) =>
