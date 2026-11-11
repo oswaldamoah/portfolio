@@ -4,8 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="icon" type="image/png" id="favicon" href="https://www.dropbox.com/scl/fi/kg1z9wpu1xxbojfb9534d/profile.png?rlkey=7mkog890bjjzo90iwq8m8nuw6&st=d1ibr8fr&raw=1">
-    <link rel="apple-touch-icon" id="touchIcon" href="https://www.dropbox.com/scl/fi/kg1z9wpu1xxbojfb9534d/profile.png?rlkey=7mkog890bjjzo90iwq8m8nuw6&st=d1ibr8fr&raw=1">
+    <link rel="icon" type="image/png" href="https://www.svgrepo.com/show/406076/letter-o.svg">
 
     <!-- Modern Font Pairing: Sora + Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -34,12 +33,12 @@
 -->
 <script>
 /* ──────────────────────────────────────────────────────────────────────
-   PROFILE  — your photo is used for the favicon, the nav icon and the
-   resume card. Long-press it (or tap it in the resume card) to view it full.
+   PROFILE  — your photo shows on the resume card. Tap or long-press it
+   to view it full screen.
    ────────────────────────────────────────────────────────────────────── */
 const PROFILE = {
     name: "Oswald Amoah",
-    photo: "https://www.dropbox.com/scl/fi/kg1z9wpu1xxbojfb9534d/profile.png?rlkey=7mkog890bjjzo90iwq8m8nuw6&st=d1ibr8fr&raw=1",
+    photo: "https://www.dropbox.com/scl/fi/rw9b9gtr27zx4f9hf8uck/pro.png?rlkey=mbhjipmucwh3cyrategw2dxge&st=2l8wexfn&raw=1",
 };
 
 /* ──────────────────────────────────────────────────────────────────────
@@ -376,27 +375,14 @@ const CLIENTS = [
 
         .nav-logo:hover { opacity: 0.7; }
 
-        .nav-logo-icon img {
-            position: absolute;
-            inset: 0;
-            width: 100%;
-            height: 100%;
-            object-fit: cover;
-        }
-
-        /* Photos: no save-image popup / dragging, so long-press works */
-        .nav-logo, .nav-logo-icon, .resume-avatar {
+        /* Photo: no save-image popup / dragging, so long-press works */
+        .resume-avatar {
             -webkit-touch-callout: none;
             -webkit-user-select: none;
             user-select: none;
         }
 
-        .nav-logo-icon img, .resume-avatar img { -webkit-user-drag: none; pointer-events: none; }
-
-        .nav-logo-icon:has(img) { background: transparent; border-radius: 0; overflow: visible; }
-        .nav-logo-icon img { object-fit: contain; }
-
-        .nav-logo-icon.pressing { transform: scale(0.9); filter: drop-shadow(0 0 6px var(--accent-glow)); }
+        .resume-avatar img { -webkit-user-drag: none; pointer-events: none; }
 
         .nav-logo-icon {
             width: 32px;
@@ -409,9 +395,6 @@ const CLIENTS = [
             color: white;
             font-weight: 700;
             font-size: 0.9rem;
-            position: relative;
-            overflow: hidden;
-            transition: transform 0.3s var(--ease), box-shadow 0.3s;
         }
 
         .nav-links { display: flex; align-items: center; gap: 8px; }
@@ -1616,7 +1599,7 @@ const CLIENTS = [
     <nav class="nav">
         <div class="nav-inner">
             <a href="#" class="nav-logo">
-                <div class="nav-logo-icon" id="navAvatar">O</div>
+                <div class="nav-logo-icon">O</div>
                 <span> </span>
             </a>
 
@@ -2291,7 +2274,7 @@ const CLIENTS = [
             if (e.target === lightbox || e.target === lightboxStage) closeLightbox();
         });
 
-        // ===== PROFILE PHOTO (favicon, nav icon, resume card) =====
+        // ===== PROFILE PHOTO (resume card) =====
         const photo = raw(PROFILE.photo);
 
         const openPhoto = () => {
@@ -2333,14 +2316,6 @@ const CLIENTS = [
         };
 
         if (photo) {
-            $('#favicon').href = photo;
-            $('#touchIcon').href = photo;
-
-            const navAvatar = $('#navAvatar');
-            navAvatar.insertAdjacentHTML('beforeend',
-                `<img src="${esc(photo)}" alt="" draggable="false" data-fallback="hide">`);
-            onLongPress(navAvatar.closest('.nav-logo'), openPhoto);
-
             const resumeAvatar = $('#resumeAvatar');
             resumeAvatar.innerHTML =
                 `<img src="${esc(photo)}" alt="${esc(PROFILE.name)}" draggable="false" data-fallback="hide-parent">`;
