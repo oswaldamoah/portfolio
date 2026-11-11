@@ -4,7 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-    <link rel="icon" type="image/png" href="https://www.svgrepo.com/show/406076/letter-o.svg">
+    <link rel="icon" type="image/png" id="favicon" href="https://www.dropbox.com/scl/fi/6ulzhjjm4lik8jg71uldn/headshot.png?rlkey=fml83u7b2nwmec8n99i8kieje&st=5is0irp7&raw=1">
+    <link rel="apple-touch-icon" id="touchIcon" href="https://www.dropbox.com/scl/fi/6ulzhjjm4lik8jg71uldn/headshot.png?rlkey=fml83u7b2nwmec8n99i8kieje&st=5is0irp7&raw=1">
 
     <!-- Modern Font Pairing: Sora + Inter -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
@@ -33,6 +34,15 @@
 -->
 <script>
 /* ──────────────────────────────────────────────────────────────────────
+   PROFILE  — your photo is used for the favicon, the nav icon and the
+   resume card. Long-press it (or tap it in the resume card) to view it full.
+   ────────────────────────────────────────────────────────────────────── */
+const PROFILE = {
+    name: "Oswald Amoah",
+    photo: "https://www.dropbox.com/scl/fi/6ulzhjjm4lik8jg71uldn/headshot.png?rlkey=fml83u7b2nwmec8n99i8kieje&st=5is0irp7&raw=1",
+};
+
+/* ──────────────────────────────────────────────────────────────────────
    WORK / PROJECTS
    ──────────────────────────────────────────────────────────────────────
    title        Project name (shown on card, list and popup)
@@ -56,10 +66,9 @@ const PROJECTS = [
         description: "Conducted site surveys and led a network design team in planning over 500km of MTN Fibre routes across Ghana, while developing an internal distance automation tool to improve data accuracy.",
         logo: "https://www.dropbox.com/scl/fi/mwehughxcqgabvq2qlob8/mtn.jpg?rlkey=bvpdao8r083igaa62mm8i85pv&st=0s2v7vzu&raw=1",
         media: [
-            "https://www.dropbox.com/scl/fi/bffgt3gyg2cu7s9t2vm5n/s4_kmz.jpg?rlkey=9ljhl0pq8nt2fb9xkhrmnvx0d&st=i07mrie4&raw=1",
             "https://www.dropbox.com/scl/fi/nnmo82b8c1bwooybulaj9/s2_field.jpg?rlkey=ch6k8ezmfrg1kb37m1shqfbk8&st=gpu61j3x&raw=1",
             "https://www.dropbox.com/scl/fi/x9sil1n5u8eea2vuv91l3/s1_asbuilt.jpg?rlkey=p7vyx7rwkt9czxd6w4133v5fs&st=s2y1pse8&raw=1",
-            "https://www.dropbox.com/scl/fi/cvotkb89fnm766qju2xdt/mtn.png?rlkey=5es9zn9g2lu0jbaig8lx32cpu&st=2npdg6i7&raw=1",
+            "https://www.dropbox.com/scl/fi/bffgt3gyg2cu7s9t2vm5n/s4_kmz.jpg?rlkey=9ljhl0pq8nt2fb9xkhrmnvx0d&st=i07mrie4&raw=1",
             "https://www.dropbox.com/scl/fi/vr5dtrgj340gl57oxcpzu/s3_dist.jpg?rlkey=2oqpk3khp8i1tkhu7d6tfkcgl&st=k8frtxrs&raw=1",
             "https://www.dropbox.com/scl/fi/g8xb3sk1xsk1uaz04ntd6/s7_feeder.jpg?rlkey=cf852uamvnfu8swqzfocw2e8z&st=g0t0tc66&raw=1",
             "https://www.dropbox.com/scl/fi/3osawadph6p3em88h5gt8/s5_tower.jpg?rlkey=k9wtscu4edc9rrg4kg38luvx5&st=nvh4y2p1&raw=1",
@@ -367,6 +376,25 @@ const CLIENTS = [
 
         .nav-logo:hover { opacity: 0.7; }
 
+        .nav-logo-icon img {
+            position: absolute;
+            inset: 0;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+
+        /* Photos: no save-image popup / dragging, so long-press works */
+        .nav-logo, .nav-logo-icon, .resume-avatar {
+            -webkit-touch-callout: none;
+            -webkit-user-select: none;
+            user-select: none;
+        }
+
+        .nav-logo-icon img, .resume-avatar img { -webkit-user-drag: none; pointer-events: none; }
+
+        .nav-logo-icon.pressing { transform: scale(0.9); box-shadow: 0 0 0 4px var(--accent-glow); }
+
         .nav-logo-icon {
             width: 32px;
             height: 32px;
@@ -378,6 +406,9 @@ const CLIENTS = [
             color: white;
             font-weight: 700;
             font-size: 0.9rem;
+            position: relative;
+            overflow: hidden;
+            transition: transform 0.3s var(--ease), box-shadow 0.3s;
         }
 
         .nav-links { display: flex; align-items: center; gap: 8px; }
@@ -1111,6 +1142,58 @@ const CLIENTS = [
 
         .resume-card:hover { border-color: var(--accent); box-shadow: 0 0 0 4px var(--accent-glow); }
 
+        .resume-avatar {
+            position: relative;
+            width: 96px;
+            height: 96px;
+            border-radius: 28px;
+            border: 1px solid var(--border);
+            background: var(--bg-elevated);
+            padding: 0;
+            cursor: zoom-in;
+            overflow: visible;
+            box-shadow: var(--shadow);
+            transition: transform 0.4s var(--ease), border-color 0.3s, box-shadow 0.3s;
+        }
+
+        .resume-avatar img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+            border-radius: 27px;
+            display: block;
+        }
+
+        .resume-avatar::after {
+            content: '';
+            position: absolute;
+            right: -6px;
+            bottom: -6px;
+            width: 26px;
+            height: 26px;
+            border-radius: 9px;
+            background: var(--bg-alt) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 24 24' fill='none' stroke='%239ca3af' stroke-width='2'%3E%3Cpath d='M4 8V4m0 0h4M4 4l5 5m11-1V4m0 0h-4m4 0l-5 5M4 16v4m0 0h4m-4 0l5-5m11 5l-5-5m5 5v-4m0 4h-4'/%3E%3C/svg%3E") center / 13px no-repeat;
+            border: 1px solid var(--border);
+            opacity: 0;
+            transform: scale(0.8);
+            transition: opacity 0.3s, transform 0.3s var(--ease);
+        }
+
+        .resume-avatar:hover,
+        .resume-avatar:focus-visible {
+            transform: translateY(-3px) rotate(-2deg);
+            border-color: var(--accent);
+            box-shadow: 0 0 0 4px var(--accent-glow), var(--shadow);
+            outline: none;
+        }
+
+        .resume-avatar:hover::after,
+        .resume-avatar:focus-visible::after { opacity: 1; transform: scale(1); }
+
+        .resume-avatar.pressing { transform: scale(0.94); }
+
+        .lightbox-stage img.photo-full { border-radius: 24px; }
+
         .resume-btn {
             display: inline-flex;
             align-items: center;
@@ -1530,7 +1613,7 @@ const CLIENTS = [
     <nav class="nav">
         <div class="nav-inner">
             <a href="#" class="nav-logo">
-                <div class="nav-logo-icon">O</div>
+                <div class="nav-logo-icon" id="navAvatar">O</div>
                 <span> </span>
             </a>
 
@@ -1653,6 +1736,7 @@ const CLIENTS = [
         </div>
 
         <div class="resume-card fade-in">
+            <button class="resume-avatar" id="resumeAvatar" aria-label="View photo"></button>
             <p style="color: var(--text-muted); margin-bottom: 8px;">View my full professional background</p>
             <a href="https://docs.google.com/document/d/1DKn_-Oe9nFI9c_hW-V9kS-q2lBOvfQ-L-kNKQOvCgD8/" target="_blank" class="resume-btn">
                 <svg fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
@@ -1834,6 +1918,7 @@ const CLIENTS = [
         document.addEventListener('error', (e) => {
             const el = e.target;
             if (el.tagName === 'IMG' && el.dataset.fallback === 'hide') { el.remove(); return; }
+            if (el.tagName === 'IMG' && el.dataset.fallback === 'hide-parent') { el.parentElement.remove(); return; }
             if (el.tagName === 'IMG' && el.dataset.fallback) {
                 el.outerHTML = fallbackTile(el.dataset.fallback, el.dataset.label, el.className);
             }
@@ -2082,6 +2167,7 @@ const CLIENTS = [
         };
 
         const go = (delta) => {
+            if (state.photo) return;
             const total = state.project?.media.length || 0;
             if (total < 2) return;
             state.index = (state.index + delta + total) % total;
@@ -2172,12 +2258,15 @@ const CLIENTS = [
             lightboxStage.innerHTML = mediaHTML(m, 'lightbox', p.title);
             lightboxStage.firstElementChild.classList.add('slide-in');
             $('#lightboxLogoWrap').innerHTML = logoTile(p.logo, p.title, 'lightbox-logo', 'initials');
+            $('#lightboxLogoWrap').style.display = 'flex';
             $('#lightboxCompany').textContent = label;
             $('#lightboxCounter').textContent = `${state.index + 1} / ${p.media.length}`;
             lightbox.classList.toggle('multi', p.media.length > 1);
         };
 
         const openLightbox = () => {
+            state.photo = false;
+            state.openedAt = Date.now();
             pauseVideos(mediaStage);
             renderLightbox();
             lightbox.classList.add('active');
@@ -2188,15 +2277,75 @@ const CLIENTS = [
             pauseVideos(lightboxStage);
             lightboxStage.innerHTML = '';
             lightbox.classList.remove('active');
+            state.photo = false;
         };
 
         $('#lightboxClose').addEventListener('click', closeLightbox);
         $('#lightboxPrev').addEventListener('click', (e) => { e.stopPropagation(); go(-1); });
         $('#lightboxNext').addEventListener('click', (e) => { e.stopPropagation(); go(1); });
         lightbox.addEventListener('click', (e) => {
-            if (state.swiped) return;
+            if (state.swiped || Date.now() - (state.openedAt || 0) < 350) return;
             if (e.target === lightbox || e.target === lightboxStage) closeLightbox();
         });
+
+        // ===== PROFILE PHOTO (favicon, nav icon, resume card) =====
+        const photo = raw(PROFILE.photo);
+
+        const openPhoto = () => {
+            if (!photo) return;
+            state.photo = true;
+            state.openedAt = Date.now();
+            lightboxStage.innerHTML = `<img class="photo-full slide-in" src="${esc(photo)}" alt="${esc(PROFILE.name)}">`;
+            $('#lightboxLogoWrap').innerHTML = '';
+            $('#lightboxLogoWrap').style.display = 'none';
+            $('#lightboxCompany').textContent = PROFILE.name;
+            lightbox.classList.remove('multi');
+            lightbox.classList.add('active');
+        };
+
+        // Press and hold (touch or mouse) → calls onLong. A normal click still works.
+        const onLongPress = (el, onLong, ms = 450) => {
+            let timer = null, fired = false, sx = 0, sy = 0;
+            const cancel = () => { clearTimeout(timer); timer = null; el.classList.remove('pressing'); };
+            el.addEventListener('pointerdown', (e) => {
+                if (e.button !== 0) return;
+                fired = false; sx = e.clientX; sy = e.clientY;
+                el.classList.add('pressing');
+                timer = setTimeout(() => {
+                    fired = true;
+                    el.classList.remove('pressing');
+                    haptic([10, 30, 10]);
+                    onLong();
+                }, ms);
+            });
+            el.addEventListener('pointermove', (e) => {
+                if (timer && Math.hypot(e.clientX - sx, e.clientY - sy) > 10) cancel();
+            });
+            ['pointerup', 'pointerleave', 'pointercancel'].forEach(ev => el.addEventListener(ev, cancel));
+            el.addEventListener('contextmenu', (e) => e.preventDefault());
+            // Swallow the click that follows a long-press
+            el.addEventListener('click', (e) => {
+                if (fired) { e.preventDefault(); e.stopImmediatePropagation(); fired = false; }
+            }, true);
+        };
+
+        if (photo) {
+            $('#favicon').href = photo;
+            $('#touchIcon').href = photo;
+
+            const navAvatar = $('#navAvatar');
+            navAvatar.insertAdjacentHTML('beforeend',
+                `<img src="${esc(photo)}" alt="" draggable="false" data-fallback="hide">`);
+            onLongPress(navAvatar.closest('.nav-logo'), openPhoto);
+
+            const resumeAvatar = $('#resumeAvatar');
+            resumeAvatar.innerHTML =
+                `<img src="${esc(photo)}" alt="${esc(PROFILE.name)}" draggable="false" data-fallback="hide-parent">`;
+            onLongPress(resumeAvatar, openPhoto);
+            resumeAvatar.addEventListener('click', () => { haptic(15); openPhoto(); });
+        } else {
+            $('#resumeAvatar').remove();
+        }
 
         // ===== SWIPE (touch) =====
         const enableSwipe = (el) => {
